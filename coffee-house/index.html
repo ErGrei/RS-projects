@@ -4,10 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coffe-House</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.cdnfonts.com/css/inter?styles=29139,29140,29141"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="./CSS/style.css" />
   </head>
   <body>
@@ -25,11 +29,85 @@
           </ul>
         </div>
         <div class="header-menu__link">
-          <a href="#">Menu</a>
-          <img src="./img/coffee-cup.svg" alt="">
+          <a href="#">Menu <img src="./img/coffee-cup.svg" alt="" /></a>
         </div>
       </header>
-      <div class="Enjoy"></div>
+      <div class="Enjoy">
+        <p class="enjoy-title">
+          <span>Enjoy</span> premium coffee at our charming cafe
+        </p>
+        <p class="enjoy-text">
+          With its inviting atmosphere and delicious coffee options, the Coffee
+          House Resource is a popular destination for coffee lovers and those
+          seeking a warm and inviting space to enjoy their favorite beverage.
+        </p>
+        <button class="enjoy-link__menu"><a href="#">Menu</a></button>
+      </div>
+      <div class="Favourites-Coffee">
+        <button class="Favourites-Coffee__slider_left">
+          <img src="./img/arrow-left.svg" alt="arrow-left" />
+        </button>
+        <div class="Favourites-Coffee__contener">
+          <h2 class="Favourites-Coffee__tile">
+            Choose your <span>favorite</span> coffee
+          </h2>
+          <img
+            class="Favourites-Coffee__img"
+            src="./img/coffee-slider-1.png"
+            alt="Coffee"
+          />
+          <h3 class="Favourites-Coffee__name">S’mores Frappuccino</h3>
+          <p class="Favourites-Coffee__text">
+            This new drink takes an espresso and mixes it with brown sugar and
+            cinnamon before being topped with oat milk.
+          </p>
+          <p class="Favourites-Coffee__price">$5.50</p>
+          <div class="Favourites-Coffee__line">
+            <div class="active">
+              <span></span>
+            </div>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <button class="Favourites-Coffee__slider_right">
+          <img src="./img/arrow-right.svg" alt="arrow-right" />
+        </button>
+      </div>
+      <div class="About">
+        <h2 class="About-text">
+          Resource is <span>the perfect and cozy place</span> where you can
+          enjoy a variety of hot beverages, relax, catch up with friends, or get
+          some work done.
+        </h2>
+        <div class="about-img">
+          <div>
+            <div class="about-img__one"></div>
+            <div class="about-img__two"></div>
+          </div>
+          <div>
+            <div class="about-img__three"></div>
+
+            <div class="about-img__four"></div>
+          </div>
+        </div>
+      </div>
+      <div class="Mobile-App">
+        <div class="Mobile-App__content">
+          <h2><span>Download</span> our apps to start ordering</h2>
+          <p>Download the Resource app today and experience the comfort of ordering your favorite coffee from wherever you are</p>
+          
+        <button class="Mobile-App__btn_apple">
+          <img src="./img/icon.svg" alt="">
+          <div>
+          <p>Available on the</p>
+          <h3>App Store</h3>
+        </div>
+        </button>
+        
+        </div>
+        <div class="Mobile-App__img"><img src="./img/mobile-screens.png" alt=""></div>
+      </div>
     </div>
 
     <script src="./JS/script.js"></script>
