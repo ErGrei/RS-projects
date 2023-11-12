@@ -69,6 +69,10 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: inherit;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .conteiner {
   max-width: 1440px;
   padding: 20px 0px 40px 0px;
@@ -99,10 +103,45 @@ h1, h2, h3, h4, h5, h6 {
 
 .header-menu__item li {
   display: inline-block;
-  padding: 0 18px 0 18px;
+  margin: 0 18px 0 18px;
+  position: relative;
+}
+.header-menu__item li ::after {
+  background-color: #080808;
+  content: "";
+  bottom: -4px;
+  height: 2px;
+  width: 100%;
+  left: 0%;
+  position: absolute;
+  transition: all 0.5s;
+  transform: scaleX(0);
+}
+.header-menu__item li :hover::after,
+.header-menu__item li :focus::after {
+  transform: scaleX(1);
 }
 
-.header-menu__link img {
+.header-menu__link li {
+  display: inline-block;
+  position: relative;
+}
+.header-menu__link li ::after {
+  background-color: #080808;
+  content: "";
+  bottom: -4px;
+  height: 2px;
+  width: 100%;
+  left: 0%;
+  position: absolute;
+  transition: all 0.5s;
+  transform: scaleX(0);
+}
+.header-menu__link li :hover::after,
+.header-menu__link li :focus::after {
+  transform: scaleX(1);
+}
+.header-menu__link li img {
   margin-left: 5px;
 }
 
@@ -121,7 +160,6 @@ h1, h2, h3, h4, h5, h6 {
   width: 530px;
   height: 228px;
   color: var(--text-light, #e1d4c9);
-  /* Desktop/Heading/heading-1 */
   font-size: 72px;
   font-weight: 600;
   line-height: 105%;
@@ -130,7 +168,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 .enjoy-title span {
   color: var(--text-accent, #b0907a);
-  /* Desktop/Heading/heading-1.accent */
   font-size: 72px;
   font-style: italic;
   font-weight: 600;
@@ -143,7 +180,6 @@ h1, h2, h3, h4, h5, h6 {
   padding: 40px 0 40px 0;
   color: var(--text-light, #e1d4c9);
   font-feature-settings: "clig" off, "liga" off;
-  /* Desktop/Body/medium */
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -151,23 +187,38 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .enjoy-link__menu {
-  width: 200px;
-  padding: 20px 78px;
+  max-width: 200px;
   justify-content: center;
   align-items: center;
   border-radius: 100px;
   background: var(--background-body, #e1d4c9);
   color: var(--text-dark, #403f3d);
   text-align: center;
-  /* Desktop/Action/link & button */
   font-size: 16px;
-  font-style: normal;
   font-weight: 600;
   line-height: 150%; /* 24px */
   margin-top: 72px;
+  transition: all 1s;
 }
-.enjoy-link__menu a {
-  color: var(--text-dark, #403f3d);
+.enjoy-link__menu ::before {
+  content: "";
+  background: url("../img/coffee-cup.svg");
+  background-position: center center;
+}
+
+.enjoy-link__menu_hover {
+  transition: all 1s;
+  max-width: 200px;
+  padding: 20px 0;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  margin: 0 auto;
+}
+.enjoy-link__menu_hover ::before {
+  content: "";
+  background: url("../img/coffee-cup.svg");
+  background-position: center center;
 }
 
 .Favourites-Coffee {
@@ -324,6 +375,11 @@ h1, h2, h3, h4, h5, h6 {
   gap: 40px;
   align-self: stretch;
   flex-wrap: wrap;
+  transition: 1s;
+}
+.about-img :hover {
+  background-size: 100%;
+  transition: 1s;
 }
 
 .about-img__one {
@@ -335,6 +391,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 40px 0 40px 0;
   background-size: 110%;
   background-position: center center;
+  transition: 1s;
 }
 
 .about-img__two {
@@ -346,6 +403,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 40px;
   background-size: 110%;
   background-position: center center;
+  transition: 1s;
 }
 
 .about-img__three {
@@ -357,6 +415,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 40px 0 40px 0;
   background-size: 110%;
   background-position: center center;
+  transition: 1s;
 }
 
 .about-img__four {
@@ -369,6 +428,7 @@ h1, h2, h3, h4, h5, h6 {
   align-self: flex-start;
   background-size: 110%;
   background-position: center center;
+  transition: 1s;
 }
 
 .Mobile-App {
@@ -410,81 +470,269 @@ h1, h2, h3, h4, h5, h6 {
   font-style: normal;
   font-weight: 400;
   line-height: 150%; /* 24px */
-  padding: 36px 0 36px 0;
+  padding: 41px 0 38px 0;
+}
+
+.Mobile-App__wrape {
+  display: flex;
 }
 
 .Mobile-App__btn_apple {
   display: flex;
-  padding: 12px 20px 12px 20px;
   width: 200px;
-  height: 64px;
+  padding: 12px 20px;
   align-items: center;
   border-radius: 100px;
-  border: 1px solid var(--border-dark, #665f55);
-  background-color: #e1d4c9;
+  border: 1px solid #665f55;
+  transition: all 1.5s;
 }
-.Mobile-App__btn_apple p {
-  padding: 0 0 0 8px;
-  margin: 0;
-  color: var(--text-dark, #403F3D);
-  text-align: center;
-  font-feature-settings: "clig" off, "liga" off;
-  /* Desktop/Body/caption */
-  font-family: Inter;
+
+.img-apple {
+  background-image: url("../img/icon.svg");
+  width: 36px;
+  height: 36px;
+  transition: all 1.5s;
+}
+
+.text-apple li {
+  display: inline-block;
   font-size: 10px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 140%; /* 14px */
+  color: var(--text-dark, #403f3d);
+  margin: 3px 0 0 8px;
+  transition: all 1.5s;
 }
-.Mobile-App__btn_apple h3 {
-  padding: 0 0 0 8px;
-  margin: 0;
-  color: var(--text-dark, #403F3D);
-  font-feature-settings: "clig" off, "liga" off;
-  /* Desktop/Action/link & button */
-  font-family: Inter;
+.text-apple span {
+  display: block;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
   line-height: 150%; /* 24px */
+  color: var(--text-dark, #403f3d);
+  padding-top: 5px;
+  transition: all 1.5s;
 }
-.Mobile-App__btn_apple :hover {
+
+.Mobile-App__wrape_apple {
+  width: 200px;
+  cursor: pointer;
+}
+.Mobile-App__wrape_apple :hover {
+  transition: all 1.5s;
+  background-color: #665f55;
+  color: #e1d4c9;
+}
+.Mobile-App__wrape_apple :hover .img-apple {
+  background: url("../img/icon apple.svg") no-repeat;
+  transition: all 1.5s;
+}
+.Mobile-App__wrape_apple :hover .text-apple {
+  background: none;
+  color: #e1d4c9;
+  transition: all 1.5s;
+}
+.Mobile-App__wrape_apple :hover li {
+  background: none;
+  color: #e1d4c9;
+  transition: all 1.5s;
+}
+.Mobile-App__wrape_apple :hover span {
+  background: none;
+  color: #e1d4c9;
+  transition: all 1.5s;
+}
+
+.Mobile-App__btn_google {
   display: flex;
-  padding: 12px 20px 12px 20px;
   width: 200px;
-  height: 64px;
+  padding: 12px 20px;
   align-items: center;
   border-radius: 100px;
-  border: 1px solid var(--border-dark, #665f55);
-  background-color: #130901;
+  border: 1px solid #665f55;
+  transition: all 1.5s;
 }
-.Mobile-App__btn_apple :hover p {
-  padding: 0 0 0 8px;
-  margin: 0;
-  color: var(--text-dark, #403F3D);
-  text-align: center;
-  font-feature-settings: "clig" off, "liga" off;
-  /* Desktop/Body/caption */
-  font-family: Inter;
+
+.img-google {
+  transition: all 1.5s;
+  background-image: url("../img/icon google black.svg");
+  width: 36px;
+  height: 36px;
+}
+
+.text-google li {
+  display: inline-block;
   font-size: 10px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 140%; /* 14px */
+  color: var(--text-dark, #403f3d);
+  margin: 3px 0 0 8px;
+  transition: all 1.5s;
 }
-.Mobile-App__btn_apple :hover h3 {
-  padding: 0 0 0 8px;
-  margin: 0;
-  color: var(--text-dark, #403F3D);
-  font-feature-settings: "clig" off, "liga" off;
-  /* Desktop/Action/link & button */
-  font-family: Inter;
+.text-google span {
+  display: block;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
   line-height: 150%; /* 24px */
+  color: var(--text-dark, #403f3d);
+  padding-top: 5px;
+  transition: all 1.5s;
+}
+
+.Mobile-App__wrape_google {
+  width: 200px;
+  padding-left: 20px;
+  cursor: pointer;
+  transition: all 1.5s;
+}
+.Mobile-App__wrape_google :hover {
+  transition: all 1.5s;
+  background-color: #665f55;
+  color: #e1d4c9;
+}
+.Mobile-App__wrape_google :hover .img-google {
+  background: url("../img/icon google.svg") no-repeat;
+  transition: all 1.5s;
+}
+.Mobile-App__wrape_google :hover .text-google {
+  background: none;
+  color: #e1d4c9;
+  transition: all 1.5s;
+}
+.Mobile-App__wrape_google :hover li {
+  background: none;
+  color: #e1d4c9;
+  transition: all 1.5s;
+}
+.Mobile-App__wrape_google :hover span {
+  background: none;
+  color: #e1d4c9;
+  transition: all 1.5s;
 }
 
 .Mobile-App__img {
   width: 630px;
   height: 630px;
+}
+
+.footer-contener {
+  border-radius: 40px;
+  background: var(--background-container, #665f55);
+  display: flex;
+  max-width: 1360px;
+  padding: 100px;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  align-self: stretch;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.footer-content__text {
+  width: 530px;
+  padding-bottom: 40px;
+}
+.footer-content__text h2 {
+  color: var(--text-light, #e1d4c9);
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 125%; /* 75px */
+}
+.footer-content__text span {
+  color: var(--text-accent, #b0907a);
+  font-size: 60px;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 125%;
+}
+
+.footer-link {
+  width: 530px;
+}
+.footer-link h3 {
+  margin: 0 0 40px 0;
+  color: var(--text-light, #e1d4c9);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 125%; /* 30px */
+}
+.footer-link li {
+  color: var(--text-light, #e1d4c9);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%; /* 24px */
+  padding-left: 28px;
+}
+
+.footer-link__adress {
+  background: url("../img/pin-alt.svg") no-repeat;
+}
+
+.footer-link__phone {
+  margin: 16px 0 16px 0;
+  background: url("../img/phone.svg") no-repeat;
+}
+
+.footer-link__working_hours {
+  background: url("../img/clock.svg") no-repeat;
+}
+
+.footer-content__sohil {
+  display: flex;
+}
+
+.twitter-icon {
+  transition: 1.5s;
+  width: 60px;
+  height: 60px;
+  border-radius: 100px;
+  border: 1px solid var(--border-light, #c1b6ad);
+  display: flex;
+  background: url("../img/twitter.svg") no-repeat;
+  background-position: center center;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+
+.twitter :hover {
+  border: 1px solid var(--border-light, #c1b6ad);
+  background: url("../img/iconizer-twitter.svg") no-repeat;
+  background-color: #e1d4c9;
+  background-position: center center;
+}
+
+.instagram-icon {
+  transition: 1.5s;
+  width: 60px;
+  height: 60px;
+  border-radius: 100px;
+  border: 1px solid var(--border-light, #c1b6ad);
+  background: url("../img/instagram.svg") no-repeat;
+  background-position: center center;
+  margin: 0 12px 0 12px;
+  cursor: pointer;
+}
+
+.instagram :hover {
+  border: 1px solid var(--border-light, #c1b6ad);
+  background: url("../img/instagram-black.svg") no-repeat;
+  background-color: #e1d4c9;
+  background-position: center center;
+}
+
+.facebook-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 100px;
+  border: 1px solid #c1b6ad;
+  background: url("../img/facebook.svg") no-repeat;
+  background-position: center center;
+  cursor: pointer;
+  transition: 1.5s;
+}
+
+.facebook :hover {
+  border: 1px solid var(--border-light, #c1b6ad);
+  background: url("../img/iconizer-facebook.svg") no-repeat;
+  background-color: #e1d4c9;
+  background-position: center center;
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,172 @@
+*{padding: 0;margin: 0;border: 0;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+.conteiner {
+    max-width: 1440px;
+    padding: 20px 0px 40px 0px;
+    align-items: center;
+    gap: 100px;
+    background: var(--background-body, #e1d4c9);
+    margin: 0 auto;
+    font-family: "Inter", sans-serif;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1360px;
+    align-items: center;
+    align-self: stretch;
+    margin: 0 auto;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    margin-bottom: 20px;
+    a {
+      color: #403f3d;
+    }
+  }
+  
+  .header-menu__item {
+    li {
+      display: inline-block;
+      padding: 0 18px 0 18px;
+    }
+  }
+  .header-menu__link {
+    img {
+      margin-left: 5px;
+    }
+  }
+
+
+
+
+  .footer-contener {
+    border-radius: 40px;
+    background: var(--background-container, #665f55);
+    display: flex;
+    max-width: 1360px;
+    padding: 100px;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    align-self: stretch;
+  
+    margin: 0 auto;
+    margin-top: 100px;
+  }
+  .footer-content__text {
+    width: 530px;
+    padding-bottom: 40px;
+    h2 {
+      color: var(--text-light, #e1d4c9);
+      font-size: 60px;
+      font-weight: 600;
+      line-height: 125%; /* 75px */
+    }
+    span {
+      color: var(--text-accent, #b0907a);
+      font-size: 60px;
+      font-style: italic;
+      font-weight: 600;
+      line-height: 125%;
+    }
+  }
+  .footer-link {
+    width: 530px;
+    h3 {
+      margin: 0 0 40px 0;
+      color: var(--text-light, #e1d4c9);
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 125%; /* 30px */
+    }
+    li {
+      color: var(--text-light, #e1d4c9);
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 150%; /* 24px */
+      padding-left: 28px;
+    }
+  }
+  .footer-link__adress {
+    background: url("../img/pin-alt.svg") no-repeat;
+  }
+  .footer-link__phone {
+    margin: 16px 0 16px 0;
+    background: url("../img/phone.svg") no-repeat;
+  }
+  .footer-link__working_hours {
+    background: url("../img/clock.svg") no-repeat;
+  }
+  .footer-content__sohil {
+    display: flex;
+  }
+  .twitter-icon {
+    transition: 1.5s;
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    border: 1px solid var(--border-light, #c1b6ad);
+  
+   // background: url("../img/twitter.svg") no-repeat;
+   // background-position: center center;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+  }
+  .twitter {
+    :hover {
+      border: 1px solid var(--border-light, #c1b6ad);
+      //background: url("../img/coffee-cup.svg") no-repeat;
+      background-color: #e1d4c9;
+     // background-position: center center;
+    
+    }
+  }
+  .instagram-icon {
+    transition: 1.5s;
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    border: 1px solid var(--border-light, #c1b6ad);
+    background: url("../img/instagram.svg") no-repeat;
+    background-position: center center;
+    margin: 0 12px 0 12px;
+    cursor: pointer;
+  }
+  .instagram {
+    :hover {
+      border: 1px solid var(--border-light, #c1b6ad);
+      background: url("../img/instagram-black.svg") no-repeat;
+      background-color: #e1d4c9;
+      background-position: center center;
+    }
+  }
+  .facebook-icon{
+    
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    border: 1px solid var(--border-light, #c1b6ad);
+    background: url("../img/facebook.svg") no-repeat;
+    background-position: center center;
+    cursor: pointer;
+    transition: 1.5s;
+  }
+  .facebook {
+    :hover {
+  
+      border: 1px solid var(--border-light, #c1b6ad);
+      background: url("../img/facebook-black.svg") no-repeat;
+      background-size: 24px;
+      background-color: #e1d4c9;
+      background-position: center center;
+  }
+  }
