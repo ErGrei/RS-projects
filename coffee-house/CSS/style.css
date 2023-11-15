@@ -484,14 +484,14 @@ html {
   align-items: center;
   border-radius: 100px;
   border: 1px solid #665f55;
-  transition: all 1.5s;
+  transition: all 1s;
 }
 
 .img-apple {
   background-image: url("../img/icon.svg");
   width: 36px;
   height: 36px;
-  transition: all 1.5s;
+  transition: all 1s;
 }
 
 .text-apple li {
@@ -499,7 +499,7 @@ html {
   font-size: 10px;
   color: var(--text-dark, #403f3d);
   margin: 3px 0 0 8px;
-  transition: all 1.5s;
+  transition: all 1s;
 }
 .text-apple span {
   display: block;
@@ -509,7 +509,7 @@ html {
   line-height: 150%; /* 24px */
   color: var(--text-dark, #403f3d);
   padding-top: 5px;
-  transition: all 1.5s;
+  transition: all 1s;
 }
 
 .Mobile-App__wrape_apple {
@@ -517,28 +517,28 @@ html {
   cursor: pointer;
 }
 .Mobile-App__wrape_apple :hover {
-  transition: all 1.5s;
+  transition: all 1s;
   background-color: #665f55;
   color: #e1d4c9;
 }
 .Mobile-App__wrape_apple :hover .img-apple {
   background: url("../img/icon apple.svg") no-repeat;
-  transition: all 1.5s;
+  transition: all 1s;
 }
 .Mobile-App__wrape_apple :hover .text-apple {
   background: none;
   color: #e1d4c9;
-  transition: all 1.5s;
+  transition: all 1s;
 }
 .Mobile-App__wrape_apple :hover li {
   background: none;
   color: #e1d4c9;
-  transition: all 1.5s;
+  transition: all 1;
 }
 .Mobile-App__wrape_apple :hover span {
   background: none;
   color: #e1d4c9;
-  transition: all 1.5s;
+  transition: all 1s;
 }
 
 .Mobile-App__btn_google {
@@ -548,7 +548,7 @@ html {
   align-items: center;
   border-radius: 100px;
   border: 1px solid #665f55;
-  transition: all 1.5s;
+  transition: all 1s;
 }
 
 .img-google {
@@ -563,7 +563,7 @@ html {
   font-size: 10px;
   color: var(--text-dark, #403f3d);
   margin: 3px 0 0 8px;
-  transition: all 1.5s;
+  transition: all 1s;
 }
 .text-google span {
   display: block;
@@ -573,38 +573,38 @@ html {
   line-height: 150%; /* 24px */
   color: var(--text-dark, #403f3d);
   padding-top: 5px;
-  transition: all 1.5s;
+  transition: all 1s;
 }
 
 .Mobile-App__wrape_google {
   width: 200px;
   padding-left: 20px;
   cursor: pointer;
-  transition: all 1.5s;
+  transition: all 1s;
 }
 .Mobile-App__wrape_google :hover {
-  transition: all 1.5s;
+  transition: all 1s;
   background-color: #665f55;
   color: #e1d4c9;
 }
 .Mobile-App__wrape_google :hover .img-google {
   background: url("../img/icon google.svg") no-repeat;
-  transition: all 1.5s;
+  transition: all 1s;
 }
 .Mobile-App__wrape_google :hover .text-google {
   background: none;
   color: #e1d4c9;
-  transition: all 1.5s;
+  transition: all 1s;
 }
 .Mobile-App__wrape_google :hover li {
   background: none;
   color: #e1d4c9;
-  transition: all 1.5s;
+  transition: all 1s;
 }
 .Mobile-App__wrape_google :hover span {
   background: none;
   color: #e1d4c9;
-  transition: all 1.5s;
+  transition: all 1s;
 }
 
 .Mobile-App__img {
