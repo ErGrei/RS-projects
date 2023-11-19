@@ -4,51 +4,19 @@
   border: 0;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
-:focus, :active {
+a:focus,
+a:active {
   outline: none;
 }
 
-a:focus, a:active {
-  outline: none;
-}
-
-nav, footer, header, aside {
-  display: block;
-}
-
-html, body {
-  height: 100%;
-  width: 100%;
-  font-size: 100%;
-  line-height: 1;
-  font-size: 14px;
-  -ms-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
-
-input, button, textarea {
-  font-family: inherit;
-}
-
-input::-ms-clear {
-  display: none;
-}
-
-button {
-  cursor: pointer;
-}
-
-button::-moz-focus-inner {
-  padding: 0;
-  border: 0;
-}
-
-a, a:visited {
+a,
+a:visited {
   text-decoration: none;
 }
 
@@ -58,15 +26,6 @@ a:hover {
 
 ul li {
   list-style: none;
-}
-
-img {
-  vertical-align: top;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-size: inherit;
-  font-weight: inherit;
 }
 
 html {
@@ -81,6 +40,7 @@ html {
   background: var(--background-body, #e1d4c9);
   margin: 0 auto;
   font-family: "Inter", sans-serif;
+  transition: all 1s;
 }
 
 .header {
@@ -114,7 +74,7 @@ html {
   width: 100%;
   left: 0%;
   position: absolute;
-  transition: all 0.5s;
+  transition: all 1s;
   transform: scaleX(0);
 }
 .header-menu__item li :hover::after,
@@ -134,7 +94,7 @@ html {
   width: 100%;
   left: 0%;
   position: absolute;
-  transition: all 0.5s;
+  transition: all 1s;
   transform: scaleX(0);
 }
 .header-menu__link li :hover::after,
@@ -177,7 +137,7 @@ html {
 }
 
 .enjoy-text {
-  transition: 1s;
+  transition: 0.5s;
   width: 530px;
   height: 72px;
   padding: 40px 0 40px 0;
@@ -190,7 +150,6 @@ html {
 }
 
 .enjoy-link__menu {
-  transition: 1s;
   max-width: 200px;
   justify-content: center;
   align-items: center;
@@ -202,6 +161,9 @@ html {
   font-weight: 600;
   line-height: 150%; /* 24px */
   margin-top: 72px;
+  transition: all 1s;
+}
+.enjoy-link__menu span {
   transition: 1s;
 }
 .enjoy-link__menu :hover img {
@@ -214,7 +176,7 @@ html {
 
 .enjoy-menu__img {
   padding-left: 60px;
-  position: fixed;
+  position: absolute;
   visibility: hidden;
 }
 
@@ -322,14 +284,14 @@ html {
   margin-top: 405px;
   background: url("../img/arrow-left.svg") no-repeat;
   background-position: center center;
-  transition: 1s;
+  transition: all 1s;
 }
 
 .Favourites-Coffee_hover_left {
-  transition: 1s;
+  transition: all 1s;
 }
 .Favourites-Coffee_hover_left :hover {
-  transition: 1s;
+  transition: all 1s;
   background: url("../img/iconizer-arrow-left .svg") no-repeat;
   background-position: center center;
   background-color: #665f55;
@@ -348,11 +310,11 @@ html {
   margin-top: 405px;
   background: url("../img/arrow-right.svg") no-repeat;
   background-position: center center;
-  transition: 1s;
+  transition: all 1s;
 }
 
 .Favourites-Coffee_hover_right :hover {
-  transition: 1s;
+  transition: all 1s;
   background: url("../img/wite_arrow-right.svg") no-repeat;
   background-position: center center;
   background-color: #665f55;
@@ -409,11 +371,11 @@ html {
   gap: 40px;
   align-self: stretch;
   flex-wrap: wrap;
-  transition: 1s;
+  transition: all 1s;
 }
 .about-img :hover {
   background-size: 100%;
-  transition: 1s;
+  transition: all 1s;
 }
 
 .about-img__one {
@@ -425,7 +387,7 @@ html {
   margin: 40px 0 40px 0;
   background-size: 110%;
   background-position: center center;
-  transition: 1s;
+  transition: all 1s;
 }
 
 .about-img__two {
@@ -437,7 +399,7 @@ html {
   padding: 40px;
   background-size: 110%;
   background-position: center center;
-  transition: 1s;
+  transition: all 1s;
 }
 
 .about-img__three {
@@ -449,7 +411,7 @@ html {
   margin: 40px 0 40px 0;
   background-size: 110%;
   background-position: center center;
-  transition: 1s;
+  transition: all 1s;
 }
 
 .about-img__four {
@@ -462,7 +424,7 @@ html {
   align-self: flex-start;
   background-size: 110%;
   background-position: center center;
-  transition: 1s;
+  transition: all 1s;
 }
 
 .Mobile-App {
@@ -567,7 +529,7 @@ html {
 .Mobile-App__wrape_apple :hover li {
   background: none;
   color: #e1d4c9;
-  transition: all 1;
+  transition: all 1s;
 }
 .Mobile-App__wrape_apple :hover span {
   background: none;
@@ -586,7 +548,7 @@ html {
 }
 
 .img-google {
-  transition: all 1.5s;
+  transition: all 1s;
   background-image: url("../img/icon google black.svg");
   width: 36px;
   height: 36px;
@@ -711,7 +673,7 @@ html {
   width: 100%;
   left: 0%;
   position: absolute;
-  transition: all 0.5s;
+  transition: all 1s;
   transform: scaleX(0);
 }
 .footer-link__adress a :hover::after,
@@ -735,7 +697,7 @@ html {
   width: 100%;
   left: 0%;
   position: absolute;
-  transition: all 0.5s;
+  transition: all 1s;
   transform: scaleX(0);
 }
 .footer-link__phone a :hover::after,
@@ -752,7 +714,7 @@ html {
 }
 
 .twitter-icon {
-  transition: 1.5s;
+  transition: all 1s;
   width: 60px;
   height: 60px;
   border-radius: 100px;
@@ -773,7 +735,7 @@ html {
 }
 
 .instagram-icon {
-  transition: 1.5s;
+  transition: all 1s;
   width: 60px;
   height: 60px;
   border-radius: 100px;
@@ -799,7 +761,7 @@ html {
   background: url("../img/facebook.svg") no-repeat;
   background-position: center center;
   cursor: pointer;
-  transition: 1.5s;
+  transition: all 1s;
 }
 
 .facebook :hover {
