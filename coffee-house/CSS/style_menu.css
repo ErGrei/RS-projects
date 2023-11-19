@@ -286,8 +286,8 @@ html {
   transform: scale(1.1);
 }
 
-.zoom {
-  transform: scale(1.1);
+.zoom img {
+  transform: scale(1);
 }
 
 .menu-text {
