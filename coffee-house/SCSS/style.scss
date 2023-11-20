@@ -26,7 +26,7 @@ ul li {
 }
 html {
   scroll-behavior: smooth;
- // background: var(--background-body, #e1d4c9);
+  background: var(--background-body, #e1d4c9);
 }
 .conteiner {
   max-width: 1440px;
@@ -50,10 +50,13 @@ html {
   font-style: normal;
   font-weight: 600;
   line-height: 150%;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   a {
     color: #403f3d;
   }
+}
+.header-logo{
+  padding-top: 8px;
 }
 
 .header-menu__item {
@@ -340,6 +343,7 @@ span {
 .About {
   max-width: 1365px;
   margin: 0 auto;
+  margin-bottom: 63px;
 }
 .About-text {
   color: var(--text-dark, #403f3d);
@@ -422,7 +426,7 @@ span {
 }
 .Mobile-App {
   display: flex;
-  max-width: 1360px;
+  max-width: 1336px;
   justify-content: center;
   align-items: center;
 }
@@ -484,7 +488,7 @@ span {
     display: inline-block;
     font-size: 10px;
     color: var(--text-dark, #403f3d);
-    margin: 3px 0 0 8px;
+    margin: 0 0 0 8px;
     transition: all 1s;
   }
   span {
@@ -550,7 +554,7 @@ span {
     display: inline-block;
     font-size: 10px;
     color: var(--text-dark, #403f3d);
-    margin: 3px 0 0 8px;
+    margin: 0 0 0 8px;
     transition: all 1s;
   }
   span {
@@ -599,6 +603,7 @@ span {
 .Mobile-App__img {
   width: 630px;
   height: 630px;
+  padding-left:  100px;
 }
 
 .footer-contener {
@@ -611,9 +616,8 @@ span {
   align-items: center;
   gap: 100px;
   align-self: stretch;
-
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 102px;
 }
 .footer-content__text {
   width: 530px;
@@ -634,18 +638,21 @@ span {
 }
 .footer-link {
   width: 530px;
+  display: grid;
+  grid-row: auto;
+  gap: 20px;
 
-  a {
-  }
+
   h3 {
-    margin: 0 0 40px 0;
+    display: block;
+    margin:  -6px 0 21px 0;
     color: var(--text-light, #e1d4c9);
     font-size: 24px;
     font-weight: 600;
     line-height: 125%; /* 30px */
   }
   li {
-    color: var(--text-light, #e1d4c9);
+        color: var(--text-light, #e1d4c9);
     font-size: 16px;
     font-weight: 600;
     line-height: 150%; /* 24px */
@@ -654,6 +661,7 @@ span {
 }
 .footer-link__adress {
   background: url("../img/pin-alt.svg") no-repeat;
+
   a {
     display: inline-block;
     position: relative;
@@ -665,7 +673,7 @@ span {
       width: 100%;
       left: 0%;
       position: absolute;
-      transition: all 1s;
+      transition: all 0.5s;
       transform: scaleX(0);
     }
     :hover::after,
@@ -675,11 +683,13 @@ span {
   }
 }
 .footer-link__phone {
-  margin: 16px 0 16px 0;
+ // margin: 15px 0 15px 0;
   background: url("../img/phone.svg") no-repeat;
+ 
   a {
     display: inline-block;
     position: relative;
+    //margin: 10px 0 10px 0;
     ::after {
       background-color: #e1d4c9;
       content: "";
@@ -688,7 +698,7 @@ span {
       width: 100%;
       left: 0%;
       position: absolute;
-      transition: all 1s;
+      transition: all 0.5s;
       transform: scaleX(0);
     }
     :hover::after,
@@ -699,12 +709,13 @@ span {
 }
 .footer-link__working_hours {
   background: url("../img/clock.svg") no-repeat;
+ 
 }
 .footer-content__sohil {
   display: flex;
 }
 .twitter-icon {
-  transition: all 1s;
+  transition: 1.5s;
   width: 60px;
   height: 60px;
   border-radius: 100px;
@@ -725,7 +736,7 @@ span {
   }
 }
 .instagram-icon {
-  transition: all 1s;
+  transition: 1.5s;
   width: 60px;
   height: 60px;
   border-radius: 100px;
@@ -751,7 +762,7 @@ span {
   background: url("../img/facebook.svg") no-repeat;
   background-position: center center;
   cursor: pointer;
-  transition: all 1s;
+  transition: 1.5s;
 }
 .facebook {
   :hover {

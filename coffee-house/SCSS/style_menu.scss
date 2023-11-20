@@ -90,7 +90,7 @@ html {
     ::after {
       background-color: #080808;
       content: "";
-      bottom: -4px;
+      bottom: -2px;
       height: 2px;
       width: 100%;
       left: 0%;
@@ -356,17 +356,21 @@ height: 310px;
 }
 .footer-link {
   width: 530px;
+  display: grid;
+  grid-row: auto;
+  gap: 20px;
 
 
   h3 {
-    margin: 0px 0 40px 0;
+    display: block;
+    margin:  -6px 0 21px 0;
     color: var(--text-light, #e1d4c9);
     font-size: 24px;
     font-weight: 600;
     line-height: 125%; /* 30px */
   }
   li {
-    color: var(--text-light, #e1d4c9);
+        color: var(--text-light, #e1d4c9);
     font-size: 16px;
     font-weight: 600;
     line-height: 150%; /* 24px */
@@ -375,6 +379,7 @@ height: 310px;
 }
 .footer-link__adress {
   background: url("../img/pin-alt.svg") no-repeat;
+
   a {
     display: inline-block;
     position: relative;
@@ -402,7 +407,7 @@ height: 310px;
   a {
     display: inline-block;
     position: relative;
-    margin: 10px 0 10px 0;
+    //margin: 10px 0 10px 0;
     ::after {
       background-color: #e1d4c9;
       content: "";
