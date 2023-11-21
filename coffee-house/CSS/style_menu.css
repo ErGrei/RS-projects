@@ -40,7 +40,7 @@ html {
 
 .conteiner {
   max-width: 1440px;
-  padding: 20px 0px 40px 0px;
+  padding: 11px 0px 40px 0px;
   align-items: center;
   gap: 100px;
   background: var(--background-body, #e1d4c9);
@@ -113,14 +113,14 @@ html {
   max-width: 1360px;
   margin: 0 auto;
 }
-.menu-title h2 {
+.menu-title h1 {
   color: var(--text-dark, #403f3d);
   text-align: center;
   font-size: 60px;
   line-height: 125%; /* 75px */
   padding-bottom: 40px;
 }
-.menu-title h2 span {
+.menu-title h1 span {
   color: var(--text-accent, #b0907a);
   font-size: 60px;
   font-style: italic;

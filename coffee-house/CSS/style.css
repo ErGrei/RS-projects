@@ -35,7 +35,7 @@ html {
 
 .conteiner {
   max-width: 1440px;
-  padding: 20px 0px 40px 0px;
+  padding: 11px 0px 40px 0px;
   align-items: center;
   gap: 100px;
   background: var(--background-body, #e1d4c9);
@@ -56,7 +56,7 @@ html {
   font-style: normal;
   font-weight: 600;
   line-height: 150%;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
 }
 .header a {
   color: #403f3d;
@@ -626,7 +626,7 @@ html {
   gap: 100px;
   align-self: stretch;
   margin: 0 auto;
-  margin-top: 102px;
+  margin-top: 98px;
 }
 
 .footer-content__text {
