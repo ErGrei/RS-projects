@@ -105,22 +105,31 @@ html {
     }
   }
 }
+.heder-btn__hover {
+  width: 44px;
+  height: 44px;
+  border-radius: 100px;
+  border: 1px solid var(--border-dark, #665f55);
+  display: none;
+  background: url(../img/Menu_img/btn/button-icon-burger.png) no-repeat;
+  background-position: center center;
+}
 
 .Enjoy {
   transition: 4s;
   max-width: 1360px;
-  height: 644px;
+  max-height: 644px;
   padding: 100px;
   border-radius: 40px;
-  background: url("../img/Enjoy.png"), lightgray no-repeat;
-  background-size: 100%;
+  background: url("../img/Enjoy.png") no-repeat, lightgray no-repeat;
+  background-size: cover;
   background-position: center center;
   margin: 0 auto;
   transition: all 1s;
 }
 .enjoy-title {
-  width: 530px;
-  height: 228px;
+  max-width: 530px;
+  max-height: 228px;
   color: var(--text-light, #e1d4c9);
   font-size: 72px;
   font-weight: 600;
@@ -137,8 +146,8 @@ html {
 }
 .enjoy-text {
   transition: 0.5s;
-  width: 530px;
-  height: 72px;
+  max-width: 530px;
+  max-height: 72px;
   padding: 40px 0 40px 0;
   color: var(--text-light, #e1d4c9);
   font-feature-settings: "clig" off, "liga" off;
@@ -284,6 +293,7 @@ span {
   background: url("../img/arrow-left.svg") no-repeat;
   background-position: center center;
   transition: all 1s;
+  cursor: pointer;
 }
 .Favourites-Coffee_hover_left {
   transition: all 1s;
@@ -309,6 +319,7 @@ span {
   background: url("../img/arrow-right.svg") no-repeat;
   background-position: center center;
   transition: all 1s;
+  cursor: pointer;
  
 }
 
@@ -426,6 +437,7 @@ span {
 }
 .Mobile-App {
   display: flex;
+  flex-wrap: wrap;
   max-width: 1336px;
   justify-content: center;
   align-items: center;
@@ -466,6 +478,7 @@ span {
 }
 .Mobile-App__wrape {
   display: flex;
+ 
 }
 .Mobile-App__btn_apple {
   display: flex;
@@ -601,9 +614,15 @@ span {
   }
 }
 .Mobile-App__img {
-  width: 630px;
-  height: 630px;
+  max-width: 630px;
+  min-height: 630px;
   padding-left:  100px;
+ 
+  img{
+    width: 100%; /* Ширина изображений */
+    
+    object-fit: cover; /* Вписываем фотографию в область */
+  }
 }
 
 .footer-contener {
@@ -620,7 +639,7 @@ span {
   margin-top: 98px;
 }
 .footer-content__text {
-  width: 530px;
+  max-width: 530px;
   padding-bottom: 40px;
   h2 {
     color: var(--text-light, #e1d4c9);
@@ -772,3 +791,4 @@ span {
     background-position: center center;
   }
 }
+@import "media";

@@ -331,6 +331,7 @@ html {
   }
 }
 .btn-menu_hover {
+  display: none;
  margin-top: 20px;
   width: 60px;
   height: 60px;
@@ -355,7 +356,7 @@ html {
   margin-top: 102px;
 }
 .footer-content__text {
-  width: 530px;
+  max-width: 530px;
   padding-bottom: 40px;
   h2 {
     color: var(--text-light, #e1d4c9);
@@ -372,7 +373,7 @@ html {
   }
 }
 .footer-link {
-  width: 530px;
+  max-width: 530px;
   display: grid;
   grid-row: auto;
   gap: 20px;

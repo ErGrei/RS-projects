@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -110,22 +111,32 @@ html {
   margin-left: 5px;
 }
 
+.heder-btn__hover {
+  width: 44px;
+  height: 44px;
+  border-radius: 100px;
+  border: 1px solid var(--border-dark, #665f55);
+  display: none;
+  background: url(../img/Menu_img/btn/button-icon-burger.png) no-repeat;
+  background-position: center center;
+}
+
 .Enjoy {
   transition: 4s;
   max-width: 1360px;
-  height: 644px;
+  max-height: 644px;
   padding: 100px;
   border-radius: 40px;
-  background: url("../img/Enjoy.png"), lightgray no-repeat;
-  background-size: 100%;
+  background: url("../img/Enjoy.png") no-repeat, lightgray no-repeat;
+  background-size: cover;
   background-position: center center;
   margin: 0 auto;
   transition: all 1s;
 }
 
 .enjoy-title {
-  width: 530px;
-  height: 228px;
+  max-width: 530px;
+  max-height: 228px;
   color: var(--text-light, #e1d4c9);
   font-size: 72px;
   font-weight: 600;
@@ -143,8 +154,8 @@ html {
 
 .enjoy-text {
   transition: 0.5s;
-  width: 530px;
-  height: 72px;
+  max-width: 530px;
+  max-height: 72px;
   padding: 40px 0 40px 0;
   color: var(--text-light, #e1d4c9);
   font-feature-settings: "clig" off, "liga" off;
@@ -290,6 +301,7 @@ html {
   background: url("../img/arrow-left.svg") no-repeat;
   background-position: center center;
   transition: all 1s;
+  cursor: pointer;
 }
 
 .Favourites-Coffee_hover_left {
@@ -316,6 +328,7 @@ html {
   background: url("../img/arrow-right.svg") no-repeat;
   background-position: center center;
   transition: all 1s;
+  cursor: pointer;
 }
 
 .Favourites-Coffee_hover_right :hover {
@@ -435,6 +448,7 @@ html {
 
 .Mobile-App {
   display: flex;
+  flex-wrap: wrap;
   max-width: 1336px;
   justify-content: center;
   align-items: center;
@@ -610,9 +624,14 @@ html {
 }
 
 .Mobile-App__img {
-  width: 630px;
-  height: 630px;
+  max-width: 630px;
+  min-height: 630px;
   padding-left: 100px;
+}
+.Mobile-App__img img {
+  width: 100%; /* Ширина изображений */
+  -o-object-fit: cover;
+     object-fit: cover; /* Вписываем фотографию в область */
 }
 
 .footer-contener {
@@ -630,7 +649,7 @@ html {
 }
 
 .footer-content__text {
-  width: 530px;
+  max-width: 530px;
   padding-bottom: 40px;
 }
 .footer-content__text h2 {
@@ -779,4 +798,134 @@ html {
   background: url("../img/iconizer-facebook.svg") no-repeat;
   background-color: #e1d4c9;
   background-position: center center;
+}
+
+@media (max-width: 1390px) {
+  .conteiner {
+    margin: 1px 40px 0 40px;
+  }
+  .contanier-menu {
+    justify-content: center;
+  }
+  .footer-link {
+    width: 350px;
+  }
+  .footer-contener {
+    padding-left: 60px;
+    padding-right: 60px;
+    gap: 30px;
+  }
+  .contanier-menu {
+    max-height: 1125px;
+    overflow: hidden;
+  }
+  .btn-menu_hover {
+    display: block;
+  }
+  .about-img {
+    justify-content: center;
+    gap: 0;
+  }
+  .about-img__two {
+    display: none;
+  }
+  .about-img__three {
+    display: none;
+  }
+  .Enjoy {
+    padding: 100px 60px;
+  }
+  .about-img__one {
+    width: 690px;
+  }
+  .about-img__four {
+    width: 689px;
+  }
+  .Mobile-App__content {
+    max-width: 1000px;
+  }
+  .Mobile-App__img {
+    padding-top: 96px;
+    padding-left: 0;
+  }
+}
+@media (max-width: 1025px) {
+  .footer-contener {
+    flex-wrap: wrap;
+    gap: 107px;
+  }
+  .Favourites-Coffee {
+    padding: 100px 30px;
+  }
+}
+@media (max-width: 930px) {
+  .footer-content {
+    margin-left: -37px;
+  }
+  .footer-link {
+    margin-left: -216px;
+  }
+  .footer-contener {
+    flex-wrap: wrap;
+    gap: 105px;
+  }
+}
+@media (max-width: 782px) {
+  .contanier-menu {
+    margin-bottom: 5px;
+  }
+  .heder-btn__hover {
+    display: block;
+  }
+  .header-menu__link {
+    display: none;
+  }
+  .header-menu__item {
+    display: none;
+  }
+  .enjoy-link__menu img {
+    visibility: visible;
+  }
+  .enjoy-link__menu span {
+    margin-right: 30px;
+  }
+}
+@media (max-width: 739px) {
+  .contanier-menu {
+    max-height: 2218px;
+  }
+}
+@media (max-width: 670px) {
+  .conteiner {
+    margin: 0 16px 0 16px;
+  }
+  .menu-title h1 {
+    font-size: 32px;
+  }
+  .menu-title h1 span {
+    font-size: 32px;
+  }
+  .menu-btn {
+    gap: 9px;
+  }
+  .menu-hover {
+    gap: 8px;
+  }
+  .footer-contener {
+    padding: 60px 16px 60px 16px;
+    gap: 46px;
+    margin-top: 99px;
+  }
+  .footer-content__text h2 {
+    font-size: 32px;
+  }
+  .footer-content__text span {
+    font-size: 32px;
+  }
+  .footer-content {
+    margin-left: 0;
+  }
+  .footer-link {
+    margin-left: 0;
+  }
 }/*# sourceMappingURL=style.css.map */
