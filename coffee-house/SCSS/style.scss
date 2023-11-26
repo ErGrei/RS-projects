@@ -55,7 +55,7 @@ html {
     color: #403f3d;
   }
 }
-.header-logo{
+.header-logo {
   padding-top: 8px;
 }
 
@@ -147,8 +147,7 @@ html {
   font-weight: 400;
   line-height: 150%; /* 24px */
 }
-.enjoy-link__menu { 
- 
+.enjoy-link__menu {
   max-width: 200px;
   //padding: 20px 0;
   justify-content: center;
@@ -160,11 +159,11 @@ html {
   font-size: 16px;
   font-weight: 600;
   line-height: 150%; /* 24px */
-margin-top: 72px;
-transition: all 1s;
-span {
-  transition: 1s;
-}
+  margin-top: 72px;
+  transition: all 1s;
+  span {
+    transition: 1s;
+  }
 
   :hover {
     img {
@@ -173,7 +172,6 @@ span {
   }
   :hover {
     span {
-     
       margin-right: 30px;
       transition: all 1s;
     }
@@ -182,7 +180,7 @@ span {
 .enjoy-menu__img {
   padding-left: 60px;
   position: absolute;
- visibility: hidden;
+  visibility: hidden;
 }
 
 .enjoy-link__menu_hover {
@@ -284,6 +282,7 @@ span {
   background: url("../img/arrow-left.svg") no-repeat;
   background-position: center center;
   transition: all 1s;
+  cursor: pointer;
 }
 .Favourites-Coffee_hover_left {
   transition: all 1s;
@@ -292,7 +291,6 @@ span {
     background: url("../img/iconizer-arrow-left\ .svg") no-repeat;
     background-position: center center;
     background-color: #665f55;
-   
   }
 }
 .Favourites-Coffee__slider_right {
@@ -309,7 +307,7 @@ span {
   background: url("../img/arrow-right.svg") no-repeat;
   background-position: center center;
   transition: all 1s;
- 
+  cursor: pointer;
 }
 
 .Favourites-Coffee_hover_right {
@@ -318,7 +316,6 @@ span {
     background: url("../img/wite_arrow-right.svg") no-repeat;
     background-position: center center;
     background-color: #665f55;
-   
   }
 }
 .Favourites-Coffee__line {
@@ -603,7 +600,7 @@ span {
 .Mobile-App__img {
   width: 630px;
   height: 630px;
-  padding-left:  100px;
+  padding-left: 100px;
 }
 
 .footer-contener {
@@ -642,17 +639,16 @@ span {
   grid-row: auto;
   gap: 20px;
 
-
   h3 {
     display: block;
-    margin:  -6px 0 21px 0;
+    margin: -6px 0 21px 0;
     color: var(--text-light, #e1d4c9);
     font-size: 24px;
     font-weight: 600;
     line-height: 125%; /* 30px */
   }
   li {
-        color: var(--text-light, #e1d4c9);
+    color: var(--text-light, #e1d4c9);
     font-size: 16px;
     font-weight: 600;
     line-height: 150%; /* 24px */
@@ -683,9 +679,9 @@ span {
   }
 }
 .footer-link__phone {
- // margin: 15px 0 15px 0;
+  // margin: 15px 0 15px 0;
   background: url("../img/phone.svg") no-repeat;
- 
+
   a {
     display: inline-block;
     position: relative;
@@ -709,7 +705,6 @@ span {
 }
 .footer-link__working_hours {
   background: url("../img/clock.svg") no-repeat;
- 
 }
 .footer-content__sohil {
   display: flex;

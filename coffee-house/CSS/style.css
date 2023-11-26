@@ -290,6 +290,7 @@ html {
   background: url("../img/arrow-left.svg") no-repeat;
   background-position: center center;
   transition: all 1s;
+  cursor: pointer;
 }
 
 .Favourites-Coffee_hover_left {
@@ -316,6 +317,7 @@ html {
   background: url("../img/arrow-right.svg") no-repeat;
   background-position: center center;
   transition: all 1s;
+  cursor: pointer;
 }
 
 .Favourites-Coffee_hover_right :hover {
