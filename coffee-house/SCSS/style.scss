@@ -205,7 +205,7 @@ span {
   margin: 0 auto;
 }
 .Favourites-Coffee {
-  padding: 100px 43px 100px 45px;
+  padding: 0 43px 100px 45px;
   display: flex;
   margin: 0 auto;
   button {
@@ -220,7 +220,7 @@ span {
   text-align: center;
   //font-feature-settings: 'clig' off, 'liga' off;
   /* Desktop/Heading/heading-2 */
-
+  padding: 100px 0 0 0;
   font-size: 60px;
   font-style: normal;
   font-weight: 600;
@@ -241,6 +241,10 @@ span {
   margin-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
+
+    object-fit: cover; /* Вписываем фотографию в область */
+
+  
 }
 .Favourites-Coffee__name {
   color: var(--text-dark, #403f3d);
@@ -289,7 +293,7 @@ span {
   border-radius: 100px;
   border: 1px solid var(--border-dark, #665f55);
   background-color: #e1d4c9;
-  margin-top: 405px;
+  margin-top: 331px;
   background: url("../img/arrow-left.svg") no-repeat;
   background-position: center center;
   transition: all 1s;
@@ -315,7 +319,7 @@ span {
   border-radius: 100px;
   border: 1px solid var(--border-dark, #665f55);
   background-color: #e1d4c9;
-  margin-top: 405px;
+  margin-top: 331px;
   background: url("../img/arrow-right.svg") no-repeat;
   background-position: center center;
   transition: all 1s;
@@ -400,6 +404,7 @@ span {
   background-size: 110%;
   background-position: center center;
   transition: all 1s;
+  overflow: hidden;
 }
 .about-img__two {
   display: flex;
@@ -434,6 +439,7 @@ span {
   background-size: 110%;
   background-position: center center;
   transition: all 1s;
+  overflow: hidden;
 }
 .Mobile-App {
   display: flex;
@@ -619,7 +625,7 @@ span {
   padding-left:  100px;
  
   img{
-    width: 100%; /* Ширина изображений */
+   
     
     object-fit: cover; /* Вписываем фотографию в область */
   }
@@ -636,7 +642,7 @@ span {
   gap: 100px;
   align-self: stretch;
   margin: 0 auto;
-  margin-top: 98px;
+  margin-top: 94px;
 }
 .footer-content__text {
   max-width: 530px;
