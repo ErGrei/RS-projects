@@ -77,11 +77,7 @@ html {
       transition: all 0.5s;
       transform: scaleX(0);
     }
-    :hover::after,
-    :focus::after {
-      transform: scaleX(1);
     }
-  }
 }
 .header-menu__link {
   li {
@@ -143,21 +139,7 @@ html {
   display: flex;
   justify-content: center;
   gap: 16px;
-
-  :hover {
-    cursor: pointer;
-
-    background: var(--background-container, #665f55);
-    color: var(--text-light, #e1d4c9);
-    .menu-btn_Tea_img {
-      background: var(--background-container, #e1d4c9);
-    }
-    .menu-btn_Dessert_img {
-      background: var(--background-container, #e1d4c9);
-    }
-  }
 }
-
 .menu-btn_coffe {
   display: flex;
   width: 115px;
@@ -172,11 +154,7 @@ html {
   font-style: normal;
   font-weight: 600;
   line-height: 150%; /* 24px */
-  :hover {
-    background: var(--background-container, #e1d4c9);
-    color: var(--text-light, #e1d4c9);
-  }
-}
+ }
 .menu-btn_coffe_img {
   padding-top: 5px;
   width: 30px;
@@ -203,11 +181,7 @@ html {
   font-weight: 600;
   line-height: 150%; /* 24px */
   transition: all 0.8s;
-  :hover {
-    background: var(--background-container, #e1d4c9);
-    color: var(--text-light, #e1d4c9);
-  }
-}
+ }
 .menu-btn_Tea_img {
   padding-top: 5px;
   width: 30px;
@@ -259,8 +233,6 @@ html {
   flex-wrap: wrap;
   gap: 40px;
   margin: 0 auto;
-   :hover {
-  }
 }
 
 .cart-menu {
@@ -271,22 +243,15 @@ html {
   border-radius: 40px;
   border: 1px solid var(--border-light, #c1b6ad);
   margin-bottom: -3px;
-  // overflow: hidden;
 }
 .img {
   display: flex;
   justify-content: center;
-  // position: absolute;
   width: 310px;
   height: 310px;
-  //flex-shrink: 0;
   align-items: center;
-  // margin-left:  -15px;
-  // margin-top:  -15px;
   border-radius: 40px;
-
   overflow: hidden;
-  //text-align: center;
   object-fit: cover;
   img {
     transition: 0.8s;
@@ -411,11 +376,7 @@ html {
       transition: all 0.5s;
       transform: scaleX(0);
     }
-    :hover::after,
-    :focus::after {
-      transform: scaleX(1);
-    }
-  }
+     }
 }
 .footer-link__phone {
  // margin: 15px 0 15px 0;
@@ -436,10 +397,7 @@ html {
       transition: all 0.5s;
       transform: scaleX(0);
     }
-    :hover::after,
-    :focus::after {
-      transform: scaleX(1);
-    }
+   
   }
 }
 .footer-link__working_hours {
@@ -462,14 +420,7 @@ html {
   justify-content: center;
   align-items: center;
 }
-.twitter {
-  :hover {
-    border: 1px solid var(--border-light, #c1b6ad);
-    background: url("../img/iconizer-twitter.svg") no-repeat;
-    background-color: #e1d4c9;
-    background-position: center center;
-  }
-}
+
 .instagram-icon {
   transition: 1.5s;
   width: 60px;
@@ -481,14 +432,7 @@ html {
   margin: 0 12px 0 12px;
   cursor: pointer;
 }
-.instagram {
-  :hover {
-    border: 1px solid var(--border-light, #c1b6ad);
-    background: url("../img/instagram-black.svg") no-repeat;
-    background-color: #e1d4c9;
-    background-position: center center;
-  }
-}
+
 .facebook-icon {
   width: 60px;
   height: 60px;
@@ -499,12 +443,6 @@ html {
   cursor: pointer;
   transition: 1.5s;
 }
-.facebook {
-  :hover {
-    border: 1px solid var(--border-light, #c1b6ad);
-    background: url("../img/iconizer-facebook.svg") no-repeat;
-    background-color: #e1d4c9;
-    background-position: center center;
-  }
-}
+
+@import "media_hover";
 @import "media";

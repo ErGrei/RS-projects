@@ -55,7 +55,7 @@ html {
     color: #403f3d;
   }
 }
-.header-logo{
+.header-logo {
   padding-top: 8px;
 }
 
@@ -75,10 +75,6 @@ html {
       transition: all 1s;
       transform: scaleX(0);
     }
-    :hover::after,
-    :focus::after {
-      transform: scaleX(1);
-    }
   }
 }
 .header-menu__link {
@@ -95,13 +91,6 @@ html {
       position: absolute;
       transition: all 1s;
       transform: scaleX(0);
-    }
-    :hover::after,
-    :focus::after {
-      transform: scaleX(1);
-    }
-    img {
-      margin-left: 5px;
     }
   }
 }
@@ -156,8 +145,7 @@ html {
   font-weight: 400;
   line-height: 150%; /* 24px */
 }
-.enjoy-link__menu { 
- 
+.enjoy-link__menu {
   max-width: 200px;
   //padding: 20px 0;
   justify-content: center;
@@ -169,29 +157,16 @@ html {
   font-size: 16px;
   font-weight: 600;
   line-height: 150%; /* 24px */
-margin-top: 72px;
-transition: all 1s;
-span {
-  transition: 1s;
-}
-
-  :hover {
-    img {
-      visibility: visible;
-    }
-  }
-  :hover {
-    span {
-     
-      margin-right: 30px;
-      transition: all 1s;
-    }
+  margin-top: 72px;
+  transition: all 1s;
+  span {
+    transition: 1s;
   }
 }
 .enjoy-menu__img {
   padding-left: 60px;
   position: absolute;
- visibility: hidden;
+  visibility: hidden;
 }
 
 .enjoy-link__menu_hover {
@@ -242,9 +217,7 @@ span {
   margin-left: auto;
   margin-right: auto;
 
-    object-fit: cover; /* Вписываем фотографию в область */
-
-  
+  object-fit: cover; /* Вписываем фотографию в область */
 }
 .Favourites-Coffee__name {
   color: var(--text-dark, #403f3d);
@@ -299,16 +272,7 @@ span {
   transition: all 1s;
   cursor: pointer;
 }
-.Favourites-Coffee_hover_left {
-  transition: all 1s;
-  :hover {
-    transition: all 1s;
-    background: url("../img/iconizer-arrow-left\ .svg") no-repeat;
-    background-position: center center;
-    background-color: #665f55;
-   
-  }
-}
+
 .Favourites-Coffee__slider_right {
   display: inline-block;
   display: flex;
@@ -324,17 +288,6 @@ span {
   background-position: center center;
   transition: all 1s;
   cursor: pointer;
- 
-}
-
-.Favourites-Coffee_hover_right {
-  :hover {
-    transition: all 1s;
-    background: url("../img/wite_arrow-right.svg") no-repeat;
-    background-position: center center;
-    background-color: #665f55;
-   
-  }
 }
 .Favourites-Coffee__line {
   display: flex;
@@ -363,7 +316,6 @@ span {
 .About-text {
   color: var(--text-dark, #403f3d);
   font-feature-settings: "clig" off, "liga" off;
-  /* Desktop/Heading/heading-2 */
   font-family: Inter;
   font-size: 60px;
   font-style: normal;
@@ -372,8 +324,6 @@ span {
   span {
     color: var(--text-accent, #b0907a);
     font-feature-settings: "clig" off, "liga" off;
-
-    /* Desktop/Heading/heading-2.accent */
     font-family: Inter;
     font-size: 60px;
     font-style: italic;
@@ -389,10 +339,6 @@ span {
   align-self: stretch;
   flex-wrap: wrap;
   transition: all 1s;
-  :hover {
-    background-size: 100%;
-    transition: all 1s;
-  }
 }
 .about-img__one {
   display: flex;
@@ -484,7 +430,6 @@ span {
 }
 .Mobile-App__wrape {
   display: flex;
- 
 }
 .Mobile-App__btn_apple {
   display: flex;
@@ -525,32 +470,6 @@ span {
 .Mobile-App__wrape_apple {
   width: 200px;
   cursor: pointer;
-  :hover {
-    transition: all 1s;
-    .img-apple {
-      background: url("../img/icon\ apple.svg") no-repeat;
-      transition: all 1s;
-    }
-
-    background-color: #665f55;
-    color: #e1d4c9;
-    .text-apple {
-      background: none;
-      color: #e1d4c9;
-      transition: all 1s;
-    }
-
-    li {
-      background: none;
-      color: #e1d4c9;
-      transition: all 1s;
-    }
-    span {
-      background: none;
-      color: #e1d4c9;
-      transition: all 1s;
-    }
-  }
 }
 .Mobile-App__btn_google {
   display: flex;
@@ -592,42 +511,13 @@ span {
   padding-left: 20px;
   cursor: pointer;
   transition: all 1s;
-  :hover {
-    transition: all 1s;
-    .img-google {
-      background: url("../img/icon\ google.svg") no-repeat;
-      transition: all 1s;
-    }
-
-    background-color: #665f55;
-    color: #e1d4c9;
-    .text-google {
-      background: none;
-      color: #e1d4c9;
-      transition: all 1s;
-    }
-
-    li {
-      background: none;
-      color: #e1d4c9;
-      transition: all 1s;
-    }
-    span {
-      background: none;
-      color: #e1d4c9;
-      transition: all 1s;
-    }
-  }
 }
 .Mobile-App__img {
   max-width: 630px;
   min-height: 630px;
-  padding-left:  100px;
- 
-  img{
-   
-    
-    object-fit: cover; /* Вписываем фотографию в область */
+  padding-left: 100px;
+  img {
+    object-fit: cover;
   }
 }
 
@@ -667,17 +557,16 @@ span {
   grid-row: auto;
   gap: 20px;
 
-
   h3 {
     display: block;
-    margin:  -6px 0 21px 0;
+    margin: -6px 0 21px 0;
     color: var(--text-light, #e1d4c9);
     font-size: 24px;
     font-weight: 600;
     line-height: 125%; /* 30px */
   }
   li {
-        color: var(--text-light, #e1d4c9);
+    color: var(--text-light, #e1d4c9);
     font-size: 16px;
     font-weight: 600;
     line-height: 150%; /* 24px */
@@ -701,16 +590,10 @@ span {
       transition: all 0.5s;
       transform: scaleX(0);
     }
-    :hover::after,
-    :focus::after {
-      transform: scaleX(1);
-    }
   }
 }
 .footer-link__phone {
- // margin: 15px 0 15px 0;
   background: url("../img/phone.svg") no-repeat;
- 
   a {
     display: inline-block;
     position: relative;
@@ -726,15 +609,10 @@ span {
       transition: all 0.5s;
       transform: scaleX(0);
     }
-    :hover::after,
-    :focus::after {
-      transform: scaleX(1);
-    }
   }
 }
 .footer-link__working_hours {
   background: url("../img/clock.svg") no-repeat;
- 
 }
 .footer-content__sohil {
   display: flex;
@@ -752,14 +630,6 @@ span {
   justify-content: center;
   align-items: center;
 }
-.twitter {
-  :hover {
-    border: 1px solid var(--border-light, #c1b6ad);
-    background: url("../img/iconizer-twitter.svg") no-repeat;
-    background-color: #e1d4c9;
-    background-position: center center;
-  }
-}
 .instagram-icon {
   transition: 1.5s;
   width: 60px;
@@ -771,14 +641,6 @@ span {
   margin: 0 12px 0 12px;
   cursor: pointer;
 }
-.instagram {
-  :hover {
-    border: 1px solid var(--border-light, #c1b6ad);
-    background: url("../img/instagram-black.svg") no-repeat;
-    background-color: #e1d4c9;
-    background-position: center center;
-  }
-}
 .facebook-icon {
   width: 60px;
   height: 60px;
@@ -789,12 +651,6 @@ span {
   cursor: pointer;
   transition: 1.5s;
 }
-.facebook {
-  :hover {
-    border: 1px solid var(--border-light, #c1b6ad);
-    background: url("../img/iconizer-facebook.svg") no-repeat;
-    background-color: #e1d4c9;
-    background-position: center center;
-  }
-}
+
+@import "media_hover";
 @import "media";

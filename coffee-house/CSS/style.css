@@ -83,10 +83,6 @@ html {
   transition: all 1s;
   transform: scaleX(0);
 }
-.header-menu__item li :hover::after,
-.header-menu__item li :focus::after {
-  transform: scaleX(1);
-}
 
 .header-menu__link li {
   display: inline-block;
@@ -102,13 +98,6 @@ html {
   position: absolute;
   transition: all 1s;
   transform: scaleX(0);
-}
-.header-menu__link li :hover::after,
-.header-menu__link li :focus::after {
-  transform: scaleX(1);
-}
-.header-menu__link li img {
-  margin-left: 5px;
 }
 
 .heder-btn__hover {
@@ -181,13 +170,6 @@ html {
 }
 .enjoy-link__menu span {
   transition: 1s;
-}
-.enjoy-link__menu :hover img {
-  visibility: visible;
-}
-.enjoy-link__menu :hover span {
-  margin-right: 30px;
-  transition: all 1s;
 }
 
 .enjoy-menu__img {
@@ -307,16 +289,6 @@ html {
   cursor: pointer;
 }
 
-.Favourites-Coffee_hover_left {
-  transition: all 1s;
-}
-.Favourites-Coffee_hover_left :hover {
-  transition: all 1s;
-  background: url("../img/iconizer-arrow-left .svg") no-repeat;
-  background-position: center center;
-  background-color: #665f55;
-}
-
 .Favourites-Coffee__slider_right {
   display: inline-block;
   display: flex;
@@ -332,13 +304,6 @@ html {
   background-position: center center;
   transition: all 1s;
   cursor: pointer;
-}
-
-.Favourites-Coffee_hover_right :hover {
-  transition: all 1s;
-  background: url("../img/wite_arrow-right.svg") no-repeat;
-  background-position: center center;
-  background-color: #665f55;
 }
 
 .Favourites-Coffee__line {
@@ -368,7 +333,6 @@ html {
 .About-text {
   color: var(--text-dark, #403f3d);
   font-feature-settings: "clig" off, "liga" off;
-  /* Desktop/Heading/heading-2 */
   font-family: Inter;
   font-size: 60px;
   font-style: normal;
@@ -378,7 +342,6 @@ html {
 .About-text span {
   color: var(--text-accent, #b0907a);
   font-feature-settings: "clig" off, "liga" off;
-  /* Desktop/Heading/heading-2.accent */
   font-family: Inter;
   font-size: 60px;
   font-style: italic;
@@ -393,10 +356,6 @@ html {
   gap: 40px;
   align-self: stretch;
   flex-wrap: wrap;
-  transition: all 1s;
-}
-.about-img :hover {
-  background-size: 100%;
   transition: all 1s;
 }
 
@@ -537,30 +496,6 @@ html {
   width: 200px;
   cursor: pointer;
 }
-.Mobile-App__wrape_apple :hover {
-  transition: all 1s;
-  background-color: #665f55;
-  color: #e1d4c9;
-}
-.Mobile-App__wrape_apple :hover .img-apple {
-  background: url("../img/icon apple.svg") no-repeat;
-  transition: all 1s;
-}
-.Mobile-App__wrape_apple :hover .text-apple {
-  background: none;
-  color: #e1d4c9;
-  transition: all 1s;
-}
-.Mobile-App__wrape_apple :hover li {
-  background: none;
-  color: #e1d4c9;
-  transition: all 1s;
-}
-.Mobile-App__wrape_apple :hover span {
-  background: none;
-  color: #e1d4c9;
-  transition: all 1s;
-}
 
 .Mobile-App__btn_google {
   display: flex;
@@ -603,30 +538,6 @@ html {
   cursor: pointer;
   transition: all 1s;
 }
-.Mobile-App__wrape_google :hover {
-  transition: all 1s;
-  background-color: #665f55;
-  color: #e1d4c9;
-}
-.Mobile-App__wrape_google :hover .img-google {
-  background: url("../img/icon google.svg") no-repeat;
-  transition: all 1s;
-}
-.Mobile-App__wrape_google :hover .text-google {
-  background: none;
-  color: #e1d4c9;
-  transition: all 1s;
-}
-.Mobile-App__wrape_google :hover li {
-  background: none;
-  color: #e1d4c9;
-  transition: all 1s;
-}
-.Mobile-App__wrape_google :hover span {
-  background: none;
-  color: #e1d4c9;
-  transition: all 1s;
-}
 
 .Mobile-App__img {
   max-width: 630px;
@@ -635,7 +546,7 @@ html {
 }
 .Mobile-App__img img {
   -o-object-fit: cover;
-     object-fit: cover; /* Вписываем фотографию в область */
+     object-fit: cover;
 }
 
 .footer-contener {
@@ -710,10 +621,6 @@ html {
   transition: all 0.5s;
   transform: scaleX(0);
 }
-.footer-link__adress a :hover::after,
-.footer-link__adress a :focus::after {
-  transform: scaleX(1);
-}
 
 .footer-link__phone {
   background: url("../img/phone.svg") no-repeat;
@@ -732,10 +639,6 @@ html {
   position: absolute;
   transition: all 0.5s;
   transform: scaleX(0);
-}
-.footer-link__phone a :hover::after,
-.footer-link__phone a :focus::after {
-  transform: scaleX(1);
 }
 
 .footer-link__working_hours {
@@ -760,13 +663,6 @@ html {
   align-items: center;
 }
 
-.twitter :hover {
-  border: 1px solid var(--border-light, #c1b6ad);
-  background: url("../img/iconizer-twitter.svg") no-repeat;
-  background-color: #e1d4c9;
-  background-position: center center;
-}
-
 .instagram-icon {
   transition: 1.5s;
   width: 60px;
@@ -777,13 +673,6 @@ html {
   background-position: center center;
   margin: 0 12px 0 12px;
   cursor: pointer;
-}
-
-.instagram :hover {
-  border: 1px solid var(--border-light, #c1b6ad);
-  background: url("../img/instagram-black.svg") no-repeat;
-  background-color: #e1d4c9;
-  background-position: center center;
 }
 
 .facebook-icon {
@@ -797,13 +686,138 @@ html {
   transition: 1.5s;
 }
 
-.facebook :hover {
-  border: 1px solid var(--border-light, #c1b6ad);
-  background: url("../img/iconizer-facebook.svg") no-repeat;
-  background-color: #e1d4c9;
-  background-position: center center;
+@media (hover: hover) {
+  .header-menu__item li :hover::after,
+  .header-menu__item li :focus::after {
+    transform: scaleX(1);
+  }
+  .header-menu__link li :hover::after,
+  .header-menu__link li :focus::after {
+    transform: scaleX(1);
+  }
+  .header-menu__link li img {
+    margin-left: 5px;
+  }
+  .enjoy-link__menu :hover img {
+    visibility: visible;
+  }
+  .enjoy-link__menu :hover span {
+    margin-right: 30px;
+    transition: all 1s;
+  }
+  .Favourites-Coffee_hover_left {
+    transition: all 1s;
+  }
+  .Favourites-Coffee_hover_left :hover {
+    transition: all 1s;
+    background: url("../img/iconizer-arrow-left .svg") no-repeat;
+    background-position: center center;
+    background-color: #665f55;
+  }
+  .Favourites-Coffee_hover_right :hover {
+    transition: all 1s;
+    background: url("../img/wite_arrow-right.svg") no-repeat;
+    background-position: center center;
+    background-color: #665f55;
+  }
+  .about-img :hover {
+    background-size: 100%;
+    transition: all 1s;
+  }
+  .Mobile-App__wrape_apple :hover {
+    transition: all 1s;
+    background-color: #665f55;
+    color: #e1d4c9;
+  }
+  .Mobile-App__wrape_apple :hover .img-apple {
+    background: url("../img/icon apple.svg") no-repeat;
+    transition: all 1s;
+  }
+  .Mobile-App__wrape_apple :hover .text-apple {
+    background: none;
+    color: #e1d4c9;
+    transition: all 1s;
+  }
+  .Mobile-App__wrape_apple :hover li {
+    background: none;
+    color: #e1d4c9;
+    transition: all 1s;
+  }
+  .Mobile-App__wrape_apple :hover span {
+    background: none;
+    color: #e1d4c9;
+    transition: all 1s;
+  }
+  .Mobile-App__wrape_google :hover {
+    transition: all 1s;
+    background-color: #665f55;
+    color: #e1d4c9;
+  }
+  .Mobile-App__wrape_google :hover .img-google {
+    background: url("../img/icon google.svg") no-repeat;
+    transition: all 1s;
+  }
+  .Mobile-App__wrape_google :hover .text-google {
+    background: none;
+    color: #e1d4c9;
+    transition: all 1s;
+  }
+  .Mobile-App__wrape_google :hover li {
+    background: none;
+    color: #e1d4c9;
+    transition: all 1s;
+  }
+  .Mobile-App__wrape_google :hover span {
+    background: none;
+    color: #e1d4c9;
+    transition: all 1s;
+  }
+  .footer-link__adress :hover::after,
+  .footer-link__adress :focus::after {
+    transform: scaleX(1);
+  }
+  .footer-link__phone :hover::after,
+  .footer-link__phone :focus::after {
+    transform: scaleX(1);
+  }
+  .twitter :hover {
+    border: 1px solid var(--border-light, #c1b6ad);
+    background: url("../img/iconizer-twitter.svg") no-repeat;
+    background-color: #e1d4c9;
+    background-position: center center;
+  }
+  .instagram :hover {
+    border: 1px solid var(--border-light, #c1b6ad);
+    background: url("../img/instagram-black.svg") no-repeat;
+    background-color: #e1d4c9;
+    background-position: center center;
+  }
+  .facebook :hover {
+    border: 1px solid var(--border-light, #c1b6ad);
+    background: url("../img/iconizer-facebook.svg") no-repeat;
+    background-color: #e1d4c9;
+    background-position: center center;
+  }
+  .menu-btn_Tea :hover {
+    background: var(--background-container, #e1d4c9);
+    color: var(--text-light, #e1d4c9);
+  }
+  .menu-btn_coffe :hover {
+    background: var(--background-container, #e1d4c9);
+    color: var(--text-light, #e1d4c9);
+  }
+  .menu-hover :hover {
+    cursor: pointer;
+    background: var(--background-container, #665f55);
+    color: var(--text-light, #e1d4c9);
+  }
+  .menu-hover :hover .menu-btn_Tea_img {
+    background: var(--background-container, #e1d4c9);
+  }
+  .menu-hover :hover .menu-btn_Dessert_img {
+    background: var(--background-container, #e1d4c9);
+  }
 }
-
 @media (max-width: 1390px) {
   .conteiner {
     margin: 1px 40px 0 40px;
