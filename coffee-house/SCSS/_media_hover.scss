@@ -171,4 +171,11 @@
       }
     }
   }
+  .cart-menu{
+    &:hover{
+      img {
+        transform: scale(1);
+      }
+    }
+  }
 }

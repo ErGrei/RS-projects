@@ -1,36 +1,24 @@
-// const contanierMenu = document.querySelector(".contanier-menu");
+/* zoom на карточках в блоке menu */
+// let cardMenu = document.querySelectorAll(".cart-menu");
+// const cardZoom = document.querySelectorAll(".img");
 
-// const arrMenu = [
-//   { Image: "Image1", title: "title1", text: "text1", price: "price1" },
-//   { Image: "Image2", title: "title2", text: "text2", price: "price2" },
-// ];
+// for (let i = 0; i < cardMenu.length; i++) {
+//   /* определяем устройство*/
+//   const tochDevice =
+//     "ontouchstart" in window || navigator.maxTouchPoints > 0 in cardMenu;
+//   /*проверям какое устройство */
+//   if (!tochDevice) {
+//     cardMenu[i].addEventListener("mouseenter", () => {
+//       console.log(1);
+//       cardZoom[i].classList.toggle("zoom");
+//     });
+//     cardMenu[i].addEventListener("mouseleave", () => {
+//       console.log(1);
+//       cardZoom[i].classList.toggle("zoom");
+//     });
+//   }
+// }
 
-// const cardMeu = arrMenu.forEach((card) => {
-//   console.log(card);
-//   const menuList = document.createElement('div');
-//   menuList.classList.add('card-wrap');
-//   return card;
+/**Бургер меню */
 
-// });
 
-// contanierMenu.append(cardMeu)
-
-let cardMenu = document.querySelectorAll('.cart-menu');
-const cardZoom = document.querySelectorAll(".img");
-for (let i = 0; i < cardMenu.length; i++) {
-    cardMenu[i].addEventListener("mouseenter", () => {
-        console.log(1);
-        cardZoom[i].classList.toggle("zoom");
-    })
-        cardMenu[i].addEventListener("mouseleave", () => {
-            console.log(1);
-            cardZoom[i].classList.toggle("zoom");
-  })}
-// cardMenu.addEventListener("mouseenter", () => {
-//   console.log(1);
-//   cardZoom.classList.toggle("zoom");
-// });
-// cardMenu.addEventListener("mouseleave", () => {
-//     console.log(1);
-//     cardZoom.classList.toggle("zoom");
-//   });
