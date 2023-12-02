@@ -38,7 +38,10 @@ html {
   font-family: "Inter", sans-serif;
   transition: all 1s;
 }
-.header {
+.media{
+  display: none;
+  }
+  .navbar {
   display: flex;
   justify-content: space-between;
   max-width: 1360px;
@@ -75,10 +78,6 @@ html {
       transition: all 1s;
       transform: scaleX(0);
     }
-    :hover::after,
-    :focus::after {
-      transform: scaleX(1);
-    }
   }
 }
 .header-menu__link {
@@ -96,31 +95,33 @@ html {
       transition: all 1s;
       transform: scaleX(0);
     }
-    :hover::after,
-    :focus::after {
-      transform: scaleX(1);
-    }
-    img {
-      margin-left: 5px;
-    }
   }
+}
+.heder-btn__hover {
+  width: 44px;
+  height: 44px;
+  border-radius: 100px;
+  border: 1px solid var(--border-dark, #665f55);
+  display: none;
+  background: url(../img/Menu_img/btn/button-icon-burger.png) no-repeat;
+  background-position: center center;
 }
 
 .Enjoy {
   transition: 4s;
   max-width: 1360px;
-  height: 644px;
+  max-height: 644px;
   padding: 100px;
   border-radius: 40px;
-  background: url("../img/Enjoy.png"), lightgray no-repeat;
-  background-size: 100%;
+  background: url("../img/Enjoy.png") no-repeat, lightgray no-repeat;
+  background-size: cover;
   background-position: center center;
   margin: 0 auto;
   transition: all 1s;
 }
 .enjoy-title {
-  width: 530px;
-  height: 228px;
+  max-width: 530px;
+  max-height: 228px;
   color: var(--text-light, #e1d4c9);
   font-size: 72px;
   font-weight: 600;
@@ -137,8 +138,8 @@ html {
 }
 .enjoy-text {
   transition: 0.5s;
-  width: 530px;
-  height: 72px;
+  max-width: 530px;
+  max-height: 72px;
   padding: 40px 0 40px 0;
   color: var(--text-light, #e1d4c9);
   font-feature-settings: "clig" off, "liga" off;
@@ -163,18 +164,7 @@ html {
   transition: all 1s;
   span {
     transition: 1s;
-  }
 
-  :hover {
-    img {
-      visibility: visible;
-    }
-  }
-  :hover {
-    span {
-      margin-right: 30px;
-      transition: all 1s;
-    }
   }
 }
 .enjoy-menu__img {
@@ -194,7 +184,7 @@ html {
   margin: 0 auto;
 }
 .Favourites-Coffee {
-  padding: 100px 43px 100px 45px;
+  padding: 0 43px 100px 45px;
   display: flex;
   margin: 0 auto;
   button {
@@ -209,7 +199,7 @@ html {
   text-align: center;
   //font-feature-settings: 'clig' off, 'liga' off;
   /* Desktop/Heading/heading-2 */
-
+  padding: 100px 0 0 0;
   font-size: 60px;
   font-style: normal;
   font-weight: 600;
@@ -223,13 +213,15 @@ html {
   }
 }
 .Favourites-Coffee__img {
-  width: 480px;
+  width: 100%;
   height: 480px;
   display: block;
   margin-top: 40px;
   margin-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
+
+  object-fit: cover; /* Вписываем фотографию в область */
 }
 .Favourites-Coffee__name {
   color: var(--text-dark, #403f3d);
@@ -278,21 +270,13 @@ html {
   border-radius: 100px;
   border: 1px solid var(--border-dark, #665f55);
   background-color: #e1d4c9;
-  margin-top: 405px;
+  margin-top: 331px;
   background: url("../img/arrow-left.svg") no-repeat;
   background-position: center center;
   transition: all 1s;
   cursor: pointer;
 }
-.Favourites-Coffee_hover_left {
-  transition: all 1s;
-  :hover {
-    transition: all 1s;
-    background: url("../img/iconizer-arrow-left\ .svg") no-repeat;
-    background-position: center center;
-    background-color: #665f55;
-  }
-}
+
 .Favourites-Coffee__slider_right {
   display: inline-block;
   display: flex;
@@ -303,20 +287,12 @@ html {
   border-radius: 100px;
   border: 1px solid var(--border-dark, #665f55);
   background-color: #e1d4c9;
-  margin-top: 405px;
+  margin-top: 331px;
   background: url("../img/arrow-right.svg") no-repeat;
   background-position: center center;
   transition: all 1s;
   cursor: pointer;
-}
 
-.Favourites-Coffee_hover_right {
-  :hover {
-    transition: all 1s;
-    background: url("../img/wite_arrow-right.svg") no-repeat;
-    background-position: center center;
-    background-color: #665f55;
-  }
 }
 .Favourites-Coffee__line {
   display: flex;
@@ -345,7 +321,6 @@ html {
 .About-text {
   color: var(--text-dark, #403f3d);
   font-feature-settings: "clig" off, "liga" off;
-  /* Desktop/Heading/heading-2 */
   font-family: Inter;
   font-size: 60px;
   font-style: normal;
@@ -354,8 +329,6 @@ html {
   span {
     color: var(--text-accent, #b0907a);
     font-feature-settings: "clig" off, "liga" off;
-
-    /* Desktop/Heading/heading-2.accent */
     font-family: Inter;
     font-size: 60px;
     font-style: italic;
@@ -371,10 +344,6 @@ html {
   align-self: stretch;
   flex-wrap: wrap;
   transition: all 1s;
-  :hover {
-    background-size: 100%;
-    transition: all 1s;
-  }
 }
 .about-img__one {
   display: flex;
@@ -386,6 +355,7 @@ html {
   background-size: 110%;
   background-position: center center;
   transition: all 1s;
+  overflow: hidden;
 }
 .about-img__two {
   display: flex;
@@ -420,9 +390,11 @@ html {
   background-size: 110%;
   background-position: center center;
   transition: all 1s;
+  overflow: hidden;
 }
 .Mobile-App {
   display: flex;
+  flex-wrap: wrap;
   max-width: 1336px;
   justify-content: center;
   align-items: center;
@@ -503,32 +475,6 @@ html {
 .Mobile-App__wrape_apple {
   width: 200px;
   cursor: pointer;
-  :hover {
-    transition: all 1s;
-    .img-apple {
-      background: url("../img/icon\ apple.svg") no-repeat;
-      transition: all 1s;
-    }
-
-    background-color: #665f55;
-    color: #e1d4c9;
-    .text-apple {
-      background: none;
-      color: #e1d4c9;
-      transition: all 1s;
-    }
-
-    li {
-      background: none;
-      color: #e1d4c9;
-      transition: all 1s;
-    }
-    span {
-      background: none;
-      color: #e1d4c9;
-      transition: all 1s;
-    }
-  }
 }
 .Mobile-App__btn_google {
   display: flex;
@@ -570,37 +516,15 @@ html {
   padding-left: 20px;
   cursor: pointer;
   transition: all 1s;
-  :hover {
-    transition: all 1s;
-    .img-google {
-      background: url("../img/icon\ google.svg") no-repeat;
-      transition: all 1s;
-    }
-
-    background-color: #665f55;
-    color: #e1d4c9;
-    .text-google {
-      background: none;
-      color: #e1d4c9;
-      transition: all 1s;
-    }
-
-    li {
-      background: none;
-      color: #e1d4c9;
-      transition: all 1s;
-    }
-    span {
-      background: none;
-      color: #e1d4c9;
-      transition: all 1s;
-    }
-  }
 }
 .Mobile-App__img {
-  width: 630px;
-  height: 630px;
+  max-width: 630px;
+  min-height: 630px;
   padding-left: 100px;
+  img {
+    object-fit: cover;
+  }
+
 }
 
 .footer-contener {
@@ -614,10 +538,10 @@ html {
   gap: 100px;
   align-self: stretch;
   margin: 0 auto;
-  margin-top: 98px;
+  margin-top: 94px;
 }
 .footer-content__text {
-  width: 530px;
+  max-width: 530px;
   padding-bottom: 40px;
   h2 {
     color: var(--text-light, #e1d4c9);
@@ -672,14 +596,9 @@ html {
       transition: all 0.5s;
       transform: scaleX(0);
     }
-    :hover::after,
-    :focus::after {
-      transform: scaleX(1);
-    }
   }
 }
 .footer-link__phone {
-  // margin: 15px 0 15px 0;
   background: url("../img/phone.svg") no-repeat;
 
   a {
@@ -696,10 +615,6 @@ html {
       position: absolute;
       transition: all 0.5s;
       transform: scaleX(0);
-    }
-    :hover::after,
-    :focus::after {
-      transform: scaleX(1);
     }
   }
 }
@@ -722,14 +637,6 @@ html {
   justify-content: center;
   align-items: center;
 }
-.twitter {
-  :hover {
-    border: 1px solid var(--border-light, #c1b6ad);
-    background: url("../img/iconizer-twitter.svg") no-repeat;
-    background-color: #e1d4c9;
-    background-position: center center;
-  }
-}
 .instagram-icon {
   transition: 1.5s;
   width: 60px;
@@ -741,14 +648,6 @@ html {
   margin: 0 12px 0 12px;
   cursor: pointer;
 }
-.instagram {
-  :hover {
-    border: 1px solid var(--border-light, #c1b6ad);
-    background: url("../img/instagram-black.svg") no-repeat;
-    background-color: #e1d4c9;
-    background-position: center center;
-  }
-}
 .facebook-icon {
   width: 60px;
   height: 60px;
@@ -759,11 +658,6 @@ html {
   cursor: pointer;
   transition: 1.5s;
 }
-.facebook {
-  :hover {
-    border: 1px solid var(--border-light, #c1b6ad);
-    background: url("../img/iconizer-facebook.svg") no-repeat;
-    background-color: #e1d4c9;
-    background-position: center center;
-  }
-}
+
+@import "media_hover";
+@import "media";

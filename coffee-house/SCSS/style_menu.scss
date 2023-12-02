@@ -41,7 +41,10 @@ html {
   margin: 0 auto;
   font-family: "Inter", sans-serif;
 }
-.header {
+.media{
+display: none;
+}
+.navbar {
   display: flex;
   justify-content: space-between;
   max-width: 1360px;
@@ -58,10 +61,12 @@ html {
     color: #403f3d;
   }
 }
-.header-logo{
+.header-logo {
   margin-top: 5px;
 }
+
 .header-menu__item {
+
   li {
     display: inline-block;
     margin: 0 18px 0 18px;
@@ -76,10 +81,6 @@ html {
       position: absolute;
       transition: all 0.5s;
       transform: scaleX(0);
-    }
-    :hover::after,
-    :focus::after {
-      transform: scaleX(1);
     }
   }
 }
@@ -107,8 +108,17 @@ html {
     }
   }
 }
+.heder-btn__hover {
+  width: 44px;
+  height: 44px;
+  border-radius: 100px;
+  border: 1px solid var(--border-dark, #665f55);
+  display: none;
+  background: url(../img/Menu_img/btn/button-icon-burger.png) no-repeat;
+  background-position: center center;
+}
 .menu-title {
-  max-width: 1360px;
+  max-width: 875px;
   margin: 0 auto;
 
   h1 {
@@ -134,21 +144,7 @@ html {
   display: flex;
   justify-content: center;
   gap: 16px;
- 
-  :hover {
-    cursor: pointer;
-
-    background: var(--background-container, #665f55);
-    color: var(--text-light, #e1d4c9);
-    .menu-btn_Tea_img {
-      background: var(--background-container, #e1d4c9);
-    }
-    .menu-btn_Dessert_img {
-      background: var(--background-container, #e1d4c9);
-    }
-  }
 }
-
 .menu-btn_coffe {
   display: flex;
   width: 115px;
@@ -163,10 +159,6 @@ html {
   font-style: normal;
   font-weight: 600;
   line-height: 150%; /* 24px */
-  :hover {
-    background: var(--background-container, #e1d4c9);
-    color: var(--text-light, #e1d4c9);
-  }
 }
 .menu-btn_coffe_img {
   padding-top: 5px;
@@ -194,10 +186,6 @@ html {
   font-weight: 600;
   line-height: 150%; /* 24px */
   transition: all 0.8s;
-  :hover {
-    background: var(--background-container, #e1d4c9);
-    color: var(--text-light, #e1d4c9);
-  }
 }
 .menu-btn_Tea_img {
   padding-top: 5px;
@@ -244,57 +232,46 @@ html {
 }
 
 .contanier-menu {
-   max-width: 1360px;
+  max-width: 1360px;
   padding: 38px 0 0 0;
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
   margin: 0 auto;
-
-  :hover {
-  }
 }
 
 .cart-menu {
-  
- 
   cursor: pointer;
-    width: 310px;
+  width: 310px;
   position: relative;
-   align-items: center;
-    border-radius: 40px;
-    border: 1px solid var(--border-light, #c1b6ad);
-    margin-bottom: -3px;
-   // overflow: hidden;
+  align-items: center;
+  border-radius: 40px;
+  border: 1px solid var(--border-light, #c1b6ad);
+  margin-bottom: -3px;
 }
 .img {
- 
   display: flex;
   justify-content: center;
- // position: absolute;
   width: 310px;
-height: 310px;
-//flex-shrink: 0;
-     align-items: center;
-// margin-left:  -15px; 
-// margin-top:  -15px;
-    border-radius: 40px;
-
- overflow: hidden;
-  //text-align: center;
+  height: 310px;
+  align-items: center;
+  border-radius: 40px;
+  overflow: hidden;
   object-fit: cover;
   img {
     transition: 0.8s;
-   width: 310px;
+    width: 310px;
     height: 310p;
     border-radius: 40px;
 
-   transform: scale(1.1)
+    transform: scale(1.1);
   }
 }
-.zoom{ img{
-  transform: scale(1)
-}}
+.zoom {
+  img {
+    transform: scale(1);
+  }
+}
 .menu-text {
   padding: 20px;
   display: grid;
@@ -323,6 +300,17 @@ height: 310px;
     line-height: 125%; /* 30px */
   }
 }
+.btn-menu_hover {
+  display: none;
+  margin-top: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 100px;
+  border: 1px solid var(--border-dark, #665f55);
+  margin: 0 auto;
+  background: url(../img/Menu_img/btn/refresh.svg) no-repeat;
+  background-position: center center;
+}
 .footer-contener {
   border-radius: 40px;
   background: var(--background-container, #665f55);
@@ -333,12 +321,11 @@ height: 310px;
   align-items: center;
   gap: 100px;
   align-self: stretch;
-
   margin: 0 auto;
   margin-top: 102px;
 }
 .footer-content__text {
-  width: 530px;
+  max-width: 530px;
   padding-bottom: 40px;
   h2 {
     color: var(--text-light, #e1d4c9);
@@ -360,17 +347,16 @@ height: 310px;
   grid-row: auto;
   gap: 20px;
 
-
   h3 {
     display: block;
-    margin:  -6px 0 21px 0;
+    margin: -6px 0 21px 0;
     color: var(--text-light, #e1d4c9);
     font-size: 24px;
     font-weight: 600;
     line-height: 125%; /* 30px */
   }
   li {
-        color: var(--text-light, #e1d4c9);
+    color: var(--text-light, #e1d4c9);
     font-size: 16px;
     font-weight: 600;
     line-height: 150%; /* 24px */
@@ -394,16 +380,12 @@ height: 310px;
       transition: all 0.5s;
       transform: scaleX(0);
     }
-    :hover::after,
-    :focus::after {
-      transform: scaleX(1);
-    }
   }
 }
 .footer-link__phone {
- // margin: 15px 0 15px 0;
+  // margin: 15px 0 15px 0;
   background: url("../img/phone.svg") no-repeat;
- 
+
   a {
     display: inline-block;
     position: relative;
@@ -419,15 +401,10 @@ height: 310px;
       transition: all 0.5s;
       transform: scaleX(0);
     }
-    :hover::after,
-    :focus::after {
-      transform: scaleX(1);
-    }
   }
 }
 .footer-link__working_hours {
   background: url("../img/clock.svg") no-repeat;
- 
 }
 .footer-content__sohil {
   display: flex;
@@ -445,14 +422,7 @@ height: 310px;
   justify-content: center;
   align-items: center;
 }
-.twitter {
-  :hover {
-    border: 1px solid var(--border-light, #c1b6ad);
-    background: url("../img/iconizer-twitter.svg") no-repeat;
-    background-color: #e1d4c9;
-    background-position: center center;
-  }
-}
+
 .instagram-icon {
   transition: 1.5s;
   width: 60px;
@@ -464,14 +434,7 @@ height: 310px;
   margin: 0 12px 0 12px;
   cursor: pointer;
 }
-.instagram {
-  :hover {
-    border: 1px solid var(--border-light, #c1b6ad);
-    background: url("../img/instagram-black.svg") no-repeat;
-    background-color: #e1d4c9;
-    background-position: center center;
-  }
-}
+
 .facebook-icon {
   width: 60px;
   height: 60px;
@@ -482,11 +445,6 @@ height: 310px;
   cursor: pointer;
   transition: 1.5s;
 }
-.facebook {
-  :hover {
-    border: 1px solid var(--border-light, #c1b6ad);
-    background: url("../img/iconizer-facebook.svg") no-repeat;
-    background-color: #e1d4c9;
-    background-position: center center;
-  }
-}
+
+@import "media_hover";
+@import "media";
