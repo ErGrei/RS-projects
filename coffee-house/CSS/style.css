@@ -291,6 +291,7 @@ html {
   background-position: center center;
   transition: all 1s;
   cursor: pointer;
+
 }
 
 .Favourites-Coffee__slider_right {
@@ -308,6 +309,7 @@ html {
   background-position: center center;
   transition: all 1s;
   cursor: pointer;
+
 }
 
 .Favourites-Coffee__line {

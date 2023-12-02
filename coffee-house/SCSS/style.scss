@@ -164,6 +164,7 @@ html {
   transition: all 1s;
   span {
     transition: 1s;
+
   }
 }
 .enjoy-menu__img {
@@ -291,6 +292,7 @@ html {
   background-position: center center;
   transition: all 1s;
   cursor: pointer;
+
 }
 .Favourites-Coffee__line {
   display: flex;
@@ -522,6 +524,7 @@ html {
   img {
     object-fit: cover;
   }
+
 }
 
 .footer-contener {
@@ -597,6 +600,7 @@ html {
 }
 .footer-link__phone {
   background: url("../img/phone.svg") no-repeat;
+
   a {
     display: inline-block;
     position: relative;
