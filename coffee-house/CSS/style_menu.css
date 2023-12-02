@@ -157,23 +157,14 @@ html {
   align-items: center;
   gap: 8px;
   border-radius: 100px;
-  background: var(--background-container, #665f55);
-  color: var(--text-light, #e1d4c9);
+  background: var(--background-container, #e1d4c9);
+  color: var(--text-light, #403f3d);
+  border: 1px solid var(--border-light, #c1b6ad);
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
   line-height: 150%; /* 24px */
-}
-
-.menu-btn_coffe_img {
-  padding-top: 5px;
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  border-radius: 100px;
-  background: var(--background-body, #e1d4c9);
-  font-size: 16px;
-  line-height: 150%; /* 24px */
+  transition: all 0.8s;
 }
 
 .menu-btn_Tea {
@@ -190,18 +181,6 @@ html {
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
-  line-height: 150%; /* 24px */
-  transition: all 0.8s;
-}
-
-.menu-btn_Tea_img {
-  padding-top: 5px;
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  border-radius: 100px;
-  background: var(--border-light, #c1b6ad);
-  font-size: 16px;
   line-height: 150%; /* 24px */
   transition: all 0.8s;
 }
@@ -228,7 +207,7 @@ html {
   color: var(--text-light, #e1d4c9);
 }
 
-.menu-btn_Dessert_img {
+.menu-btn_img {
   padding-top: 5px;
   width: 30px;
   height: 30px;
@@ -240,13 +219,27 @@ html {
   transition: all 0.8s;
 }
 
+.btn-item-active {
+  background: var(--background-container, #665f55);
+  color: var(--text-light, #e1d4c9);
+}
+
+.menu-btn_img_active {
+  background: var(--background-container, #e1d4c9);
+}
+
 .contanier-menu {
   max-width: 1360px;
   padding: 38px 0 0 0;
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   gap: 40px;
   margin: 0 auto;
+  padding-bottom: 10px;
+}
+
+.contanier-menu_activ {
+  display: flex;
 }
 
 .cart-menu {
@@ -582,10 +575,7 @@ html {
     background: var(--background-container, #665f55);
     color: var(--text-light, #e1d4c9);
   }
-  .menu-hover :hover .menu-btn_Tea_img {
-    background: var(--background-container, #e1d4c9);
-  }
-  .menu-hover :hover .menu-btn_Dessert_img {
+  .menu-hover :hover .menu-btn_img {
     background: var(--background-container, #e1d4c9);
   }
   .cart-menu:hover img {
@@ -699,18 +689,18 @@ html {
     position: absolute;
     width: 100%;
     background: #e1d4c9;
-    padding: 0 60px 40px;
     margin-left: -800px;
+    transition: 2s;
+  }
+  .navbar-ativ {
+    margin-left: 0px;
+    transition: 2s;
   }
   .header-menu__link {
     display: block;
     height: 60px;
     padding-top: 31px;
-    margin-left: -121px;
-    background-image: url("../img/Menu_img/coffee-cup.svg");
-    background-repeat: no-repeat;
-    background-position-x: 443px;
-    background-position-y: 21px;
+    margin-left: -89px;
   }
   .header-menu__link li {
     display: flex;
@@ -720,16 +710,20 @@ html {
   .header-menu__link li ::after {
     transform: scaleX(0);
   }
-  .header-menu__link img {
+  .menu-link__img {
     display: none;
+  }
+  .menu-link__img_media {
+    display: block;
+    margin-top: 5px;
   }
   .header-menu__item {
     margin: 0 auto;
-    margin-left: -65px;
+    margin-left: -81px;
   }
   .header-menu__item li {
     font-size: 32px;
-    margin: 80px;
+    margin: 73px;
     display: flex;
     justify-content: center;
   }

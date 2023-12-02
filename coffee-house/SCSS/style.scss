@@ -97,6 +97,9 @@ html {
     }
   }
 }
+.menu-link__img_media{
+  display: none;
+  }
 .heder-btn__hover {
   width: 44px;
   height: 44px;
@@ -172,6 +175,7 @@ html {
   position: absolute;
   visibility: hidden;
 }
+
 
 .enjoy-link__menu_hover {
   transition: all 1s;

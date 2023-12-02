@@ -108,18 +108,20 @@
     position: absolute;
     width: 100%;
     background: #e1d4c9;
-    padding: 0 60px 40px;
+    //padding: 0 60px 40px;
     margin-left: -800px;
+    transition: 2s;
+  }
+  .navbar-ativ {
+    margin-left: 0px;
+    transition: 2s;
   }
   .header-menu__link {
     display: block;
     height: 60px;
     padding-top: 31px;
-    margin-left: -121px;
-    background-image: url("../img/Menu_img/coffee-cup.svg");
-    background-repeat: no-repeat;
-    background-position-x: 443px;
-    background-position-y: 21px;
+    margin-left: -89px;
+    
     li {
       display: flex;
       justify-content: center;
@@ -129,17 +131,22 @@
         transform: scaleX(0);
       }
     }
-    img {
-      display: none;
-    }
+   
+  }
+  .menu-link__img{
+display: none;
+  }
+  .menu-link__img_media{
+display: block;
+margin-top: 5px;
   }
   .header-menu__item {
     //display: none;
     margin: 0 auto;
-    margin-left: -65px;
+    margin-left: -81px;
     li {
       font-size: 32px;
-      margin: 80px;
+      margin: 73px;
       display: flex;
       justify-content: center;
     }

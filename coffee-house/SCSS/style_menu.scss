@@ -153,23 +153,18 @@ display: none;
   align-items: center;
   gap: 8px;
   border-radius: 100px;
-  background: var(--background-container, #665f55);
-  color: var(--text-light, #e1d4c9);
+  // background: var(--background-container, #665f55);
+  // color: var(--text-light, #e1d4c9);
+  background: var(--background-container, #e1d4c9);
+  color: var(--text-light, #403f3d);
+  border: 1px solid var(--border-light, #c1b6ad);
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
   line-height: 150%; /* 24px */
+  transition: all 0.8s;
 }
-.menu-btn_coffe_img {
-  padding-top: 5px;
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  border-radius: 100px;
-  background: var(--background-body, #e1d4c9);
-  font-size: 16px;
-  line-height: 150%; /* 24px */
-}
+
 .menu-btn_Tea {
   display: flex;
   width: 90px;
@@ -187,17 +182,7 @@ display: none;
   line-height: 150%; /* 24px */
   transition: all 0.8s;
 }
-.menu-btn_Tea_img {
-  padding-top: 5px;
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  border-radius: 100px;
-  background: var(--border-light, #c1b6ad);
-  font-size: 16px;
-  line-height: 150%; /* 24px */
-  transition: all 0.8s;
-}
+
 .menu-btn_Dessert {
   display: flex;
   width: 124px;
@@ -219,7 +204,7 @@ display: none;
     color: var(--text-light, #e1d4c9);
   }
 }
-.menu-btn_Dessert_img {
+.menu-btn_img {
   padding-top: 5px;
   width: 30px;
   height: 30px;
@@ -230,14 +215,25 @@ display: none;
   line-height: 150%; /* 24px */
   transition: all 0.8s;
 }
+.btn-item-active{
+ background: var(--background-container, #665f55);
+  color: var(--text-light, #e1d4c9);
+}
+.menu-btn_img_active{
+  background: var(--background-container, #e1d4c9);
+}
 
 .contanier-menu {
   max-width: 1360px;
   padding: 38px 0 0 0;
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   gap: 40px;
   margin: 0 auto;
+  padding-bottom: 10px;
+}
+.contanier-menu_activ{
+display: flex;
 }
 
 .cart-menu {
