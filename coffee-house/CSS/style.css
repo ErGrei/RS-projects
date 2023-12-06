@@ -825,6 +825,22 @@ html {
   .cart-menu:hover img {
     transform: scale(1);
   }
+  .popap-btn_size_wraper :hover {
+    cursor: pointer;
+    background: var(--background-container, #665f55);
+    color: var(--text-light, #e1d4c9);
+  }
+  .popap-btn_size_wraper :hover .popap-size {
+    background: var(--background-container, #e1d4c9);
+  }
+  .popap-btn_Additives_wraper :hover {
+    cursor: pointer;
+    background: var(--background-container, #665f55);
+    color: var(--text-light, #e1d4c9);
+  }
+  .popap-btn_Additives_wraper :hover .popap-Additives {
+    background: var(--background-container, #e1d4c9);
+  }
 }
 @media (max-width: 1390px) {
   .conteiner {

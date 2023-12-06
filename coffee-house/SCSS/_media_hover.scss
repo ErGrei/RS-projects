@@ -153,27 +153,48 @@
     }
   }
   .menu-btn_coffe {
-        :hover {
+    :hover {
       background: var(--background-container, #e1d4c9);
       color: var(--text-light, #e1d4c9);
     }
   }
   .menu-hover {
-        :hover {
+    :hover {
       cursor: pointer;
-        background: var(--background-container, #665f55);
+      background: var(--background-container, #665f55);
       color: var(--text-light, #e1d4c9);
-     
+
       .menu-btn_img {
         background: var(--background-container, #e1d4c9);
       }
-     
     }
   }
-  .cart-menu{
-    &:hover{
+  .cart-menu {
+    &:hover {
       img {
         transform: scale(1);
+      }
+    }
+  }
+  .popap-btn_size_wraper {
+    :hover {
+      cursor: pointer;
+      background: var(--background-container, #665f55);
+      color: var(--text-light, #e1d4c9);
+
+      .popap-size {
+        background: var(--background-container, #e1d4c9);
+      }
+    }
+  }
+  .popap-btn_Additives_wraper {
+    :hover {
+      cursor: pointer;
+      background: var(--background-container, #665f55);
+      color: var(--text-light, #e1d4c9);
+
+      .popap-Additives {
+        background: var(--background-container, #e1d4c9);
       }
     }
   }
