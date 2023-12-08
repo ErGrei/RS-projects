@@ -29,6 +29,8 @@ html {
   background: var(--background-body, #e1d4c9);
 }
 .conteiner {
+  position: relative;
+  overflow: hidden;
   max-width: 1440px;
   padding: 11px 0px 40px 0px;
   align-items: center;
@@ -38,10 +40,10 @@ html {
   font-family: "Inter", sans-serif;
   transition: all 1s;
 }
-.media{
+.media {
   display: none;
-  }
-  .navbar {
+}
+.navbar {
   display: flex;
   justify-content: space-between;
   max-width: 1360px;
@@ -97,9 +99,9 @@ html {
     }
   }
 }
-.menu-link__img_media{
+.menu-link__img_media {
   display: none;
-  }
+}
 .heder-btn__hover {
   width: 44px;
   height: 44px;
@@ -167,7 +169,6 @@ html {
   transition: all 1s;
   span {
     transition: 1s;
-
   }
 }
 .enjoy-menu__img {
@@ -175,7 +176,6 @@ html {
   position: absolute;
   visibility: hidden;
 }
-
 
 .enjoy-link__menu_hover {
   transition: all 1s;
@@ -195,9 +195,26 @@ html {
     display: block;
   }
 }
-.Favourites-Coffee__contener {
+.slider-line{
+  position: relative;
+  max-width: 480px;
+  overflow: hidden;
   margin: 0 auto;
+  align-items: center;
 }
+.Favourites-Coffee__contener {
+
+  max-width: 480px;
+
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  transition: all 1s;
+}
+.sleder-cart {
+  width: 480px;
+}
+
 .Favourites-Coffee__tile {
   color: var(--text-dark, #403f3d);
   text-align: center;
@@ -217,7 +234,7 @@ html {
   }
 }
 .Favourites-Coffee__img {
-  width: 100%;
+  //width: 100%;
   height: 480px;
   display: block;
   margin-top: 40px;
@@ -296,26 +313,25 @@ html {
   background-position: center center;
   transition: all 1s;
   cursor: pointer;
-
 }
 .Favourites-Coffee__line {
   display: flex;
   max-width: 144px;
   margin: 0 auto;
   justify-content: space-between;
-
-  span {
-    display: block;
-    width: 40px;
-    height: 4px;
-    border-radius: 100px;
-    background: var(--border-light, #c1b6ad);
-  }
 }
-.active {
-  span {
-    background: var(--border-dark, #665f55);
-  }
+.sler-dot {
+  display: block;
+  width: 40px;
+  height: 4px;
+  border-radius: 100px;
+  background: var(--border-light, #c1b6ad);
+  transition: all 1s;
+}
+
+.sler-dot_active {
+  background: var(--border-dark, #665f55);
+  transition: all 1s;
 }
 .About {
   max-width: 1365px;
@@ -528,7 +544,6 @@ html {
   img {
     object-fit: cover;
   }
-
 }
 
 .footer-contener {

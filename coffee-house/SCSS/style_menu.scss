@@ -36,6 +36,8 @@ html {
   overflow: hidden;
 }
 .conteiner {
+  position: relative;
+  overflow: hidden;
   max-width: 1440px;
   padding: 11px 0px 40px 0px;
   align-items: center;
@@ -48,6 +50,7 @@ html {
   display: none;
 }
 .navbar {
+  
   display: flex;
   justify-content: space-between;
   max-width: 1360px;

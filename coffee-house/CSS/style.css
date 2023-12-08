@@ -35,6 +35,8 @@ html {
 }
 
 .conteiner {
+  position: relative;
+  overflow: hidden;
   max-width: 1440px;
   padding: 11px 0px 40px 0px;
   align-items: center;
@@ -206,8 +208,24 @@ html {
   display: block;
 }
 
-.Favourites-Coffee__contener {
+.slider-line {
+  position: relative;
+  max-width: 480px;
+  overflow: hidden;
   margin: 0 auto;
+  align-items: center;
+}
+
+.Favourites-Coffee__contener {
+  max-width: 480px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  transition: all 1s;
+}
+
+.sleder-cart {
+  width: 480px;
 }
 
 .Favourites-Coffee__tile {
@@ -229,7 +247,6 @@ html {
 }
 
 .Favourites-Coffee__img {
-  width: 100%;
   height: 480px;
   display: block;
   margin-top: 40px;
@@ -320,16 +337,19 @@ html {
   margin: 0 auto;
   justify-content: space-between;
 }
-.Favourites-Coffee__line span {
+
+.sler-dot {
   display: block;
   width: 40px;
   height: 4px;
   border-radius: 100px;
   background: var(--border-light, #c1b6ad);
+  transition: all 1s;
 }
 
-.active span {
+.sler-dot_active {
   background: var(--border-dark, #665f55);
+  transition: all 1s;
 }
 
 .About {
@@ -944,17 +964,18 @@ html {
   }
   .navbar {
     display: block;
-    height: 924px;
+    position: fixed;
+    height: 100%;
     z-index: 10;
     position: absolute;
     width: 100%;
     background: #e1d4c9;
-    margin-left: -800px;
-    transition: 2s;
+    margin-left: 1000px;
+    transition: 1s;
   }
   .navbar-ativ {
     margin-left: 0px;
-    transition: 2s;
+    transition: 1s;
   }
   .header-menu__link {
     display: block;
@@ -1104,7 +1125,7 @@ html {
 }
 @media (max-width: 415px) {
   .Favourites-Coffee__img {
-    width: 100%;
+    margin-right: 30px;
     max-height: clamp(345px, 10vw, 480px);
     -o-object-fit: cover;
        object-fit: cover;

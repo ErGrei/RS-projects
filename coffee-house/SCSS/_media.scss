@@ -103,18 +103,19 @@
   }
   .navbar {
     display: block;
-    height: 924px;
+    position: fixed;
+    height: 100%;
     z-index: 10;
     position: absolute;
     width: 100%;
     background: #e1d4c9;
     //padding: 0 60px 40px;
-    margin-left: -800px;
-    transition: 2s;
+    margin-left: 1000px;
+    transition: 1s;
   }
   .navbar-ativ {
     margin-left: 0px;
-    transition: 2s;
+    transition: 1s;
   }
   .header-menu__link {
     display: block;
@@ -282,7 +283,7 @@ margin-top: 5px;
 }
 @media (max-width: 415px) {
   .Favourites-Coffee__img {
-    width: 100%;
+    margin-right: 30px;
     max-height: clamp(345px, 10vw, 480px);
     object-fit: cover;
     margin-bottom: 24px;
