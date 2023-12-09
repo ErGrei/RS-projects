@@ -29,7 +29,7 @@ html {
   background: var(--background-body, #e1d4c9);
 }
 .conteiner {
-  position: relative;
+  // position: relative;
   overflow: hidden;
   max-width: 1440px;
   padding: 11px 0px 40px 0px;
@@ -39,6 +39,9 @@ html {
   margin: 0 auto;
   font-family: "Inter", sans-serif;
   transition: all 1s;
+}
+.header {
+  position: relative;
 }
 .media {
   display: none;
@@ -57,7 +60,9 @@ html {
   line-height: 150%;
   margin-bottom: 14px;
   a {
+    display: flex;
     color: #403f3d;
+    gap: 17px;
   }
 }
 .header-logo {
@@ -103,26 +108,74 @@ html {
   display: none;
 }
 .heder-btn__hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
   width: 44px;
   height: 44px;
-  border-radius: 100px;
-  border: 1px solid var(--border-dark, #665f55);
-  display: none;
-  background: url(../img/Menu_img/btn/button-icon-burger.png) no-repeat;
-  background-position: center center;
+  border-radius: 50%;
+  background-color: #e1d4c9;
+  border: 1px solid #665f55;
+  transition: all 0.2s ease;
+  cursor: pointer;
+
+  span {
+    display: block;
+    width: 18px;
+    height: 1px;
+    border-radius: 1px;
+    background-color: #403f3d;
+    transition: all 0.5s ease;
+  }
+}
+.heder-btn__hover_active {
+  gap: 0;
+  span.heder_span1 {
+    transform: rotate(45deg);
+  }
+  span.heder_span2 {
+    transform: rotate(-45deg);
+  }
 }
 
 .Enjoy {
+position: absolute;
   transition: 4s;
   max-width: 1360px;
   max-height: 644px;
   padding: 100px;
   border-radius: 40px;
-  background: url("../img/Enjoy.png") no-repeat, lightgray no-repeat;
+   //background: url("../img/Enjoy.png") no-repeat, lightgray no-repeat;
   background-size: cover;
   background-position: center center;
   margin: 0 auto;
   transition: all 1s;
+  z-index: 9;
+}
+.enjoy-video{
+ 
+  transition: 4s;
+  max-width: 1360px;
+  max-height: 644px;
+  border-radius: 40px;
+  background-size: cover;
+  background-position: center center;
+  margin: 0 auto;
+  transition: all 1s;
+  z-index: 8;
+ 
+
+
+  video{
+  
+    width: 100%;
+    max-height: 644px;
+    object-fit: cover;
+  }
+ 
+
 }
 .enjoy-title {
   max-width: 530px;
@@ -195,7 +248,7 @@ html {
     display: block;
   }
 }
-.slider-line{
+.slider-line {
   position: relative;
   max-width: 480px;
   overflow: hidden;
@@ -203,7 +256,6 @@ html {
   align-items: center;
 }
 .Favourites-Coffee__contener {
-
   max-width: 480px;
 
   margin: 0 auto;
@@ -326,12 +378,18 @@ html {
   height: 4px;
   border-radius: 100px;
   background: var(--border-light, #c1b6ad);
-  transition: all 1s;
+  // transition: all 0.5s;
 }
 
 .sler-dot_active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // opacity: 0;
+  height: 100%;
   background: var(--border-dark, #665f55);
-  transition: all 1s;
+  // transition: all 0.5s;
+  width: 0;
 }
 .About {
   max-width: 1365px;

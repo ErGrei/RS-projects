@@ -43,7 +43,6 @@ html {
 }
 
 .conteiner {
-  position: relative;
   overflow: hidden;
   max-width: 1440px;
   padding: 11px 0px 40px 0px;
@@ -52,6 +51,11 @@ html {
   background: var(--background-body, #e1d4c9);
   margin: 0 auto;
   font-family: "Inter", sans-serif;
+  transition: all 1s;
+}
+
+.header {
+  position: relative;
 }
 
 .media {
@@ -70,14 +74,16 @@ html {
   font-style: normal;
   font-weight: 600;
   line-height: 150%;
-  margin-bottom: 17px;
+  margin-bottom: 14px;
 }
 .navbar a {
+  display: flex;
   color: #403f3d;
+  gap: 17px;
 }
 
 .header-logo {
-  margin-top: 5px;
+  padding-top: 8px;
 }
 
 .header-menu__item li {
@@ -93,7 +99,7 @@ html {
   width: 100%;
   left: 0%;
   position: absolute;
-  transition: all 0.5s;
+  transition: all 1s;
   transform: scaleX(0);
 }
 
@@ -104,25 +110,50 @@ html {
 .header-menu__link li ::after {
   background-color: #080808;
   content: "";
-  bottom: -2px;
+  bottom: -4px;
   height: 2px;
   width: 100%;
   left: 0%;
   position: absolute;
-  transition: all 0.5s;
+  transition: all 1s;
+  transform: scaleX(0);
 }
-.header-menu__link li img {
-  margin-left: 5px;
+
+.menu-link__img_media {
+  display: none;
 }
 
 .heder-btn__hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
   width: 44px;
   height: 44px;
-  border-radius: 100px;
-  border: 1px solid var(--border-dark, #665f55);
-  display: none;
-  background: url(../img/Menu_img/btn/button-icon-burger.png) no-repeat;
-  background-position: center center;
+  border-radius: 50%;
+  background-color: #e1d4c9;
+  border: 1px solid #665f55;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.heder-btn__hover span {
+  display: block;
+  width: 18px;
+  height: 1px;
+  border-radius: 1px;
+  background-color: #403f3d;
+  transition: all 0.5s ease;
+}
+
+.heder-btn__hover_active {
+  gap: 0;
+}
+.heder-btn__hover_active span.heder_span1 {
+  transform: rotate(45deg);
+}
+.heder-btn__hover_active span.heder_span2 {
+  transform: rotate(-45deg);
 }
 
 .menu-title {
@@ -481,7 +512,7 @@ html {
   align-items: flex-start;
   border-radius: 40px;
   background: var(--background-body, #e1d4c9);
-  margin: 300px auto;
+  margin: 25vh auto;
 }
 
 .popap-img {
@@ -554,7 +585,7 @@ html {
 
 .popap-size-btn {
   display: flex;
-  width: 120px;
+  min-width: 120px;
   padding: 8px 16px 8px 8px;
   justify-content: center;
   align-items: center;
@@ -960,7 +991,6 @@ html {
     margin-bottom: 5px;
   }
   .heder-btn__hover {
-    display: block;
     margin: 8px 0px 0px 0px;
   }
   .media {
@@ -975,7 +1005,7 @@ html {
   .navbar {
     display: block;
     position: fixed;
-    height: 100%;
+    height: 100vh;
     z-index: 10;
     position: absolute;
     width: 100%;
@@ -997,6 +1027,8 @@ html {
     display: flex;
     justify-content: center;
     font-size: 32px;
+    margin-left: 89px;
+    margin-top: 18px;
   }
   .header-menu__link li ::after {
     transform: scaleX(0);
@@ -1006,15 +1038,15 @@ html {
   }
   .menu-link__img_media {
     display: block;
-    margin-top: 5px;
+    margin-top: -7px;
   }
   .header-menu__item {
     margin: 0 auto;
-    margin-left: -81px;
+    margin-left: 0px;
   }
   .header-menu__item li {
     font-size: 32px;
-    margin: 73px;
+    margin: 73px 0;
     display: flex;
     justify-content: center;
   }
@@ -1089,6 +1121,9 @@ html {
   }
 }
 @media (max-width: 670px) {
+  .popap-img {
+    display: none;
+  }
   .Mobile-App__wrape_google {
     padding-left: 0;
     margin-top: 17px;

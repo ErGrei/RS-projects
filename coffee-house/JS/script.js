@@ -125,7 +125,8 @@ for (let i = 0; i < cardMenu.length; i++) {
 function popapSizeBtnActive(price, sizePrice) {
   const popapSizeBTN = document.querySelectorAll(".popap-size-btn");
   const popapSize = document.querySelectorAll(".popap-size");
-
+  const popapAdditives = document.querySelectorAll(".popap-Additives");
+  const popapAdditivesBTN = document.querySelectorAll(".popap-Additives-btn");
   let popapPrise;
   for (let i = 0; i < popapSizeBTN.length; i++) {
     popapSizeBTN[i].addEventListener("click", () => {
@@ -135,6 +136,8 @@ function popapSizeBtnActive(price, sizePrice) {
         }
         popapSizeBTN[i].classList.remove("popap-size-btn-active");
         popapSize[i].classList.remove("popap-size-active");
+        popapAdditivesBTN[i].classList.remove("popap-Additives-btn-active");
+        popapAdditives[i].classList.remove("popap-Additives-active");
       }
       popapSizeBTN[i].classList.toggle("popap-size-btn-active");
       popapSize[i].classList.toggle("popap-size-active");
@@ -153,28 +156,40 @@ function popapAdditivesBtnActive() {
   let AdditivesPrice;
   for (let i = 0; i < popapAdditivesBTN.length; i++) {
     popapAdditivesBTN[i].addEventListener("click", () => {
-      popapAdditivesBTN[i].classList.toggle("popap-Additives-btn-active");
-      popapAdditives[i].classList.toggle("popap-Additives-active");
+      if (popapAdditives[i].classList.contains("popap-Additives-active")) {
+        let priseAdd = document.querySelector(".popap-prise").innerHTML;
+        popapAdditivesBTN[i].classList.remove("popap-Additives-btn-active");
+        popapAdditives[i].classList.remove("popap-Additives-active");
+        priseAdd = +priseAdd - 0.5;
+        document.querySelector(".popap-prise").innerHTML =
+          Number(priseAdd).toFixed(2);
+      } else {
+        let priseAdd = document.querySelector(".popap-prise").innerHTML;
+        popapAdditivesBTN[i].classList.add("popap-Additives-btn-active");
+        popapAdditives[i].classList.add("popap-Additives-active");
+        priseAdd = +priseAdd + 0.5;
+        document.querySelector(".popap-prise").innerHTML =
+          Number(priseAdd).toFixed(2);
+      }
     });
   }
 }
-
-
 
 /**Бургер меню */
 const btnBoorgerMenu = document.querySelector(".heder-btn__hover");
 const navbarBoorgerMenu = document.querySelector(".navbar");
 const navbarLinkMenu = document.querySelectorAll(".menu-link");
-
 btnBoorgerMenu.addEventListener("click", () => {
   navbarBoorgerMenu.classList.toggle("navbar-ativ");
+  btnBoorgerMenu.classList.toggle("heder-btn__hover_active");
 });
 for (let i = 0; i < navbarLinkMenu.length; i++) {
   navbarLinkMenu[i].addEventListener("click", () => {
-    console.log(navbarLinkMenu.length);
     navbarBoorgerMenu.classList.toggle("navbar-ativ");
+    btnBoorgerMenu.classList.toggle("heder-btn__hover_active");
   });
 }
+
 /**Переключение карточек в блоке menu */
 const btnMenu = document.querySelectorAll(".btn-item");
 const cartMenu = document.querySelectorAll(".contanier-menu");
@@ -194,11 +209,9 @@ for (let i = 0; i < btnMenu.length; i++) {
   });
 }
 
-
-
 /**Слайдер в блоке Home */
 window.addEventListener("resize", slideAdaptiv);
-const timeAutSlider = document.querySelector(".Favourites-Coffee");
+const slerDotActive = document.querySelectorAll(".sler-dot_active");
 const sliderCart = document.querySelectorAll(".sleder-cart");
 const sliderContener = document.querySelector(".Favourites-Coffee__contener");
 const sliderBtnRight = document.querySelector(
@@ -210,9 +223,16 @@ const slierDot = document.querySelectorAll(".sler-dot");
 
 sliderBtnRight.addEventListener("click", sliderRight);
 sliderBtnLeft.addEventListener("click", sliderLeft);
+let isPaused = false;
 
 let sliderCount = 0;
 let sliderWidth;
+
+let timer;
+let timerB;
+slerDotActive1(0);
+slerInterval();
+
 function slideAdaptiv() {
   sliderWidth = sliderline.offsetWidth;
   sliderline.style.width = sliderWidth * sliderCart.length + "px";
@@ -225,16 +245,25 @@ function sliderRight() {
   if (sliderCount >= sliderCart.length) {
     sliderCount = 0;
   }
+  slerDotActive.forEach((item) => (item.style.width = 0));
+  clearInterval(timer);
+  clearInterval(timerB);
+  slerInterval();
   rollSlider();
-  slerDotActive(sliderCount);
+  slerDotActive1(sliderCount);
 }
 function sliderLeft() {
   sliderCount--;
   if (sliderCount < 0) {
     sliderCount = sliderCart.length - 1;
   }
+  slerDotActive.forEach((item) => (item.style.width = 0));
+
+  clearInterval(timer);
+  clearInterval(timerB);
+  slerInterval();
   rollSlider();
-  slerDotActive(sliderCount);
+  slerDotActive1(sliderCount);
 }
 
 function rollSlider() {
@@ -243,28 +272,88 @@ function rollSlider() {
   }px)`;
 }
 
-function slerDotActive(index) {
-  slierDot.forEach((item) => item.classList.remove("sler-dot_active"));
-  slierDot[index].classList.add("sler-dot_active");
+function slerDotActive1(index) {
+  let timerA = 0;
+  timer = setInterval(() => {
+    if (!isPaused) {
+      slerDotActive[index].style.width = timerA + "%";
+      ++timerA;
+      // console.log (timerA)
+    }
+  }, 40);
 }
 
-let isPaused = false;
- 
-setInterval(()=>{
-	if(!isPaused){
-    sliderRight();
-	}
-}, 4000);
- 
-timeAutSlider.addEventListener("mouseenter", function(){
-	if(!isPaused){
-		isPaused = true;
-	} 
-});
+function slerInterval() {
+  timerB = setInterval(() => {
+    if (!isPaused) {
+      sliderRight();
+    }
+  }, 4000);
+}
+sliderCart.forEach((item) =>
+  item.addEventListener("mouseenter", function () {
+    if (!isPaused) {
+      isPaused = true;
+      console.log("true");
+    }
+  })
+);
 
-timeAutSlider.addEventListener("mouseleave", function(){
-	if(isPaused){
-		isPaused = false;
-	} 
-});
+sliderCart.forEach((item) =>
+  item.addEventListener("mouseleave", function () {
+    if (isPaused) {
+      isPaused = false;
+      console.log("false");
+    }
+  })
+);
 
+/**События Touch */
+
+sliderCart.forEach((item) =>
+  item.addEventListener("touchstart", contenerTouchStart, false)
+);
+sliderCart.forEach((item) =>
+  item.addEventListener("touchend", contenerTouchEnd, false)
+);
+sliderCart.forEach((item) =>
+  item.addEventListener("touchmove", contenerTouchMove, false)
+);
+
+let x1 = null;
+let y1 = null;
+
+function contenerTouchEnd(event) {
+  if (isPaused) {
+    isPaused = false;
+  }
+}
+
+function contenerTouchStart(event) {
+  const firstTouch = event.touches[0];
+  if (!isPaused) {
+    isPaused = true;
+  }
+  x1 = firstTouch.clientX;
+  y1 = firstTouch.clientY;
+}
+function contenerTouchMove(event) {
+  if (!x1 || !y1) {
+    return false;
+  }
+  let x2 = event.touches[0].clientX;
+  let y2 = event.touches[0].clientY;
+
+  let xResult = x2 - x1;
+  let yResult = y2 - y1;
+
+  if (Math.abs(xResult) > Math.abs(yResult)) {
+    if (xResult > 0) {
+      sliderLeft();
+    } else {
+      sliderRight();
+    }
+  }
+  x1 = null;
+  y1 = null;
+}

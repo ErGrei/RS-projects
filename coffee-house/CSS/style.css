@@ -35,7 +35,6 @@ html {
 }
 
 .conteiner {
-  position: relative;
   overflow: hidden;
   max-width: 1440px;
   padding: 11px 0px 40px 0px;
@@ -45,6 +44,10 @@ html {
   margin: 0 auto;
   font-family: "Inter", sans-serif;
   transition: all 1s;
+}
+
+.header {
+  position: relative;
 }
 
 .media {
@@ -66,7 +69,9 @@ html {
   margin-bottom: 14px;
 }
 .navbar a {
+  display: flex;
   color: #403f3d;
+  gap: 17px;
 }
 
 .header-logo {
@@ -111,26 +116,68 @@ html {
 }
 
 .heder-btn__hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
   width: 44px;
   height: 44px;
-  border-radius: 100px;
-  border: 1px solid var(--border-dark, #665f55);
-  display: none;
-  background: url(../img/Menu_img/btn/button-icon-burger.png) no-repeat;
-  background-position: center center;
+  border-radius: 50%;
+  background-color: #e1d4c9;
+  border: 1px solid #665f55;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.heder-btn__hover span {
+  display: block;
+  width: 18px;
+  height: 1px;
+  border-radius: 1px;
+  background-color: #403f3d;
+  transition: all 0.5s ease;
+}
+
+.heder-btn__hover_active {
+  gap: 0;
+}
+.heder-btn__hover_active span.heder_span1 {
+  transform: rotate(45deg);
+}
+.heder-btn__hover_active span.heder_span2 {
+  transform: rotate(-45deg);
 }
 
 .Enjoy {
+  position: absolute;
   transition: 4s;
   max-width: 1360px;
   max-height: 644px;
   padding: 100px;
   border-radius: 40px;
-  background: url("../img/Enjoy.png") no-repeat, lightgray no-repeat;
   background-size: cover;
   background-position: center center;
   margin: 0 auto;
   transition: all 1s;
+  z-index: 9;
+}
+
+.enjoy-video {
+  transition: 4s;
+  max-width: 1360px;
+  max-height: 644px;
+  border-radius: 40px;
+  background-size: cover;
+  background-position: center center;
+  margin: 0 auto;
+  transition: all 1s;
+  z-index: 8;
+}
+.enjoy-video video {
+  width: 100%;
+  max-height: 644px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .enjoy-title {
@@ -344,12 +391,15 @@ html {
   height: 4px;
   border-radius: 100px;
   background: var(--border-light, #c1b6ad);
-  transition: all 1s;
 }
 
 .sler-dot_active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
   background: var(--border-dark, #665f55);
-  transition: all 1s;
+  width: 0;
 }
 
 .About {
@@ -950,7 +1000,6 @@ html {
     margin-bottom: 5px;
   }
   .heder-btn__hover {
-    display: block;
     margin: 8px 0px 0px 0px;
   }
   .media {
@@ -965,7 +1014,7 @@ html {
   .navbar {
     display: block;
     position: fixed;
-    height: 100%;
+    height: 100vh;
     z-index: 10;
     position: absolute;
     width: 100%;
@@ -987,6 +1036,8 @@ html {
     display: flex;
     justify-content: center;
     font-size: 32px;
+    margin-left: 89px;
+    margin-top: 18px;
   }
   .header-menu__link li ::after {
     transform: scaleX(0);
@@ -996,15 +1047,15 @@ html {
   }
   .menu-link__img_media {
     display: block;
-    margin-top: 5px;
+    margin-top: -7px;
   }
   .header-menu__item {
     margin: 0 auto;
-    margin-left: -81px;
+    margin-left: 0px;
   }
   .header-menu__item li {
     font-size: 32px;
-    margin: 73px;
+    margin: 73px 0;
     display: flex;
     justify-content: center;
   }
@@ -1079,6 +1130,9 @@ html {
   }
 }
 @media (max-width: 670px) {
+  .popap-img {
+    display: none;
+  }
   .Mobile-App__wrape_google {
     padding-left: 0;
     margin-top: 17px;

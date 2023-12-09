@@ -15,14 +15,15 @@
     <link rel="stylesheet" href="./CSS/style_menu.css" />
   </head>
   <body class="body">
-   
     <div class="conteiner">
       <header class="header">
         <div class="media">
           <div class="header-logo__adaptiv">
             <a href="./index.html"><img src="./img/logo.png" alt="Logo" /></a>
           </div>
-          <div class="heder-btn__hover"><span></span></div>
+          <div class="heder-btn__hover">
+            <span class="heder_span1"></span><span class="heder_span2"></span>
+          </div>
         </div>
         <div class="navbar">
           <div class="header-logo">
@@ -44,7 +45,19 @@
           <div class="header-menu__link">
             <ul>
               <li class="menu-link">
-                <a>Menu <img src="./img/coffee-cup.svg" alt="coffee-cup" /></a>
+                <a href="#"
+                  >Menu
+                  <img
+                    class="menu-link__img"
+                    src="./img/coffee-cup.svg"
+                    alt="coffee-cup"
+                  />
+                  <img
+                    class="menu-link__img_media"
+                    src="./img/Menu_img/coffee-cup.svg"
+                    alt="coffee-cup"
+                  />
+                </a>
               </li>
             </ul>
           </div>
@@ -351,6 +364,6 @@
         </div>
       </footer>
     </div>
-       <script type="module" src="./JS/script.js"></script>
+    <script type="module" src="./JS/script.js"></script>
   </body>
 </html>
