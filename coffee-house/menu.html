@@ -1,80 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coffe-House</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee-House</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.cdnfonts.com/css/inter?styles=29139,29140,29141"
-      rel="stylesheet">
-    <link type="image/x-icon" href="./img/favicon-16x16.png" rel="icon">
-    <link rel="stylesheet" href="./CSS/style_menu.css">
+      rel="stylesheet"
+    />
+    <link type="image/x-icon" href="./img/favicon-16x16.png" rel="icon" />
+    <link rel="stylesheet" href="./CSS/style_menu.css" />
   </head>
-  <body>
+  <body class="body">
     <div class="conteiner">
       <header class="header">
         <div class="media">
           <div class="header-logo__adaptiv">
-            <a href="./index.html"><img src="./img/logo.png" alt="Logo"></a>
+            <a href="./index.html"><img src="./img/logo.png" alt="Logo" /></a>
           </div>
-          <div class="heder-btn__hover"><span></span></div>
+          <div class="heder-btn__hover">
+            <span class="heder_span1"></span><span class="heder_span2"></span>
+          </div>
         </div>
         <div class="navbar">
           <div class="header-logo">
-            <a href="./index.html"><img src="./img/logo.png" alt="Logo"></a>
+            <a href="./index.html"><img src="./img/logo.png" alt="Logo" /></a>
           </div>
 
           <div class="header-menu__item">
             <ul>
-              <li>
+              <li class="menu-link">
                 <a href="./index.html#Favourites-Coffee">Favorite coffee</a>
               </li>
-              <li><a href="./index.html#About">About</a></li>
-              <li><a href="./index.html#Mobile-App">Mobile app</a></li>
-              <li><a href="#Contact_us">Contact us</a></li>
+              <li class="menu-link"><a href="./index.html#About">About</a></li>
+              <li class="menu-link">
+                <a href="./index.html#Mobile-App">Mobile app</a>
+              </li>
+              <li class="menu-link"><a href="#Contact_us">Contact us</a></li>
             </ul>
           </div>
           <div class="header-menu__link">
             <ul>
-              <li>
-                <a>Menu <img src="./img/coffee-cup.svg" alt="coffee-cup"></a>
+              <li class="menu-link">
+                <a href="#"
+                  >Menu
+                  <img
+                    class="menu-link__img"
+                    src="./img/coffee-cup.svg"
+                    alt="coffee-cup"
+                  />
+                  <img
+                    class="menu-link__img_media"
+                    src="./img/Menu_img/coffee-cup.svg"
+                    alt="coffee-cup"
+                  />
+                </a>
               </li>
             </ul>
           </div>
         </div>
       </header>
+
       <div class="menu-title">
         <h1>Behind each of our cups hides an <span>amazing surprise</span></h1>
         <div class="menu-btn">
-          <div class="menu-btn_coffe">
-            <div class="menu-btn_coffe_img">
-              <img src="./img/Menu_img/btn/1.svg" alt="coffe">
-            </div>
-            Coffee
-          </div>
           <div class="menu-hover">
-            <div class="menu-btn_Tea">
-              <div class="menu-btn_Tea_img">
-                <img src="./img/Menu_img/btn/2.svg" alt="tea">
+            <div class="menu-btn_coffe btn-item btn-item-active">
+              <div class="menu-btn_img menu-btn_img_active">
+                <img src="./img/Menu_img/btn/1.svg" alt="coffe" />
+              </div>
+              Coffee
+            </div>
+            <div class="menu-btn_Tea btn-item">
+              <div class="menu-btn_img">
+                <img src="./img/Menu_img/btn/2.svg" alt="tea" />
               </div>
               Tea
             </div>
-            <div class="menu-btn_Dessert">
-              <div class="menu-btn_Dessert_img">
-                <img src="./img/Menu_img/btn/3.svg" alt="desert">
+            <div class="menu-btn_Dessert btn-item">
+              <div class="menu-btn_img">
+                <img src="./img/Menu_img/btn/3.svg" alt="desert" />
               </div>
               Dessert
             </div>
           </div>
         </div>
       </div>
-      <div class="contanier-menu">
+      <div class="contanier-menu contanier-menu_activ coffe">
         <div class="cart-menu">
           <div class="img">
-            <img src="./img/Menu_img/coffee-1.jpg" alt="coffe">
+            <img src="./img/Menu_img/coffee-1.jpg" alt="coffe" />
           </div>
           <div class="menu-text">
             <h3>Irish coffee</h3>
@@ -86,7 +104,7 @@
         </div>
         <div class="cart-menu">
           <div class="img">
-            <img src="./img/Menu_img/coffee-2.jpg" alt="coffe">
+            <img src="./img/Menu_img/coffee-2.jpg" alt="coffe" />
           </div>
           <div class="menu-text">
             <h3>Kahlua coffee</h3>
@@ -99,7 +117,7 @@
         </div>
         <div class="cart-menu">
           <div class="img">
-            <img src="./img/Menu_img/coffee-3.jpg" alt="coffe">
+            <img src="./img/Menu_img/coffee-3.jpg" alt="coffe" />
           </div>
           <div class="menu-text">
             <h3>Honey raf</h3>
@@ -109,7 +127,7 @@
         </div>
         <div class="cart-menu">
           <div class="img">
-            <img src="./img/Menu_img/coffee-4.jpg" alt="coffe">
+            <img src="./img/Menu_img/coffee-4.jpg" alt="coffe" />
           </div>
           <div class="menu-text">
             <h3>Ice cappuccino</h3>
@@ -119,7 +137,7 @@
         </div>
         <div class="cart-menu">
           <div class="img">
-            <img src="./img/Menu_img/coffee-5.jpg" alt="coffe">
+            <img src="./img/Menu_img/coffee-5.jpg" alt="coffe" />
           </div>
           <div class="menu-text">
             <h3>Espresso</h3>
@@ -129,7 +147,7 @@
         </div>
         <div class="cart-menu">
           <div class="img">
-            <img src="./img/Menu_img/coffee-6.jpg" alt="coffe">
+            <img src="./img/Menu_img/coffee-6.jpg" alt="coffe" />
           </div>
           <div class="menu-text">
             <h3>Latte</h3>
@@ -142,7 +160,7 @@
         </div>
         <div class="cart-menu">
           <div class="img">
-            <img src="./img/Menu_img/coffee-7.jpg" alt="coffe">
+            <img src="./img/Menu_img/coffee-7.jpg" alt="coffe" />
           </div>
           <div class="menu-text">
             <h3>Latte macchiato</h3>
@@ -152,7 +170,7 @@
         </div>
         <div class="cart-menu">
           <div class="img">
-            <img src="./img/Menu_img/coffee-8.jpg" alt="coffe">
+            <img src="./img/Menu_img/coffee-8.jpg" alt="coffe" />
           </div>
           <div class="menu-text">
             <h3>Coffee with cognac</h3>
@@ -161,6 +179,148 @@
           </div>
         </div>
       </div>
+
+      <div class="contanier-menu tea">
+        <div class="cart-menu">
+          <div class="img">
+            <img src="./img/Menu_img/tea-1.jpg" alt="tea" />
+          </div>
+          <div class="menu-text">
+            <h3>Moroccan</h3>
+            <p>
+              Fragrant black tea with the addition of tangerine, cinnamon,
+              honey, lemon and mint
+            </p>
+            <span>$4.50</span>
+          </div>
+        </div>
+        <div class="cart-menu">
+          <div class="img">
+            <img src="./img/Menu_img/tea-2.jpg" alt="tea" />
+          </div>
+          <div class="menu-text">
+            <h3>Ginger</h3>
+            <p>Original black tea with fresh ginger, lemon and honey</p>
+            <span>$5.00</span>
+          </div>
+        </div>
+        <div class="cart-menu">
+          <div class="img">
+            <img src="./img/Menu_img/tea-3.jpg" alt="tea" />
+          </div>
+          <div class="menu-text">
+            <h3>Cranberry</h3>
+            <p>Invigorating black tea with cranberry and honey</p>
+            <span>$5.00</span>
+          </div>
+        </div>
+        <div class="cart-menu">
+          <div class="img">
+            <img src="./img/Menu_img/tea-4.jpg" alt="tea" />
+          </div>
+          <div class="menu-text">
+            <h3>Sea buckthorn</h3>
+            <p>
+              Toning sweet black tea with sea buckthorn, fresh thyme and
+              cinnamon
+            </p>
+            <span>$5.50</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contanier-menu dessert">
+        <div class="cart-menu">
+          <div class="img">
+            <img src="./img/Menu_img/dessert-1.jpg" alt="dessert" />
+          </div>
+          <div class="menu-text">
+            <h3>Marble cheesecake</h3>
+            <p>
+              Philadelphia cheese with lemon zest on a light sponge cake and red
+              currant jam
+            </p>
+            <span>$3.50</span>
+          </div>
+        </div>
+        <div class="cart-menu">
+          <div class="img">
+            <img src="./img/Menu_img/dessert-2.jpg" alt="dessert" />
+          </div>
+          <div class="menu-text">
+            <h3>Red velvet</h3>
+            <p>Layer cake with cream cheese frosting</p>
+            <span>$4.00</span>
+          </div>
+        </div>
+        <div class="cart-menu">
+          <div class="img">
+            <img src="./img/Menu_img/dessert-3.jpg" alt="dessert" />
+          </div>
+          <div class="menu-text">
+            <h3>Cheesecakes</h3>
+            <p>
+              Soft cottage cheese pancakes with sour cream and fresh berries and
+              sprinkled with powdered sugar
+            </p>
+            <span>$4.50</span>
+          </div>
+        </div>
+        <div class="cart-menu">
+          <div class="img">
+            <img src="./img/Menu_img/dessert-4.jpg" alt="dessert" />
+          </div>
+          <div class="menu-text">
+            <h3>Creme brulee</h3>
+            <p>Delicate creamy dessert in a caramel basket with wild berries</p>
+            <span>$4.00</span>
+          </div>
+        </div>
+        <div class="cart-menu">
+          <div class="img">
+            <img src="./img/Menu_img/dessert-5.jpg" alt="dessert" />
+          </div>
+          <div class="menu-text">
+            <h3>Pancakes</h3>
+            <p>Tender pancakes with strawberry jam and fresh strawberries</p>
+            <span>$4.50</span>
+          </div>
+        </div>
+        <div class="cart-menu">
+          <div class="img">
+            <img src="./img/Menu_img/dessert-6.jpg" alt="dessert" />
+          </div>
+          <div class="menu-text">
+            <h3>Honey cake</h3>
+            <p>Classic honey cake with delicate custard</p>
+            <span>$4.50</span>
+          </div>
+        </div>
+        <div class="cart-menu">
+          <div class="img">
+            <img src="./img/Menu_img/dessert-7.jpg" alt="dessert" />
+          </div>
+          <div class="menu-text">
+            <h3>Chocolate cake</h3>
+            <p>Cake with hot chocolate filling and nuts with dried apricots</p>
+            <span>$5.50</span>
+          </div>
+        </div>
+        <div class="cart-menu">
+          <div class="img">
+            <img src="./img/Menu_img/dessert-8.jpg" alt="dessert" />
+          </div>
+          <div class="menu-text">
+            <h3>Black forestc</h3>
+            <p>
+              A combination of thin sponge cake with cherry jam and light
+              chocolate mousse
+            </p>
+            <span>$6.50</span>
+          </div>
+        </div>
+      </div>
+
       <div class="btn-menu_hover"></div>
       <footer>
         <a id="Contact_us"></a>
@@ -204,6 +364,6 @@
         </div>
       </footer>
     </div>
-    <script src="./JS/script.js"></script>
+    <script type="module" src="./JS/script_menu.js"></script>
   </body>
 </html>
