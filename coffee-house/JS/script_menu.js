@@ -12,7 +12,7 @@ function _popap(cartNumber, number) {
      <div class="popap-vraper popap-vraper-active">
        <div class="popap-window">
          <div class="popap-img">
-           <img src="${cartNumber[number].img}" alt="" />
+           <img src="${cartNumber[number].img}" alt="failed to load image" />
          </div>
          <div class="popap-text">
            <div class="popap-title">
