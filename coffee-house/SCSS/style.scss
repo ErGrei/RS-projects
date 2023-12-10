@@ -29,6 +29,8 @@ html {
   background: var(--background-body, #e1d4c9);
 }
 .conteiner {
+  // position: relative;
+  overflow: hidden;
   max-width: 1440px;
   padding: 11px 0px 40px 0px;
   align-items: center;
@@ -38,10 +40,13 @@ html {
   font-family: "Inter", sans-serif;
   transition: all 1s;
 }
-.media{
+.header {
+  position: relative;
+}
+.media {
   display: none;
-  }
-  .navbar {
+}
+.navbar {
   display: flex;
   justify-content: space-between;
   max-width: 1360px;
@@ -55,7 +60,9 @@ html {
   line-height: 150%;
   margin-bottom: 14px;
   a {
+    display: flex;
     color: #403f3d;
+    gap: 17px;
   }
 }
 .header-logo {
@@ -97,27 +104,78 @@ html {
     }
   }
 }
+.menu-link__img_media {
+  display: none;
+}
 .heder-btn__hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
   width: 44px;
   height: 44px;
-  border-radius: 100px;
-  border: 1px solid var(--border-dark, #665f55);
-  display: none;
-  background: url(../img/Menu_img/btn/button-icon-burger.png) no-repeat;
-  background-position: center center;
+  border-radius: 50%;
+  background-color: #e1d4c9;
+  border: 1px solid #665f55;
+  transition: all 0.2s ease;
+  cursor: pointer;
+
+  span {
+    display: block;
+    width: 18px;
+    height: 1px;
+    border-radius: 1px;
+    background-color: #403f3d;
+    transition: all 0.5s ease;
+  }
+}
+.heder-btn__hover_active {
+  gap: 0;
+  span.heder_span1 {
+    transform: rotate(45deg);
+  }
+  span.heder_span2 {
+    transform: rotate(-45deg);
+  }
 }
 
 .Enjoy {
+position: absolute;
   transition: 4s;
   max-width: 1360px;
   max-height: 644px;
-  padding: 100px;
+  padding: 104px 139px;
   border-radius: 40px;
-  background: url("../img/Enjoy.png") no-repeat, lightgray no-repeat;
+   //background: url("../img/Enjoy.png") no-repeat, lightgray no-repeat;
   background-size: cover;
   background-position: center center;
   margin: 0 auto;
   transition: all 1s;
+  z-index: 9;
+}
+.enjoy-video{
+  display: flex;
+  justify-content: center;
+  transition: 4s;
+  max-width: 1360px;
+  max-height: 644px;
+  border-radius: 40px;
+  align-items: center;
+  border-radius: 40px;
+  overflow: hidden;
+  object-fit: cover;
+  margin: 0 auto;
+ 
+
+
+  video{
+    transition: 0.8s;
+    max-width: 1360px;
+    border-radius: 40px;
+  }
+ 
+
 }
 .enjoy-title {
   max-width: 530px;
@@ -164,7 +222,6 @@ html {
   transition: all 1s;
   span {
     transition: 1s;
-
   }
 }
 .enjoy-menu__img {
@@ -184,16 +241,32 @@ html {
   margin: 0 auto;
 }
 .Favourites-Coffee {
-  padding: 0 43px 100px 45px;
+  padding: 0 43px 0 45px;
   display: flex;
   margin: 0 auto;
   button {
     display: block;
   }
 }
-.Favourites-Coffee__contener {
+.slider-line {
+  position: relative;
+  max-width: 480px;
+  overflow: hidden;
   margin: 0 auto;
+  align-items: center;
 }
+.Favourites-Coffee__contener {
+  max-width: 480px;
+
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  transition: all 1s;
+}
+.sleder-cart {
+  width: 480px;
+}
+
 .Favourites-Coffee__tile {
   color: var(--text-dark, #403f3d);
   text-align: center;
@@ -213,7 +286,7 @@ html {
   }
 }
 .Favourites-Coffee__img {
-  width: 100%;
+  //width: 100%;
   height: 480px;
   display: block;
   margin-top: 40px;
@@ -292,26 +365,32 @@ html {
   background-position: center center;
   transition: all 1s;
   cursor: pointer;
-
 }
 .Favourites-Coffee__line {
   display: flex;
   max-width: 144px;
   margin: 0 auto;
   justify-content: space-between;
-
-  span {
-    display: block;
-    width: 40px;
-    height: 4px;
-    border-radius: 100px;
-    background: var(--border-light, #c1b6ad);
-  }
 }
-.active {
-  span {
-    background: var(--border-dark, #665f55);
-  }
+.sler-dot {
+  display: block;
+  width: 40px;
+  height: 4px;
+  border-radius: 100px;
+  background: var(--border-light, #c1b6ad);
+  margin-bottom: 100px;
+  // transition: all 0.5s;
+}
+
+.sler-dot_active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // opacity: 0;
+  height: 100%;
+  background: var(--border-dark, #665f55);
+  // transition: all 0.5s;
+  width: 0;
 }
 .About {
   max-width: 1365px;
@@ -524,7 +603,6 @@ html {
   img {
     object-fit: cover;
   }
-
 }
 
 .footer-contener {
