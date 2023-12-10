@@ -255,6 +255,8 @@ html {
 
 .contanier-menu {
   max-width: 1360px;
+  max-height: 1125px;
+  overflow: hidden;
   padding: 38px 0 0 0;
   display: none;
   flex-wrap: wrap;
@@ -264,6 +266,7 @@ html {
 }
 .contanier-menu_activ {
   display: flex;
+  max-height: 1125px;
 }
 
 .cart-menu {
@@ -336,6 +339,9 @@ html {
   margin: 0 auto;
   background: url(../img/Menu_img/btn/refresh.svg) no-repeat;
   background-position: center center;
+}
+.btn-menu_hover_active{
+  display: block;
 }
 .footer-contener {
   border-radius: 40px;

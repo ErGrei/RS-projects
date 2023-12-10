@@ -13,13 +13,13 @@
     padding-right: 60px;
     gap: 30px;
   }
-  .contanier-menu {
-    max-height: 1125px;
-    overflow: hidden;
-  }
-  .btn-menu_hover {
-    display: block;
-  }
+  // .contanier-menu {
+  //   max-height: 1125px;
+  //   overflow: hidden;
+  // }
+  // .btn-menu_hover {
+  //    display: block;
+  // }
   .about-img {
     justify-content: center;
     gap: 0;
@@ -54,9 +54,11 @@
     flex-wrap: wrap;
     gap: 107px;
   }
-
+  .sler-dot {
+   margin-bottom:  100px;
+  }
   .Favourites-Coffee {
-    padding: 0 0 100px 0;
+    padding: 0 0 0 0;
   }
   .Favourites-Coffee__slider_left {
     margin-top: 332px;
@@ -293,4 +295,8 @@ display: none;
     object-fit: cover;
     margin-bottom: 24px;
   }
+  .enjoy-video {
+    max-height: 553px;
+  }
 }
+

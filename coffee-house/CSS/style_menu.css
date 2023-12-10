@@ -267,6 +267,8 @@ html {
 
 .contanier-menu {
   max-width: 1360px;
+  max-height: 1125px;
+  overflow: hidden;
   padding: 38px 0 0 0;
   display: none;
   flex-wrap: wrap;
@@ -277,6 +279,7 @@ html {
 
 .contanier-menu_activ {
   display: flex;
+  max-height: 1125px;
 }
 
 .cart-menu {
@@ -348,6 +351,10 @@ html {
   margin: 0 auto;
   background: url(../img/Menu_img/btn/refresh.svg) no-repeat;
   background-position: center center;
+}
+
+.btn-menu_hover_active {
+  display: block;
 }
 
 .footer-contener {
@@ -918,13 +925,6 @@ html {
     padding-right: 60px;
     gap: 30px;
   }
-  .contanier-menu {
-    max-height: 1125px;
-    overflow: hidden;
-  }
-  .btn-menu_hover {
-    display: block;
-  }
   .about-img {
     justify-content: center;
     gap: 0;
@@ -959,8 +959,11 @@ html {
     flex-wrap: wrap;
     gap: 107px;
   }
+  .sler-dot {
+    margin-bottom: 100px;
+  }
   .Favourites-Coffee {
-    padding: 0 0 100px 0;
+    padding: 0 0 0 0;
   }
   .Favourites-Coffee__slider_left {
     margin-top: 332px;
@@ -1175,5 +1178,8 @@ html {
     -o-object-fit: cover;
        object-fit: cover;
     margin-bottom: 24px;
+  }
+  .enjoy-video {
+    max-height: 553px;
   }
 }/*# sourceMappingURL=style_menu.css.map */

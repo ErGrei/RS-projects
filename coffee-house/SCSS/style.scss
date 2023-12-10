@@ -145,7 +145,7 @@ position: absolute;
   transition: 4s;
   max-width: 1360px;
   max-height: 644px;
-  padding: 100px;
+  padding: 104px 139px;
   border-radius: 40px;
    //background: url("../img/Enjoy.png") no-repeat, lightgray no-repeat;
   background-size: cover;
@@ -155,24 +155,24 @@ position: absolute;
   z-index: 9;
 }
 .enjoy-video{
- 
+  display: flex;
+  justify-content: center;
   transition: 4s;
   max-width: 1360px;
   max-height: 644px;
   border-radius: 40px;
-  background-size: cover;
-  background-position: center center;
+  align-items: center;
+  border-radius: 40px;
+  overflow: hidden;
+  object-fit: cover;
   margin: 0 auto;
-  transition: all 1s;
-  z-index: 8;
  
 
 
   video{
-  
-    width: 100%;
-    max-height: 644px;
-    object-fit: cover;
+    transition: 0.8s;
+    max-width: 1360px;
+    border-radius: 40px;
   }
  
 
@@ -241,7 +241,7 @@ position: absolute;
   margin: 0 auto;
 }
 .Favourites-Coffee {
-  padding: 0 43px 100px 45px;
+  padding: 0 43px 0 45px;
   display: flex;
   margin: 0 auto;
   button {
@@ -378,6 +378,7 @@ position: absolute;
   height: 4px;
   border-radius: 100px;
   background: var(--border-light, #c1b6ad);
+  margin-bottom: 100px;
   // transition: all 0.5s;
 }
 
