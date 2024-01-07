@@ -1,33 +1,56 @@
 import "../scss/style.scss";
-const keyboard = [
-  1081, 1094, 1091, 1082, 1077, 1085, 1075, 1096, 1097, 1079, 1093, 1098, 1092,
-  1099, 1074, 1072, 1087, 1088, 1086, 1083, 1076, 1078, 1101, 1103, 1095, 1089,
-  1084, 1080, 1090, 1100, 1073, 1102,
-];
-let key = [];
-const input = document.createElement("input");
-input.className = "input";
-input.type = "text";
-input.value = "";
-document.body.append(input);
+import { keyboard, wraper } from "../js/constants";
+import СreatorElement from "../js/create-element";
 
-const div = document.createElement("div");
-div.className = "conteiner";
-document.body.append(div);
+let key = [];
+// const input = document.createElement("input");
+
+const createWraper = new СreatorElement(wraper[0]);
+const main = createWraper.element;
+document.body.append(main);
+
+const createInput = new СreatorElement(wraper[1]);
+const input = createInput.element;
+main.prepend(input)
+
+const createConteiner = new СreatorElement(wraper[2]);
+main.append(createConteiner.element)
+// const main = document.createElement("main");
+// function createWrapper(className) {
+//   main.className = className;
+//   document.body.append(main);
+// }
+// createWrapper("wrapper");
+
+// function createInput(className, type, value) {
+//   input.className = className;
+//   main.prepend(input);
+// }
+// createInput("input", "text", "");
+
+// function createConteiner(className) {
+//   const div = document.createElement("div");
+//   div.className = className;
+//   main.append(div);
+// }
+// createConteiner("attempt__counter");
+// createConteiner("conteiner");
 
 document.addEventListener("keydown", function (event) {
-  key.push(event.key);
-  input.value = key;
+  for (let i = 0; i < keyboard.length; i++) {
+    if (event.key.toLowerCase() === keyboard[i])
+      openLettersAndNotify(event.key);
+  }
 });
 
-function init() {
+function init(keyboard) {
   let aut = "";
   for (let i = 0; i < keyboard.length; i++) {
-    aut += '<div class="key">' + String.fromCharCode(keyboard[i]) + "</div>";
+    aut += '<div class="key">' + keyboard[i] + "</div>";
   }
   document.querySelector(".conteiner").innerHTML = aut;
 }
-init();
+init(keyboard);
 
 const cont = document.querySelector(".conteiner");
 cont.addEventListener("click", (e) => {
@@ -57,15 +80,28 @@ for (let i = 0; i < word.length; i++) {
 }
 input.value = answerArray.join(" ");
 let remainingLetters = word.length;
-
+let attemptCounter = 6;
+document.querySelector(".attempt__counter").innerHTML =
+  "число попыток" + " " + attemptCounter;
 function openLettersAndNotify(item) {
   let guess = item.toLowerCase();
+  let correctLetter = false;
   for (let i = 0; i < word.length; i++) {
     if (word[i] === guess) {
       answerArray[i] = guess;
       remainingLetters--;
+      correctLetter = true;
       input.value = answerArray.join(" ");
     }
   }
+  if (!correctLetter) {
+    attemptCounter--;
+    document.querySelector(".attempt__counter").innerHTML =
+      "число попыток" + " " + attemptCounter;
+  }
+  if (attemptCounter === 0) {
+    createConteiner("loss");
+    document.querySelector(".loss").innerHTML =
+      "Вы проиграли загаданное слово" + " " + word;
+  }
 }
-
