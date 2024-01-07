@@ -1,6 +1,6 @@
 export default class СreatorElement {
   constructor(param) {
-    this.element = document.createElement(param.teg);
+    this.element = null;
     this.setЕlement(param);
   }
   getElement (){
@@ -8,6 +8,7 @@ export default class СreatorElement {
   }
 
   setЕlement(param) {
+    this.element = document.createElement(param.teg);
     this.setClassName(param);
     this.setTextContent(param);
   }

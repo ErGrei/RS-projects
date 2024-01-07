@@ -32,7 +32,10 @@
   margin: 10px;
   margin: 0 auto;
 }
-.loss {
+.result-wraper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   padding: 17px;
   top: 0;
@@ -41,5 +44,124 @@
   bottom: 0;
   background: rgba($color: #000000, $alpha: 0.5);
   z-index: 5;
+}
+.result-content{
+  width: 300px;
+  height: 200px;
+  background-color: aliceblue;
 
+}
+.span {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 10px 100px 50px 130px 80px;
+  justify-content: center;
+  max-width: 390px;
+  // height: 500px;
+  border: 1px solid black;
+  align-items: center;
+  margin: 0 auto;
+  height: 370px;
+  align-items: end;
+}
+.scaffold-beam {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  width: 70%;
+  height: 10px;
+  border: 1px solid black;
+  background-color: #000000;
+
+}
+.scaffold-support {
+  width: 10px;
+  height: 100%;
+  border: 1px solid black;
+  background-color: #000000;
+  grid-row-start: 2;
+  grid-row-end: 6;
+  margin: 0 auto;
+}
+.scaffold-rope{
+  display: block;
+  width: 3px;
+  height: 100px;
+  border: 1px solid black;
+  background-color: #000000;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  margin: 0 auto;
+  align-items:start;
+}
+.head {
+  grid-column-start: 2;
+  grid-column-end: 5;
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 26px;
+  border: 1px solid black;
+  margin: 0 auto;
+}
+.left-hand {
+  display: block;
+  width: 8px;
+  height: 80px;
+  border-radius: 5px;
+  border: 1px solid black;
+  background-color: #000000;
+  transform: rotate(45deg);
+  margin-left: 89px;
+  margin-bottom: 33px;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+.right-hand {
+  display: block;
+  width: 8px;
+  height: 80px;
+  border-radius: 5px;
+  border: 1px solid black;
+  background-color: #000000;
+  transform: rotate(-45deg);
+  margin-bottom: 33px;
+}
+.body {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  display: block;
+  width: 52px;
+  height: 130px;
+  border-radius: 50px;
+  border: 1px solid black;
+  background-color: #000000;
+  margin: 0 auto;
+}
+.left-leg {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  display: block;
+  width: 8px;
+  height: 80px;
+  border-radius: 5px;
+  border: 1px solid black;
+  background-color: #000000;
+  transform: rotate(30deg);
+  margin-left: 10px;
+  margin-top: -18px;
+}
+.right-leg {
+  display: block;
+  width: 8px;
+  height: 80px;
+  border-radius: 5px;
+  border: 1px solid black;
+  background-color: #000000;
+  transform: rotate(-30deg);
+  margin-left: -16px;
+  margin-top: -14px;
 }
