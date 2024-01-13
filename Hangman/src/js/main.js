@@ -12,8 +12,9 @@ import {
 import СreatorElement from "../js/create-element";
 import GallowsCreate from "../js/gallows";
 game();
+
 function game() {
-  let key = [];
+  let virtualkeyboard = Array.from(keyboard);
   const createWraper = new СreatorElement(pageElements[0]).element;
   const main = createWraper;
   document.body.append(main);
@@ -28,8 +29,8 @@ function game() {
   const clueConteiner = document.querySelector(".clue-conteiner");
   const input = document.querySelector(".input");
 
-  const attemptsCounter = new СreatorElement(pageElements[3]);
-  main.append(attemptsCounter.element);
+  // const attemptsCounter = new СreatorElement(pageElements[3]);
+  // main.append(attemptsCounter.element);
 
   const createConteiner = new СreatorElement(pageElements[2]);
   main.append(createConteiner.element);
@@ -50,28 +51,37 @@ function game() {
     contentModalWindow.append(buttonModalWindow);
   }
 
-  document.addEventListener("keydown", function (event) {
-    for (let i = 0; i < keyboard.length; i++) {
-      if (event.key.toLowerCase() === keyboard[i])
+  document.addEventListener("keyup", keyboardUutput);
+  function keyboardUutput(event) {
+    for (let i = 0; i < virtualkeyboard.length; i++) {
+      if (event.key.toLowerCase() === virtualkeyboard[i]) {
         openLettersAndNotify(event.key);
+        console.log(virtualkeyboard.indexOf(event.key.toString()));
+        virtualkeyboard.splice(
+          virtualkeyboard.indexOf(event.key.toString()),
+          1
+        );
+        initVirtualKeyboard(virtualkeyboard);
+      }
     }
-  });
+  }
 
-  function init(keyboard) {
+  function initVirtualKeyboard(virtualkeyboard) {
     let aut = "";
-    for (let i = 0; i < keyboard.length; i++) {
-      aut += '<div class="key">' + keyboard[i] + "</div>";
+    for (let i = 0; i < virtualkeyboard.length; i++) {
+      aut += '<div class="key">' + virtualkeyboard[i] + "</div>";
     }
     document.querySelector(".conteiner").innerHTML = aut;
   }
-  init(keyboard);
+  initVirtualKeyboard(virtualkeyboard);
 
   const cont = document.querySelector(".conteiner");
   cont.addEventListener("click", (e) => {
     if (!e.target.classList.contains("key")) return;
     let item = e.target.innerHTML;
+    virtualkeyboard.splice(virtualkeyboard.indexOf(item.toString()), 1);
     openLettersAndNotify(item);
-    console.log(item);
+    initVirtualKeyboard(virtualkeyboard);
   });
 
   //Игра
@@ -86,7 +96,7 @@ function game() {
   }
   input.value = answerArray.join(" ");
   let remainingLetters = word.length;
-  let attemptCounter = attemptCounterConst;
+  let attemptCounter = 6;
   let index = 0;
   const divConteiner = document.querySelector(".span");
   document.querySelector(".attempt__counter").innerHTML =
@@ -112,19 +122,21 @@ function game() {
     }
     if (attemptCounter === 0) {
       modalWindow(createModalWindow);
+      document.removeEventListener("keyup", keyboardUutput);
       document.querySelector(".result-content").innerHTML +=
         "Вы проиграли загаданное слово:" + " " + word.toUpperCase();
-         document.querySelector(".result-button").addEventListener("click", () => {
-          main.remove();
+      document.querySelector(".result-button").addEventListener("click", () => {
+        main.remove();
         game();
       });
     }
     if (remainingLetters === 0) {
       modalWindow(createModalWindow);
+      document.removeEventListener("keyup", keyboardUutput);
       document.querySelector(".result-content").innerHTML +=
         "Вы выиграли загаданное слово:" + " " + word.toUpperCase();
-         document.querySelector(".result-button").addEventListener("click", () => {
-          main.remove();
+      document.querySelector(".result-button").addEventListener("click", () => {
+        main.remove();
         game();
       });
     }
