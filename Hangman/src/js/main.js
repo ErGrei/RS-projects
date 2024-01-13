@@ -8,12 +8,16 @@ import {
   attemptCounterConst,
   words,
   createModalWindow,
+  createModalWindowElem,
+  createLosseGame,
+  createVictoryGame,
 } from "../js/constants";
 import СreatorElement from "../js/create-element";
 import GallowsCreate from "../js/gallows";
 game();
 
 function game() {
+  let lettersUsed = [];
   let virtualkeyboard = Array.from(keyboard);
   const createWraper = new СreatorElement(pageElements[0]).element;
   const main = createWraper;
@@ -42,13 +46,22 @@ function game() {
   );
   main.prepend(createGallows.element);
 
-  function modalWindow(createModalWindow) {
+  function modalWindow(createModalWindow, createModalWindowElem, resultGame) {
     const wraperModalWindow = new СreatorElement(createModalWindow[0]).element;
     main.append(wraperModalWindow);
     const contentModalWindow = new СreatorElement(createModalWindow[1]).element;
     wraperModalWindow.append(contentModalWindow);
-    const buttonModalWindow = new СreatorElement(createModalWindow[2]).element;
-    contentModalWindow.append(buttonModalWindow);
+    for (let i = 0; i < createModalWindowElem.length; i++) {
+      const modalWindowElem = new СreatorElement(createModalWindowElem[i])
+        .element;
+      contentModalWindow.append(modalWindowElem);
+    }
+    const resultGameGallow = document.querySelector(".result-content__gallow");
+    for (let i = 0; i < resultGame.length; i++) {
+      const gameGallowElem = new СreatorElement(resultGame[i])
+        .element;
+        resultGameGallow.append(gameGallowElem);
+    }
   }
 
   document.addEventListener("keyup", keyboardUutput);
@@ -56,20 +69,29 @@ function game() {
     for (let i = 0; i < virtualkeyboard.length; i++) {
       if (event.key.toLowerCase() === virtualkeyboard[i]) {
         openLettersAndNotify(event.key);
-        console.log(virtualkeyboard.indexOf(event.key.toString()));
         virtualkeyboard.splice(
           virtualkeyboard.indexOf(event.key.toString()),
           1
         );
+        lettersUsed.push(event.key.toString());
         initVirtualKeyboard(virtualkeyboard);
+        initlettersUsed(lettersUsed);
       }
     }
+  }
+
+  function initlettersUsed(Arr) {
+    let aut = "";
+    for (let i = 0; i < Arr.length; i++) {
+      aut += '<button class="key">' + Arr[i] + "</button>";
+    }
+    document.querySelector(".letters-used").innerHTML = aut;
   }
 
   function initVirtualKeyboard(virtualkeyboard) {
     let aut = "";
     for (let i = 0; i < virtualkeyboard.length; i++) {
-      aut += '<div class="key">' + virtualkeyboard[i] + "</div>";
+      aut += '<button class="key">' + virtualkeyboard[i] + "</button>";
     }
     document.querySelector(".conteiner").innerHTML = aut;
   }
@@ -81,7 +103,9 @@ function game() {
     let item = e.target.innerHTML;
     virtualkeyboard.splice(virtualkeyboard.indexOf(item.toString()), 1);
     openLettersAndNotify(item);
+    lettersUsed.push(item.toString());
     initVirtualKeyboard(virtualkeyboard);
+    initlettersUsed(lettersUsed);
   });
 
   //Игра
@@ -91,6 +115,7 @@ function game() {
   console.log(word);
   clueConteiner.innerHTML += " " + a.clue;
   let answerArray = [];
+
   for (let i = 0; i < word.length; i++) {
     answerArray[i] = "_";
   }
@@ -121,9 +146,9 @@ function game() {
       index++;
     }
     if (attemptCounter === 0) {
-      modalWindow(createModalWindow);
+      modalWindow(createModalWindow, createModalWindowElem, createLosseGame);
       document.removeEventListener("keyup", keyboardUutput);
-      document.querySelector(".result-content").innerHTML +=
+      document.querySelector(".result-content__title").innerHTML +=
         "Вы проиграли загаданное слово:" + " " + word.toUpperCase();
       document.querySelector(".result-button").addEventListener("click", () => {
         main.remove();
@@ -131,9 +156,9 @@ function game() {
       });
     }
     if (remainingLetters === 0) {
-      modalWindow(createModalWindow);
+      modalWindow(createModalWindow, createModalWindowElem, createVictoryGame);
       document.removeEventListener("keyup", keyboardUutput);
-      document.querySelector(".result-content").innerHTML +=
+      document.querySelector(".result-content__title").innerHTML +=
         "Вы выиграли загаданное слово:" + " " + word.toUpperCase();
       document.querySelector(".result-button").addEventListener("click", () => {
         main.remove();

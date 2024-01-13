@@ -131,7 +131,17 @@ export const playingField = [
   {
     teg: "div",
     className: "attempt__counter",
-    text: '" число попыток" + " " + 6',
+    text: "Всего попыток - 6  Использованно попыток - 0",
+  },
+  {
+    teg: "p",
+    className: "letters-used__title",
+    text: "Использованные буквы:",
+  },
+  {
+    teg: "div",
+    className: "letters-used",
+    text: "",
   },
 ];
 
@@ -178,19 +188,128 @@ export const words = [
   },
 ];
 
-export const createModalWindow = [{
+export const createModalWindow = [
+  {
     teg: "div",
     className: "result-wraper",
     text: "",
   },
   {
     teg: "div",
-    className: 'result-content',
+    className: "result-content",
+    text: "",
+  },
+  {
+    teg: "div",
+    className: "result-content__Gallow",
+    text: "",
+  },
+  {
+    teg: "div",
+    className: "result-content__title",
     text: "",
   },
   {
     teg: "button",
-    className: 'result-button',
+    className: "result-button",
     text: "Играть еще раз",
+  },
+];
+export const createModalWindowElem = [
+    {
+    teg: "div",
+    className: "result-content__gallow span",
+    text: "",
+  },
+  {
+    teg: "div",
+    className: "result-content__title",
+    text: "",
+  },
+  {
+    teg: "button",
+    className: "result-button",
+    text: "Играть еще раз",
+  },
+];
+export const createLosseGame = [
+  {
+    teg: "span",
+    className: "scaffold-beam ",
+    text: "",
+  },
+  {
+    teg: "span",
+    className: "scaffold-support ",
+    text: "",
+  },
+
+  {
+    teg: "span",
+    className: "scaffold-rope ",
+    text: "",
+  },
+  {
+    teg: "span",
+    className: "head losse",
+    text: "",
+  },
+  {
+    teg: "span",
+    className: "body losse",
+    text: "",
+  },
+  {
+    teg: "span",
+    className: "left-hand losse" ,
+    text: "",
+  },
+  {
+    teg: "span",
+    className: "right-hand losse",
+    text: "",
+  },
+  {
+    teg: "span",
+    className: "left-leg losse",
+    text: "",
+  },
+  {
+    teg: "span",
+    className: "right-leg losse",
+    text: "",
+  },
+]
+
+export const createVictoryGame = [
+    {
+    teg: "span",
+    className: "head_victory",
+    text: "",
+  },
+  {
+    teg: "span",
+    className: "body_victory",
+    text: "",
+  },
+  {
+    teg: "span",
+    className: "left-hand_victory" ,
+    text: "",
+  },
+  {
+    teg: "span",
+    className: "right-hand_victory",
+    text: "",
+  },
+  {
+    teg: "span",
+    className: "left-leg_victory",
+    text: "",
+  },
+  {
+    teg: "span",
+    className: "right-leg_victory",
+    text: "",
   },
 ]
