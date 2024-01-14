@@ -1,0 +1,67 @@
+@media (max-width: 455px) {
+  .result-content__gallow {
+    &.span {
+      max-width: 266px;
+    }
+  }
+  .left-hand {
+    &.losse {
+      margin-left: 50px;
+    }
+  }
+  .right-hand {
+    &.losse {
+      margin-left: 5px;
+    }
+  }
+  .left-leg {
+    &.losse {
+      margin-left: -5px;
+    }
+  }
+  .right-leg {
+    &.losse {
+      margin-left: -5px;
+    }
+  }
+  .left-hand_victory {
+    margin-left: 15px;
+    margin-bottom: 99px;
+  }
+
+  .right-hand_victory {
+    margin-bottom: 96px;
+    margin-left: 36px;
+  }
+
+  .left-leg_victory {
+    margin-left: 35px;
+    margin-bottom: 18px;
+  }
+  .right-leg_victory {
+    margin-left: -40px;
+
+    margin-bottom: 18px;
+  }
+}
+
+@media (max-width: 430px) {
+  .span {
+    max-width: 318px;
+  }
+  .left-hand {
+    margin-left: 66px;
+  }
+  .right-hand {
+    margin-left: 8px;
+  }
+  // .body {
+  //   margin:0;
+  // }
+  .left-leg {
+    margin-left: 1px;
+  }
+  .right-leg {
+    margin-left: -5px;
+  }
+}

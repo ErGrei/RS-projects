@@ -32,6 +32,41 @@ export const keyboard = [
   "б",
   "ю",
 ];
+export const enKey = [
+  "q",
+  "w",
+  "e",
+  "r",
+  "t",
+  "y",
+  "u",
+  "i",
+  "o",
+  "p",
+  "[",
+  "]",
+  "'",
+  ";",
+  "l",
+  "k",
+  "j",
+  "h",
+  "g",
+  "f",
+  "d",
+  "s",
+  "a",
+  "z",
+  "x",
+  "c",
+  "v",
+  "b",
+  "n",
+  "m",
+  ",",
+  ".",
+  "/",
+];
 export const pageElements = [
   {
     teg: "main",
@@ -130,8 +165,13 @@ export const playingField = [
   },
   {
     teg: "div",
+    className: "checking__entered-letter",
+    text: "Введите 1 букву Русского алфавита",
+  },
+  {
+    teg: "div",
     className: "attempt__counter",
-    text: "Всего попыток - 6  Использованно попыток - 0",
+    text: "",
   },
   {
     teg: "p",
@@ -216,7 +256,7 @@ export const createModalWindow = [
   },
 ];
 export const createModalWindowElem = [
-    {
+  {
     teg: "div",
     className: "result-content__gallow span",
     text: "",
@@ -261,7 +301,7 @@ export const createLosseGame = [
   },
   {
     teg: "span",
-    className: "left-hand losse" ,
+    className: "left-hand losse",
     text: "",
   },
   {
@@ -279,10 +319,10 @@ export const createLosseGame = [
     className: "right-leg losse",
     text: "",
   },
-]
+];
 
 export const createVictoryGame = [
-    {
+  {
     teg: "span",
     className: "head_victory",
     text: "",
@@ -294,7 +334,7 @@ export const createVictoryGame = [
   },
   {
     teg: "span",
-    className: "left-hand_victory" ,
+    className: "left-hand_victory",
     text: "",
   },
   {
@@ -312,4 +352,4 @@ export const createVictoryGame = [
     className: "right-leg_victory",
     text: "",
   },
-]
+];

@@ -5,7 +5,7 @@ import {
   elementGallow,
   elementScaffold,
   playingField,
-  attemptCounterConst,
+  enKey,
   words,
   createModalWindow,
   createModalWindowElem,
@@ -58,12 +58,13 @@ function game() {
     }
     const resultGameGallow = document.querySelector(".result-content__gallow");
     for (let i = 0; i < resultGame.length; i++) {
-      const gameGallowElem = new СreatorElement(resultGame[i])
-        .element;
-        resultGameGallow.append(gameGallowElem);
+      const gameGallowElem = new СreatorElement(resultGame[i]).element;
+      resultGameGallow.append(gameGallowElem);
     }
   }
-
+function resetWarning(){
+  document.querySelector(".checking__entered-letter").classList.remove("checking__done")
+}
   document.addEventListener("keyup", keyboardUutput);
   function keyboardUutput(event) {
     for (let i = 0; i < virtualkeyboard.length; i++) {
@@ -76,6 +77,10 @@ function game() {
         lettersUsed.push(event.key.toString());
         initVirtualKeyboard(virtualkeyboard);
         initlettersUsed(lettersUsed);
+      } 
+      if (event.key.toLowerCase() === enKey[i]) {
+        document.querySelector(".checking__entered-letter").classList.add("checking__done");
+        setTimeout(resetWarning, 500);
       }
     }
   }
@@ -83,7 +88,7 @@ function game() {
   function initlettersUsed(Arr) {
     let aut = "";
     for (let i = 0; i < Arr.length; i++) {
-      aut += '<button class="key">' + Arr[i] + "</button>";
+      aut += '<button class="key_used">' + Arr[i] + "</button>";
     }
     document.querySelector(".letters-used").innerHTML = aut;
   }
@@ -120,12 +125,20 @@ function game() {
     answerArray[i] = "_";
   }
   input.value = answerArray.join(" ");
+  input.setAttribute("readonly", "readonly");
   let remainingLetters = word.length;
   let attemptCounter = 6;
+  let attemptsUsed = 0;
   let index = 0;
   const divConteiner = document.querySelector(".span");
   document.querySelector(".attempt__counter").innerHTML =
-    "число попыток" + " " + attemptCounter;
+    "Всего попыток: " +
+    " " +
+    attemptCounter +
+    "<br> " +
+    "Использованно попыток: " +
+    " " +
+    attemptsUsed;
   function openLettersAndNotify(item) {
     let guess = item.toLowerCase();
     let correctLetter = false;
@@ -139,8 +152,15 @@ function game() {
     }
     if (!correctLetter) {
       attemptCounter--;
+      attemptsUsed++;
       document.querySelector(".attempt__counter").innerHTML =
-        "число попыток" + " " + attemptCounter;
+        "Всего попыток: " +
+        " " +
+        attemptCounter +
+        "<br> " +
+        "Использованно попыток: " +
+        " " +
+        attemptsUsed;
       const createGallows = new СreatorElement(elementGallow[index]);
       divConteiner.append(createGallows.element);
       index++;
