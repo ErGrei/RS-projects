@@ -69,12 +69,12 @@ function resetWarning(){
   function keyboardUutput(event) {
     for (let i = 0; i < virtualkeyboard.length; i++) {
       if (event.key.toLowerCase() === virtualkeyboard[i]) {
-        openLettersAndNotify(event.key);
+        openLettersAndNotify(event.key.toLowerCase());
         virtualkeyboard.splice(
-          virtualkeyboard.indexOf(event.key.toString()),
+          virtualkeyboard.indexOf(event.key.toLowerCase().toString()),
           1
         );
-        lettersUsed.push(event.key.toString());
+        lettersUsed.push(event.key.toLowerCase().toString());
         initVirtualKeyboard(virtualkeyboard);
         initlettersUsed(lettersUsed);
       } 
