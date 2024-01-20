@@ -2,8 +2,9 @@ export default class СreatorElement {
   constructor(param) {
     this.element = null;
     this.setЕlement(param);
+    this.getElement()
   }
-  getElement (){
+  getElement() {
     return this.element;
   }
 
@@ -12,12 +13,10 @@ export default class СreatorElement {
     this.setClassName(param);
     this.setTextContent(param);
   }
-  setClassName(param){
+  setClassName(param) {
     this.element.className = param.className;
   }
   setTextContent(param) {
     this.element.textContent = param.text;
   }
-
-
 }

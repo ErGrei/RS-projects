@@ -1,0 +1,22 @@
+@import "./reset_styles_css";
+
+.wrapper {
+  margin: 0 auto;
+  border: 2px solid black;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 26*5px;
+  height: 26*5px;
+  margin-top: 200px;
+}
+.game-cells {
+  width: 25px;
+  height: 25px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+.cells-black {
+  border: 1px solid white;
+  background-color: black;
+}
