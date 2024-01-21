@@ -1,22 +1,64 @@
 @import "./reset_styles_css";
+@import "./root.css";
 
-.wrapper {
-  margin: 0 auto;
-  border: 2px solid black;
+$field-size: 5;
+.main {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 26*5px;
-  height: 26*5px;
-  margin-top: 200px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.wrapper-cells {
+
+  border: 0.5vmin solid black;
+  display: grid;
+  grid-template-columns: repeat(var(--grid), auto);
+  grid-template-rows:repeat(var(--grid), auto);
+  // display: flex;
+  // flex-wrap: wrap;
+  // width: var( --width);
+  // height:var( --width);
+  // margin-top: 200px;
+  background-color: black;
+  gap: 0.2vmin;
 }
 .game-cells {
-  width: 25px;
-  height: 25px;
-  border: 1px solid black;
+  width: 5vmin;
+  height: 5vmin;
+  // border: 1px solid rgba(72, 68, 68, 0.267);
+  background-color: azure;
   cursor: pointer;
+  &:nth-child(5),
+  :nth-child(10) {
+    margin-right: 0.5vmin;
+  }
+  &:nth-child(50),
+  :nth-child(100) {
+    margin-bottom: 0.5vmin;
+  }
+
 }
+
 .cells-black {
   border: 1px solid white;
   background-color: black;
+}
+.cells-cross {
+  background-color: aqua;
+}
+
+.wraper-left-tips {
+
+  border: 0.5vmin solid black;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows:repeat(10, auto);
+  // display: flex;
+  // flex-wrap: wrap;
+  // width: var( --width);
+  // height:var( --width);
+  // margin-top: 200px;
+  background-color: black;
+  gap: 0.2vmin;
 }

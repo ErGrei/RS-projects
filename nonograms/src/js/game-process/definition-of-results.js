@@ -1,31 +1,26 @@
 import { workingMatrix } from "../constants/constants-matrix";
+import { gameMatrix } from "../create-page-elements/creating-game-matrix";
 
-let currentGameMatrix = [
-  [0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0],
-];
+export const originalMatrix = workingMatrix[1]
 
 export function playingFieldTacking() {
+
   const cells = document.querySelectorAll(".game-cells");
 
   let y = 0;
   let x = 0;
   let b = 0;
-
   for (let i = 0; i < cells.length; i++) {
-    if (b <= 5) {
+    if (b <= gameMatrix.length) {
       if (cells[i].classList.contains("cells-black")) {
-        currentGameMatrix[y][x] = 1;
+        gameMatrix[y][x] = 1;
       } else {
-        currentGameMatrix[y][x] = 0;
+        gameMatrix[y][x] = 0;
       }
       x++;
       b++;
     }
-    if (b == 5) {
+    if (b == gameMatrix.length) {
       x = 0;
       b = 0;
       y++;
@@ -38,9 +33,9 @@ function gettingTheGameResult() {
   let res = true;
   ComparisonOfMatrices();
   function ComparisonOfMatrices() {
-    for (let i = 0; i < currentGameMatrix.length; i++) {
-      for (let j = 0; j < currentGameMatrix[i].length; j++) {
-        if (currentGameMatrix[i][j] !== workingMatrix[i][j]) {
+    for (let i = 0; i < gameMatrix.length; i++) {
+      for (let j = 0; j < gameMatrix[i].length; j++) {
+        if (gameMatrix[i][j] !== workingMatrix[i][j]) {
           res = false;
           break;
         }

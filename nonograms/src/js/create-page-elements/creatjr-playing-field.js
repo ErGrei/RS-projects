@@ -4,21 +4,23 @@ export default class PlayingField {
   constructor(wraper, gameСells, paramMatrix) {
     this.element = null;
     this.setElements(wraper);
-    this.setScaffold(gameСells, paramMatrix)
+    this.setGameCells(wraper, gameСells, paramMatrix);
   }
   getElement() {
     return this.element;
   }
   setElements(param) {
-    this.element = new СreatorElement(param).element;
+    this.element = new СreatorElement(param).getElement();
   }
-  setScaffold(gameСells, paramMatrix) {
+
+  setGameCells(wraper, gameСells, paramMatrix) {
+    // let fieldWrapper = this.element.append(
+    //   new СreatorElement(wraper).getElement()
+    // );
+
     for (let i = 0; i < paramMatrix.length; i++) {
-        for (let j =0; j <paramMatrix[i].length; j++)
-      this.element.append(new СreatorElement(gameСells).element);
+      for (let j = 0; j < paramMatrix[i].length; j++)
+      this.element.append(new СreatorElement(gameСells).getElement());
     }
-  }
-  setMen(paramMen, index) {
-    this.element.append(new СreatorElement(paramMen[index]).element);
   }
 }
