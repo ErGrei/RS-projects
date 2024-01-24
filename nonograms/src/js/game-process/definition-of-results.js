@@ -35,7 +35,7 @@ function gettingTheGameResult() {
   function ComparisonOfMatrices() {
     for (let i = 0; i < gameMatrix.length; i++) {
       for (let j = 0; j < gameMatrix[i].length; j++) {
-        if (gameMatrix[i][j] !== workingMatrix[i][j]) {
+        if (gameMatrix[i][j] !== originalMatrix[i][j]) {
           res = false;
           break;
         }

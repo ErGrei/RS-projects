@@ -10,11 +10,10 @@ $field-size: 5;
 }
 
 .wrapper-cells {
-
   border: 0.5vmin solid black;
   display: grid;
   grid-template-columns: repeat(var(--grid), auto);
-  grid-template-rows:repeat(var(--grid), auto);
+  grid-template-rows: repeat(var(--grid), auto);
   // display: flex;
   // flex-wrap: wrap;
   // width: var( --width);
@@ -30,14 +29,13 @@ $field-size: 5;
   background-color: azure;
   cursor: pointer;
   &:nth-child(5),
-  :nth-child(10) {
+  &:nth-child(10) {
     margin-right: 0.5vmin;
   }
   &:nth-child(50),
-  :nth-child(100) {
+  &:nth-child(100) {
     margin-bottom: 0.5vmin;
   }
-
 }
 
 .cells-black {
@@ -49,16 +47,80 @@ $field-size: 5;
 }
 
 .wraper-left-tips {
-
   border: 0.5vmin solid black;
   display: grid;
-  grid-template-columns: repeat(4, auto);
-  grid-template-rows:repeat(10, auto);
+  grid-template-columns: repeat(var(--left-tips-col), auto);
+  // grid-template-rows: repeat(var(--grid), auto);
   // display: flex;
   // flex-wrap: wrap;
   // width: var( --width);
   // height:var( --width);
   // margin-top: 200px;
   background-color: black;
+  grid-row-gap: 0.2vmin;
+}
+.left-tips-elem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  width: 5vmin;
+  height: 5vmin;
+  // border: 1px solid rgba(72, 68, 68, 0.267);
+  background-color: azure;
+  cursor: pointer;
+  // &:nth-child(5),
+  // :nth-child(10) {
+  //   margin-right: 0.5vmin;
+  // }
+  &:nth-child(15),
+  &:nth-child(30) {
+    margin-bottom: 0.5vmin;
+  }
+}
+.wraper-top-tips {
+  border: 0.5vmin solid black;
+  display: grid;
+  grid-template-columns: repeat(var(--grid), auto);
+  // grid-template-rows: repeat(1, auto);
+  // display: flex;
+  // flex-wrap: wrap;
+  // width: var( --width);
+  // height:var( --width);
+  // margin-top: 200px;
+  background-color: black;
+  grid-column-gap: 0.2vmin;
+
+}
+.top-tips-elem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  width: 5vmin;
+  height: 5vmin;
+  // border: 1px solid rgba(72, 68, 68, 0.267);
+  background-color: azure;
+  cursor: pointer;
+  // &:nth-child(5),
+  // :nth-child(10) {
+  //   margin-right: 0.5vmin;
+  // }
+  &:nth-child(5),
+  &:nth-child(10) {
+    margin-right: 0.5vmin;
+  }
+}
+
+.wraper-tips-elem{
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
   gap: 0.2vmin;
+}
+.corner-playing-field{
+  width: auto;
+  height: 100%;
+  background-color: azure;
+  border: 0.5vmin solid black;
 }

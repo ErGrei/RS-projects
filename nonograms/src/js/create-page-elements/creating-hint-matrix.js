@@ -21,15 +21,16 @@ function creatingTopTips() {
       topTips[elem].unshift(accum);
       accum = 0;
     }
-    if (i === originalMatrix.length - 1 ) {
+    if (i === originalMatrix.length - 1 && accum > 0 ) {
       topTips[elem].unshift(accum);
       accum = 0;
     }
   }
   elem++;
-  if (elem !== originalMatrix.length) {
+  if (elem !== originalMatrix.length ) {
     creatingTopTips();
   }
+  matrixCorrect(topTips)
 }
 
 function creatingLeftTips() {
@@ -43,16 +44,17 @@ function creatingLeftTips() {
       leftTips[elemleft].unshift(accumleft);
       accumleft = 0;
     }
-    if (i === originalMatrix.length - 1 ) {
+    if (i === originalMatrix.length - 1 && accumleft > 0) {
       leftTips[elemleft].unshift(accumleft);
       accumleft = 0;
     }
   }
   elemleft++;
-  if (elemleft !== originalMatrix.length) {
+  if (elemleft !== originalMatrix.length ) {
     creatingLeftTips();
   }
   matrixCorrect(leftTips)
+
 }
 
 function matrixCorrect(matrix) {
@@ -67,6 +69,22 @@ function matrixCorrect(matrix) {
     for (let j = 0; j < matrix[i].length; j++)
     if (matrixLength > matrix[i].length) {
       matrix[i].push(0);
+    }
+  }
+
+}
+function matrixTopCorrect(matrix) {
+  let matrixLength = 0;
+  for (let i = 0; i < matrix.length; i++) {
+    if (matrixLength < matrix[i].length) {
+      matrixLength = matrix[i].length;
+    }
+  }
+
+  for (let i = 0; i < matrix.length; i++) {
+    for (let j = 0; j < matrix[i].length; j++)
+    if (matrixLength > matrix[i].length) {
+      matrix[i].unshift(0);
     }
   }
 

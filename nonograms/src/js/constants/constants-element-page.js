@@ -19,3 +19,28 @@ export const wraperLeftTips = {
         className: "wraper-left-tips",
         text: "",
 }
+export const wrapertopTips = {
+        teg: "div",
+        className: "wraper-top-tips",
+        text: "",
+}
+export const leftTipsElem = {
+        teg: "div",
+        className: "left-tips-elem",
+        text: "",
+}
+export const topTipsElem = {
+        teg: "div",
+        className: "top-tips-elem",
+        text: "",
+}
+export const wraperTips = {
+        teg: "div",
+        className: "wraper-tips-elem",
+        text: "",
+}
+export const cornerPlayingField = {
+        teg: "div",
+        className: "corner-playing-field",
+        text: "",
+}
