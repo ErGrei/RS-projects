@@ -19,6 +19,8 @@ import { gameMatrix } from "./create-page-elements/creating-game-matrix";
 import { choosingGameCell } from "./game-process/choosing-game-cell";
 import { filingLeftTips, filingTopTips } from "./create-page-elements/filling-page-elements";
 import { topTips, leftTips } from "./create-page-elements/creating-hint-matrix";
+import { createTimer } from "./create-page-elements/timer-component";
+
 const main = new СreatorElement(mainPage).getElement();
 const wraperTipsElem = new СreatorElement(wraperTips).getElement();
 const cornerPlayingFieldElem = new СreatorElement(cornerPlayingField).getElement();
@@ -47,12 +49,14 @@ wraperTipsElem.append(cornerPlayingFieldElem);
 wraperTipsElem.append(topTipsEl);
 wraperTipsElem.append(leftTipsEl);
 wraperTipsElem.append(createConteiner);
-
-
-choosingGameCell();
 filingLeftTips(leftTips)
 filingTopTips(topTips)
-console.table(topTips);
-console.table(leftTips);
+createTimer()
 
+choosingGameCell();
 
+// console.table(topTips);
+// console.table(leftTips);
+
+// const timerSecond1 = document.querySelector(".timer-seconds");
+// console.log (timerSecond1.textContent)

@@ -1,7 +1,7 @@
 import { workingMatrix } from "../constants/constants-matrix";
 import { gameMatrix } from "../create-page-elements/creating-game-matrix";
 
-export const originalMatrix = workingMatrix[1]
+export const originalMatrix = workingMatrix[0]
 
 export function playingFieldTacking() {
 
