@@ -1,13 +1,17 @@
 
 
 let interval;
-let minits = 0;
-let seconds = 0;
-
+export let minits = 0;
+export let seconds = 0;
+export let miliSeconds = 0;
 const playTimer = () => {
-  seconds++;
+  miliSeconds++;
   document.querySelector(".timer-seconds").innerHTML = "0" + seconds;
+  if (miliSeconds > 90 ) {
+    seconds++;
+    miliSeconds=0;}
   if (seconds > 9 ) {
+    // seconds++;
     document.querySelector(".timer-seconds").innerHTML =  seconds;
   }
   if (seconds > 59 ) {
@@ -24,5 +28,5 @@ const playTimer = () => {
 }
 
 export function initTimer() {
-  interval = setInterval(playTimer, 1000);
+  interval = setInterval(playTimer, 10);
 }

@@ -1,7 +1,9 @@
 import { workingMatrix } from "../constants/constants-matrix";
 import { gameMatrix } from "../create-page-elements/creating-game-matrix";
+import { resultGame } from "../create-page-elements/finishing-window"
 
-export const originalMatrix = workingMatrix[0]
+
+export const originalMatrix = workingMatrix[1]
 
 export function playingFieldTacking() {
 
@@ -46,6 +48,7 @@ function gettingTheGameResult() {
     }
   }
   if (res === true) {
+    resultGame();
     console.log("Win!!");
   }
 }

@@ -61,3 +61,44 @@ export const timerElements = [
     text: "00",
   },
 ];
+export const header = {
+  teg: "header",
+  className: "header",
+  text: "",
+};
+
+export const navbar = {
+  teg: "nav",
+  className: "navbar",
+  text: "",
+};
+
+export const title = {
+  teg: "h1",
+  className: "title",
+  text: "Nonograms game",
+};
+
+export const finalTitle = {
+  teg: "h1",
+  className: "title",
+  text: "Отлично! Вы решили нонограмму за ",
+};
+
+export const crossing = [
+  {
+    teg: "span",
+    className: "left-span",
+    text: "",
+  },
+  {
+    teg: "span",
+    className: "right-span",
+    text: "",
+  },
+];
+ export const hintButton = {
+  teg: "button",
+  className: "hint-button",
+  text: "показать ответ",
+ }

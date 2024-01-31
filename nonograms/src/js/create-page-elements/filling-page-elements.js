@@ -1,3 +1,6 @@
+import { crossing } from "../constants/constants-element-page";
+import СreatorElement from "../create-page-elements/elements-creator";
+
 export function filingLeftTips(arr) {
   const fillableElement = document.querySelectorAll(".left-tips-elem");
   document.documentElement.style.setProperty("--left-tips-col", arr[0].length);
@@ -32,5 +35,14 @@ export function filingTopTips(arr) {
       count++
     }
     lastElem--
+  }
+}
+
+export function crossingOutCells(){
+  const cells1 = document.querySelectorAll(".game-cells");
+  for (let i = 0; i < cells1.length; i++) {
+    for (let j = 0; j < crossing.length; j++) {
+      cells1[i].append(new СreatorElement(crossing[j]).getElement())
+    }
   }
 }
