@@ -1,12 +1,18 @@
 import { workingMatrix } from "../constants/constants-matrix";
-import { gameMatrix } from "../create-page-elements/creating-game-matrix";
-import { resultGame } from "../create-page-elements/finishing-window"
+import { createMatrix } from "../create-page-elements/creating-game-matrix";
+import { resultGame } from "../create-page-elements/finishing-window";
 
 
-export const originalMatrix = workingMatrix[1]
+export let originalMatrix = workingMatrix[0][0];
+
+export function matrixChange (lvl,picture) {
+  originalMatrix = workingMatrix[lvl][picture];
+  return originalMatrix;
+}
+
 
 export function playingFieldTacking() {
-
+let gameMatrix = createMatrix(originalMatrix.length, originalMatrix.length)
   const cells = document.querySelectorAll(".game-cells");
 
   let y = 0;
@@ -28,13 +34,13 @@ export function playingFieldTacking() {
       y++;
     }
   }
-  gettingTheGameResult();
+  gettingTheGameResult(gameMatrix);
 }
 
-function gettingTheGameResult() {
+function gettingTheGameResult(gameMatrix) {
   let res = true;
-  ComparisonOfMatrices();
-  function ComparisonOfMatrices() {
+  ComparisonOfMatrices(gameMatrix);
+  function ComparisonOfMatrices(gameMatrix) {
     for (let i = 0; i < gameMatrix.length; i++) {
       for (let j = 0; j < gameMatrix[i].length; j++) {
         if (gameMatrix[i][j] !== originalMatrix[i][j]) {

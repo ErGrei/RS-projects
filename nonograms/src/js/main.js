@@ -1,5 +1,5 @@
 import { pageAassembly } from "./game-process/page-assembly";
-import { showHints } from "./game-process/show-hints";
+import { gameLvlSelect } from "./game-process/game-level-selection";
 
 pageAassembly ();
-// showHints();
+gameLvlSelect()

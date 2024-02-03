@@ -5,6 +5,8 @@
 --cells-margin-right5:5;
 --cells-margin-right10:0;
 
+
+
   --width: var(--field-size);
   --height:var(--field-size);
 }

@@ -6,55 +6,63 @@ let elem = 0;
 let accum = 0;
 let elemleft = 0;
 let accumleft = 0;
+const gameMatrix = originalMatrix;
+creatingLeftTips(gameMatrix);
+creatingTopTips(gameMatrix);
 
-creatingLeftTips();
-creatingTopTips();
+export function clinTips () {
+  topTips = [];
+  leftTips = [];
+}
+export function creatingTopTips(Matrix) {
 
-function creatingTopTips() {
   const arr = [];
   topTips.push(arr);
 
-  for (let i = 0; i < originalMatrix.length; i++) {
-    if (originalMatrix[i][elem] === 1) {
+  for (let i = 0; i < Matrix.length; i++) {
+    if (Matrix[i][elem] === 1) {
       accum++;
-    } else if (originalMatrix[i][elem] !== 1 && accum > 0) {
+    } else if (Matrix[i][elem] !== 1 && accum > 0) {
       topTips[elem].unshift(accum);
       accum = 0;
     }
-    if (i === originalMatrix.length - 1 && accum > 0 ) {
+    if (i === Matrix.length - 1 && accum > 0 ) {
       topTips[elem].unshift(accum);
       accum = 0;
     }
   }
   elem++;
-  if (elem !== originalMatrix.length ) {
-    creatingTopTips();
+  if (elem !== Matrix.length ) {
+    creatingTopTips(Matrix);
   }
+  elem = 0;
   matrixCorrect(topTips)
+  return topTips;
 }
 
-function creatingLeftTips() {
+export function creatingLeftTips(Matrix) {
   const arr = [];
   leftTips.push(arr);
 
-  for (let i = 0; i < originalMatrix.length; i++) {
-    if (originalMatrix[elemleft][i] === 1) {
+  for (let i = 0; i < Matrix.length; i++) {
+    if (Matrix[elemleft][i] === 1) {
       accumleft++;
-    } else if (originalMatrix[elemleft][i] !== 1 && accumleft > 0) {
+    } else if (Matrix[elemleft][i] !== 1 && accumleft > 0) {
       leftTips[elemleft].unshift(accumleft);
       accumleft = 0;
     }
-    if (i === originalMatrix.length - 1 && accumleft > 0) {
+    if (i === Matrix.length - 1 && accumleft > 0) {
       leftTips[elemleft].unshift(accumleft);
       accumleft = 0;
     }
   }
   elemleft++;
-  if (elemleft !== originalMatrix.length ) {
-    creatingLeftTips();
+  if (elemleft !== Matrix.length ) {
+    creatingLeftTips(Matrix);
   }
-  matrixCorrect(leftTips)
-
+  elemleft = 0;
+matrixCorrect(leftTips)
+  return leftTips;
 }
 
 function matrixCorrect(matrix) {

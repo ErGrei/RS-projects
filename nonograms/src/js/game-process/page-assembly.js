@@ -18,6 +18,8 @@ import {
   header,
   navbar,
   hintButton,
+  nameMatrix,
+  lvleMatrix
 } from "../constants/constants-element-page";
 import { gameMatrix } from "../create-page-elements/creating-game-matrix";
 import { choosingGameCell } from "./choosing-game-cell";
@@ -29,20 +31,39 @@ import {
 import {
   topTips,
   leftTips,
- 
 } from "../create-page-elements/creating-hint-matrix";
 import { createTimer } from "../create-page-elements/timer-component";
+import { createSelected } from "../create-page-elements/create-selected";
+
 
 export function pageAassembly() {
-  const main = new СreatorElement(mainPage).getElement();
+  // const main = new СreatorElement(mainPage).getElement();
   const headerPage = new СreatorElement(header).getElement();
-  const wraperTipsElem = new СreatorElement(wraperTips).getElement();
-  const cornerPlayingFieldElem = new СreatorElement(
-    cornerPlayingField
-  ).getElement();
+  // const wraperTipsElem = new СreatorElement(wraperTips).getElement();
+  // const cornerPlayingFieldElem = new СreatorElement(
+  //   cornerPlayingField
+  // ).getElement();
   const titlePage = new СreatorElement(title).getElement();
 
   const navbarPage = new СreatorElement(navbar).getElement();
+
+  const hintBnt = new СreatorElement(hintButton).getElement();
+
+  document.body.prepend(headerPage);
+
+  headerPage.append(navbarPage);
+  headerPage.append(titlePage);
+  navbarPage.append(hintBnt);
+  createMainMatrix(gameMatrix, topTips, leftTips);
+  createSelected(lvleMatrix, nameMatrix)
+}
+export function createMainMatrix(gameMatrix, topTips, leftTips) {
+  const main = new СreatorElement(mainPage).getElement();
+  const wraperTipsElem = new СreatorElement(wraperTips).getElement();
+
+  const cornerPlayingFieldElem = new СreatorElement(
+    cornerPlayingField
+  ).getElement();
 
   const leftTipsEl = new CreateleftTips(
     wraperLeftTips,
@@ -61,15 +82,8 @@ export function pageAassembly() {
     gameСells,
     gameMatrix
   ).getElement();
-  const hintBnt = new СreatorElement(hintButton).getElement();
-
 
   document.body.append(main);
-  document.body.prepend(headerPage);
-
-  headerPage.append(navbarPage);
-  headerPage.append(titlePage);
-  navbarPage.append(hintBnt)
   main.append(wraperTipsElem);
   wraperTipsElem.append(cornerPlayingFieldElem);
   wraperTipsElem.append(topTipsEl);

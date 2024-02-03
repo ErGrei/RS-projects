@@ -99,6 +99,15 @@ export const crossing = [
 ];
  export const hintButton = {
   teg: "button",
-  className: "hint-button",
+  className: "hint-button button",
   text: "показать ответ",
  }
+ export const lvleMatrix = 
+  ['Ease 5x5', 'Medium 10x10',' Hard 15x15']
+
+
+ export const nameMatrix = [
+  ['Башня', 'Лестница',' Окно', 'Собака', 'Флаг'],
+  ['Дерево', 'Телевизор', 'Улитка', 'Нота', 'Мышка'],
+  ['Мышка', 'Лось', 'Крепость', 'Утка', 'Дом']
+ ]
