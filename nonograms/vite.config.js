@@ -1,8 +1,8 @@
 export default {
-    publicDir: 'public',
+    publicDir: 'nonogram',
     base: './',
     build: {
-        outDir: 'public',
+        outDir: 'nonogram',
         copyPublicDir: false,
     },
 

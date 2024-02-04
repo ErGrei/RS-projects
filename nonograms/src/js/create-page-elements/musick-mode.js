@@ -19,7 +19,7 @@ export function createMusickMode() {
 export function audioRightButton() {
   const checkbox = document.getElementById("music-mode");
   if (checkbox.checked) {
-    const clickRightMouse = new Audio("../../../public/right.mp3");
+    const clickRightMouse = new Audio("../../../public/music/right.mp3");
     clickRightMouse.play();
   }
 }
@@ -27,7 +27,7 @@ export function audioRightButton() {
 export function audioLeftButton() {
   const checkbox = document.getElementById("music-mode");
   if (checkbox.checked) {
-    const clickLeftMouse = new Audio("../../../public/left.mp3");
+    const clickLeftMouse = new Audio("../../../public/music/left.mp3");
     clickLeftMouse.play();
   }
 }
@@ -35,7 +35,7 @@ export function audioLeftButton() {
 export function audioWinGame() {
   const checkbox = document.getElementById("music-mode");
   if (checkbox.checked) {
-    const winGame = new Audio("../../../public/win.mp3");
+    const winGame = new Audio("../../../public/music/win.mp3");
     winGame.play();
   }
 }
