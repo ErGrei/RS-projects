@@ -19,7 +19,7 @@ import {
   navbar,
   hintButton,
   nameMatrix,
-  lvleMatrix
+  lvleMatrix,
 } from "../constants/constants-element-page";
 import { gameMatrix } from "../create-page-elements/creating-game-matrix";
 import { choosingGameCell } from "./choosing-game-cell";
@@ -34,7 +34,12 @@ import {
 } from "../create-page-elements/creating-hint-matrix";
 import { createTimer } from "../create-page-elements/timer-component";
 import { createSelected } from "../create-page-elements/create-selected";
-
+import {
+  createDarckMode,
+  togleDarckMode,
+} from "../create-page-elements/darck-mode";
+import { createMusickMode } from "../create-page-elements/musick-mode";
+import { createResetGame } from "./remove-game";
 
 export function pageAassembly() {
   // const main = new СreatorElement(mainPage).getElement();
@@ -55,7 +60,11 @@ export function pageAassembly() {
   headerPage.append(titlePage);
   navbarPage.append(hintBnt);
   createMainMatrix(gameMatrix, topTips, leftTips);
-  createSelected(lvleMatrix, nameMatrix)
+  createSelected(lvleMatrix, nameMatrix);
+  createDarckMode();
+  togleDarckMode();
+  createMusickMode();
+  createResetGame();
 }
 export function createMainMatrix(gameMatrix, topTips, leftTips) {
   const main = new СreatorElement(mainPage).getElement();

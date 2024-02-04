@@ -81,8 +81,8 @@ export const title = {
 
 export const finalTitle = {
   teg: "h1",
-  className: "title",
-  text: "Отлично! Вы решили нонограмму за ",
+  className: "final-title",
+  text: "Great! You solved the nonogram for ",
 };
 
 export const crossing = [
@@ -100,14 +100,19 @@ export const crossing = [
  export const hintButton = {
   teg: "button",
   className: "hint-button button",
-  text: "показать ответ",
+  text: "Show answer",
  }
  export const lvleMatrix = 
   ['Ease 5x5', 'Medium 10x10',' Hard 15x15']
 
 
  export const nameMatrix = [
-  ['Башня', 'Лестница',' Окно', 'Собака', 'Флаг'],
-  ['Дерево', 'Телевизор', 'Улитка', 'Нота', 'Мышка'],
-  ['Мышка', 'Лось', 'Крепость', 'Утка', 'Дом']
+  ['Tower', 'Staircase', 'Window', 'Dog', 'Flag'],
+  ['Tree', 'TV', 'Snail', 'Note', 'Mouse'],
+  ['Mouse', 'Moose', 'Fortress', 'Duck', 'House']
  ]
+ export const mainPageFinal = {
+  teg: "main",
+  className: "final-main",
+  text: "",
+};

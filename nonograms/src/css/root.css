@@ -5,6 +5,13 @@
 --cells-margin-right5:5;
 --cells-margin-right10:0;
 
+--fon: rgb(248, 248, 251);
+--fon-button: rgb(197, 244, 244);
+--fon-text:rgba(12, 1, 96, 0.974);
+--fon-cells:azure;
+--fon-black:black;
+--fon-cells-cross:rgb(197, 197, 217);
+--fon-cross-span:#403f3d;
 
 
   --width: var(--field-size);

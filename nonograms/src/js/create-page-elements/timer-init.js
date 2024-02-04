@@ -19,6 +19,10 @@ const playTimer = () => {
     seconds = 0;
     document.querySelector(".timer-seconds").innerHTML = "0" + seconds;
   }
+  if (minits > 9) {
+    // seconds++;
+    document.querySelector(".timer-minits").innerHTML =  minits;
+  }
 };
 
 export function initTimer() {
