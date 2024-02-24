@@ -340,7 +340,7 @@ html {
   background: url(../img/Menu_img/btn/refresh.svg) no-repeat;
   background-position: center center;
 }
-.btn-menu_hover_active{
+.btn-menu_hover_active {
   display: block;
 }
 .footer-contener {
@@ -481,6 +481,8 @@ html {
 .popap-vraper {
   display: none;
   position: fixed;
+  justify-content: center;
+  align-items: center;
   padding: 17px;
   top: 0;
   right: 0;
@@ -490,7 +492,7 @@ html {
   z-index: 5;
 }
 .popap-vraper-active {
-  display: block;
+  display: flex;
 }
 .popap-window {
   display: flex;
@@ -501,7 +503,6 @@ html {
   align-items: flex-start;
   border-radius: 40px;
   background: var(--background-body, #e1d4c9);
-  margin: 25vh auto;
 }
 .popap-img {
   position: relative;
@@ -728,7 +729,7 @@ html {
   }
 }
 .popap-vraper-active {
-  display: block;
+  display: flex;
 }
 @import "media_hover";
 @import "media";

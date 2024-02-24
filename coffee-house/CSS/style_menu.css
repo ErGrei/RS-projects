@@ -497,6 +497,8 @@ html {
 .popap-vraper {
   display: none;
   position: fixed;
+  justify-content: center;
+  align-items: center;
   padding: 17px;
   top: 0;
   right: 0;
@@ -507,7 +509,7 @@ html {
 }
 
 .popap-vraper-active {
-  display: block;
+  display: flex;
 }
 
 .popap-window {
@@ -519,7 +521,6 @@ html {
   align-items: flex-start;
   border-radius: 40px;
   background: var(--background-body, #e1d4c9);
-  margin: 25vh auto;
 }
 
 .popap-img {
@@ -759,7 +760,7 @@ html {
 }
 
 .popap-vraper-active {
-  display: block;
+  display: flex;
 }
 
 @media (hover: hover) {
